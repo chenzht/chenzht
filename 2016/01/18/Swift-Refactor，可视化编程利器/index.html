@@ -37,7 +37,7 @@
 <link href="/css/main.css?v=0.4.5.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Placeholder,UITextView,iOS," />
+  <meta name="keywords" content="Refactor,Storyboard,Swift,iOS,可视化编程,团队开发," />
 
 
 
@@ -53,29 +53,37 @@
 
 
 
-<meta name="description" content="UITextField想必大家都很熟悉，其中有个叫placeholder的属性。那么当我们不得不用到UITextView时，如何给它也添加一个placeholder呢？实现效果如下图。">
+<meta name="description" content="Refactor是iOS9推出的新特性，如果还不会用实在是太暴殄天物了（虽然我也是今天才开始用的）
+尽管平时开发我更倾向于纯代码编程，很享受一连串代码行云流水的敲打过程，但不得不说可视化编程在有些时候会更加方便且快速。而之所以搁浅可视化编程是因为在团队开发时，会遇到一些不太友好的操作，当每个成员使用了一个Storyboard，这样项目就存在了很多个Storyboard，最后我们需要通过代码，将多个">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如果给UITextView增加一个Placeholder">
-<meta property="og:url" content="http://yoursite.com/2014/12/17/如果给UITextView增加一个Placeholder/index.html">
+<meta property="og:title" content="Swift_Refactor，可视化编程利器">
+<meta property="og:url" content="http://yoursite.com/2016/01/18/Swift-Refactor，可视化编程利器/index.html">
 <meta property="og:site_name" content="科勒的小刀">
-<meta property="og:description" content="UITextField想必大家都很熟悉，其中有个叫placeholder的属性。那么当我们不得不用到UITextView时，如何给它也添加一个placeholder呢？实现效果如下图。">
-<meta property="og:image" content="http://img.blog.csdn.net/20151218110716035">
-<meta property="og:updated_time" content="2016-01-07T14:07:59.000Z">
+<meta property="og:description" content="Refactor是iOS9推出的新特性，如果还不会用实在是太暴殄天物了（虽然我也是今天才开始用的）
+尽管平时开发我更倾向于纯代码编程，很享受一连串代码行云流水的敲打过程，但不得不说可视化编程在有些时候会更加方便且快速。而之所以搁浅可视化编程是因为在团队开发时，会遇到一些不太友好的操作，当每个成员使用了一个Storyboard，这样项目就存在了很多个Storyboard，最后我们需要通过代码，将多个">
+<meta property="og:image" content="http://img.blog.csdn.net/20160118180641068">
+<meta property="og:image" content="http://img.blog.csdn.net/20160118180748319">
+<meta property="og:image" content="http://img.blog.csdn.net/20160118180646098">
+<meta property="og:image" content="http://img.blog.csdn.net/20160118180650689">
+<meta property="og:image" content="http://img.blog.csdn.net/20160118180655308">
+<meta property="og:image" content="http://img.blog.csdn.net/20160118180701222">
+<meta property="og:updated_time" content="2016-02-01T03:09:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如果给UITextView增加一个Placeholder">
-<meta name="twitter:description" content="UITextField想必大家都很熟悉，其中有个叫placeholder的属性。那么当我们不得不用到UITextView时，如何给它也添加一个placeholder呢？实现效果如下图。">
+<meta name="twitter:title" content="Swift_Refactor，可视化编程利器">
+<meta name="twitter:description" content="Refactor是iOS9推出的新特性，如果还不会用实在是太暴殄天物了（虽然我也是今天才开始用的）
+尽管平时开发我更倾向于纯代码编程，很享受一连串代码行云流水的敲打过程，但不得不说可视化编程在有些时候会更加方便且快速。而之所以搁浅可视化编程是因为在团队开发时，会遇到一些不太友好的操作，当每个成员使用了一个Storyboard，这样项目就存在了很多个Storyboard，最后我们需要通过代码，将多个">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: 'post',
+    sidebar: '[object Object]',
     motion: true
   };
 </script>
 
-  <title> 如果给UITextView增加一个Placeholder | 科勒的小刀 </title>
+  <title> Swift_Refactor，可视化编程利器 | 科勒的小刀 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -228,7 +236,7 @@
             
             
               
-                如果给UITextView增加一个Placeholder
+                Swift_Refactor，可视化编程利器
               
             
           </h1>
@@ -237,8 +245,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2014-12-17T22:15:12+08:00" content="2014-12-17">
-              2014-12-17
+            <time itemprop="dateCreated" datetime="2016-01-18T17:53:20+08:00" content="2016-01-18">
+              2016-01-18
             </time>
           </span>
 
@@ -247,8 +255,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS</span>
+                  <a href="/categories/Swift/" itemprop="url" rel="index">
+                    <span itemprop="name">Swift</span>
                   </a>
                 </span>
 
@@ -263,8 +271,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2014/12/17/如果给UITextView增加一个Placeholder/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/12/17/如果给UITextView增加一个Placeholder/" itemprop="commentsCount"></span>
+                <a href="/2016/01/18/Swift-Refactor，可视化编程利器/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/18/Swift-Refactor，可视化编程利器/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -283,20 +291,20 @@
       
 
       
-        <span itemprop="articleBody"><p>UITextField想必大家都很熟悉，其中有个叫placeholder的属性。那么当我们不得不用到UITextView时，如何给它也添加一个placeholder呢？实现效果如下图。<br><a id="more"></a><br><img src="http://img.blog.csdn.net/20151218110716035" alt=""></p>
-<p>其实思路也很简单，在textView上增加一个Label就好，但也有一些值得注意的细节，具体流程如下。</p>
-<ul>
-<li><p>定义<code>@property (nonatomic, strong) UILabel *placeHolderLabel;</code></p>
-</li>
-<li><p>初始化(label必须设置为不可用)</p>
-</li>
-</ul>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">_placeHolderLabel = [[<span class="built_in">UILabel</span> alloc] 	</span><br><span class="line">_placeHolderLabel<span class="variable">.frame</span> =<span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">50</span>, <span class="number">15</span>);</span><br><span class="line">   _placeHolderLabel<span class="variable">.text</span> = <span class="string">@"请输入文字..."</span>;</span><br><span class="line">   _placeHolderLabel<span class="variable">.enabled</span> = <span class="literal">NO</span>;<span class="comment">//lable必须设置为不可用</span></span><br><span class="line">   _placeHolderLabel<span class="variable">.textColor</span> = <span class="built_in">UIColorFromRGB</span>(<span class="number">0x999999</span>);</span><br><span class="line">    _placeHolderLabel<span class="variable">.font</span> = [<span class="built_in">UIFont</span> systemFontOfSize:<span class="number">13.0</span>f];</span><br><span class="line">       </span><br><span class="line"> [<span class="keyword">self</span><span class="variable">.textView</span> addSubview:<span class="keyword">self</span><span class="variable">.placeHolderLabel</span>];</span><br></pre></td></tr></table></figure>
-<ul>
-<li>在textView的代理方法里实现相应方法，<strong>注意</strong>，此前要将textView的delegate设置为self</li>
-</ul>
-<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)textViewDidBeginEditing:(UITextView *)textView</span><br><span class="line">&#123;</span><br><span class="line">    _placeHolderLabel.<span class="built_in">text</span> = @<span class="string">""</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)textViewDidEndEditing:(UITextView *)textView</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (textView.<span class="built_in">text</span>.length == <span class="number">0</span>) &#123;</span><br><span class="line">        _placeHolderLabel.<span class="built_in">text</span> = @<span class="string">"请输入文字..."</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        _placeHolderLabel.<span class="built_in">text</span> = @<span class="string">""</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以上。</p>
+        <span itemprop="articleBody"><p>Refactor是iOS9推出的新特性，如果还不会用实在是太暴殄天物了<em>（虽然我也是今天才开始用的）</em></p>
+<p>尽管平时开发我更倾向于纯代码编程，很享受一连串代码行云流水的敲打过程，但不得不说可视化编程在有些时候会更加方便且快速。而之所以搁浅可视化编程是因为在团队开发时，会遇到一些不太友好的操作，当每个成员使用了一个Storyboard，这样项目就存在了很多个Storyboard，最后我们需要通过代码，将多个Storyboard整合在一起的，实在是非常的麻烦。而有了这个<code>Storyboard Refactor</code>，这将变得超级简单。<br><a id="more"></a></p>
+<h4 id="1-_使用Storyboard搭建一个框架">1. 使用Storyboard搭建一个框架</h4><p><img src="http://img.blog.csdn.net/20160118180641068" alt=""><br>仅仅一个简单框架下的Storyboard中就存在了很多的控制器，操作起来也非常的麻烦。并且在团队开发的过程中，同时处理这一个Storyboard会造成svn/git同步混乱等问题</p>
+<p>比较好的方法是：把每一个模块都抽成一个Storyboard，然后分别在自己里面处理，团队开发的时候，也不至于修改了别人的文件。</p>
+<p>之前我们都是通过代码进行关联，现在则可以使用新的工具Refactor。</p>
+<h4 id="2-_选中需要抽离的控制器">2. 选中需要抽离的控制器</h4><p><img src="http://img.blog.csdn.net/20160118180748319" alt=""></p>
+<h4 id="3-_选择菜单_-&gt;_Editor_-&gt;_Refactor">3. 选择菜单 -&gt; Editor -&gt; Refactor</h4><p><img src="http://img.blog.csdn.net/20160118180646098" alt=""></p>
+<h4 id="4-_输入名称">4. 输入名称</h4><p><img src="http://img.blog.csdn.net/20160118180650689" alt=""></p>
+<p>保存之后原来的Main.storyboard会相应的改变如下图。</p>
+<p><img src="http://img.blog.csdn.net/20160118180655308" alt=""></p>
+<p>图中标记圈中的玩意儿就是Storyboard Reference，它代表一个Storyboard，这样就可以从一个Storyboard关联到另一个Storyboard了，然后你可以在一个新的storyboard里找到刚才抽离的控制器，如下图所示</p>
+<p><img src="http://img.blog.csdn.net/20160118180701222" alt=""></p>
+<p>团队里的成员只需在自己的storyboard里操作自己的模块即可，省去了一些麻烦，当然，Refactor还有其他的功能，<br>大家一起去挖掘吧。</p>
+<p>That’s all, thank you.</p>
 </span>
       
     </div>
@@ -305,11 +313,17 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Placeholder/" rel="tag">#Placeholder</a>
+            <a href="/tags/Refactor/" rel="tag">#Refactor</a>
           
-            <a href="/tags/UITextView/" rel="tag">#UITextView</a>
+            <a href="/tags/Storyboard/" rel="tag">#Storyboard</a>
+          
+            <a href="/tags/Swift/" rel="tag">#Swift</a>
           
             <a href="/tags/iOS/" rel="tag">#iOS</a>
+          
+            <a href="/tags/可视化编程/" rel="tag">#可视化编程</a>
+          
+            <a href="/tags/团队开发/" rel="tag">#团队开发</a>
           
         </div>
       
@@ -318,16 +332,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2014/12/15/一些UINavgationBar的实用技巧/" rel="next" title="一些UINavgationBar的实用技巧">
-                <i class="fa fa-chevron-left"></i> 一些UINavgationBar的实用技巧
+              <a href="/2016/01/13/React-Native学习里程01-环境搭建/" rel="next" title="React Native学习里程01--环境搭建">
+                <i class="fa fa-chevron-left"></i> React Native学习里程01--环境搭建
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/11/13/3DTouch-ShortcutItem/" rel="prev" title="3DTouch_ShortcutItem">
-                3DTouch_ShortcutItem <i class="fa fa-chevron-right"></i>
+              <a href="/2016/01/20/UI分析利器 - Reveal/" rel="prev" title="UI分析利器 - Reveal">
+                UI分析利器 - Reveal <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -355,8 +369,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2014/12/17/如果给UITextView增加一个Placeholder/"
-           data-title="如果给UITextView增加一个Placeholder" data-url="http://yoursite.com/2014/12/17/如果给UITextView增加一个Placeholder/">
+      <div class="ds-thread" data-thread-key="2016/01/18/Swift-Refactor，可视化编程利器/"
+           data-title="Swift_Refactor，可视化编程利器" data-url="http://yoursite.com/2016/01/18/Swift-Refactor，可视化编程利器/">
       </div>
     
   </div>
@@ -391,21 +405,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-count">26</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">43</span>
+              <span class="site-state-item-count">67</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>

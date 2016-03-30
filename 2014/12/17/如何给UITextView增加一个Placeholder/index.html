@@ -37,7 +37,7 @@
 <link href="/css/main.css?v=0.4.5.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="JavaScript,Sublime Text," />
+  <meta name="keywords" content="Placeholder,UITextView,iOS," />
 
 
 
@@ -53,37 +53,29 @@
 
 
 
-<meta name="description" content="1. 安装Sublime Text 3百度网盘链接: http://pan.baidu.com/s/1qWOE5L6 密码: vuch
-2. 插件2.1 Package Control
-按Ctrl+`调出console（注：安装有QQ输入法的这个快捷键会有冲突的，输入法属性设置-输入法管理-取消热键切换至QQ拼音）
-粘贴以下代码到底部命令行并回车：">
+<meta name="description" content="UITextField想必大家都很熟悉，其中有个叫placeholder的属性。那么当我们不得不用到UITextView时，如何给它也添加一个placeholder呢？实现效果如下图。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Sublime Text 3">
-<meta property="og:url" content="http://yoursite.com/2015/12/28/Sublime-Text-3/index.html">
+<meta property="og:title" content="如何给UITextView增加一个Placeholder">
+<meta property="og:url" content="http://yoursite.com/2014/12/17/如何给UITextView增加一个Placeholder/index.html">
 <meta property="og:site_name" content="科勒的小刀">
-<meta property="og:description" content="1. 安装Sublime Text 3百度网盘链接: http://pan.baidu.com/s/1qWOE5L6 密码: vuch
-2. 插件2.1 Package Control
-按Ctrl+`调出console（注：安装有QQ输入法的这个快捷键会有冲突的，输入法属性设置-输入法管理-取消热键切换至QQ拼音）
-粘贴以下代码到底部命令行并回车：">
-<meta property="og:updated_time" content="2016-01-07T14:07:59.000Z">
+<meta property="og:description" content="UITextField想必大家都很熟悉，其中有个叫placeholder的属性。那么当我们不得不用到UITextView时，如何给它也添加一个placeholder呢？实现效果如下图。">
+<meta property="og:image" content="http://img.blog.csdn.net/20151218110716035">
+<meta property="og:updated_time" content="2016-01-09T02:32:21.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sublime Text 3">
-<meta name="twitter:description" content="1. 安装Sublime Text 3百度网盘链接: http://pan.baidu.com/s/1qWOE5L6 密码: vuch
-2. 插件2.1 Package Control
-按Ctrl+`调出console（注：安装有QQ输入法的这个快捷键会有冲突的，输入法属性设置-输入法管理-取消热键切换至QQ拼音）
-粘贴以下代码到底部命令行并回车：">
+<meta name="twitter:title" content="如何给UITextView增加一个Placeholder">
+<meta name="twitter:description" content="UITextField想必大家都很熟悉，其中有个叫placeholder的属性。那么当我们不得不用到UITextView时，如何给它也添加一个placeholder呢？实现效果如下图。">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: 'post',
+    sidebar: '[object Object]',
     motion: true
   };
 </script>
 
-  <title> Sublime Text 3 | 科勒的小刀 </title>
+  <title> 如何给UITextView增加一个Placeholder | 科勒的小刀 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -236,7 +228,7 @@
             
             
               
-                Sublime Text 3
+                如何给UITextView增加一个Placeholder
               
             
           </h1>
@@ -245,8 +237,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-28T11:58:57+08:00" content="2015-12-28">
-              2015-12-28
+            <time itemprop="dateCreated" datetime="2014-12-17T22:15:12+08:00" content="2014-12-17">
+              2014-12-17
             </time>
           </span>
 
@@ -255,8 +247,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Others/" itemprop="url" rel="index">
-                    <span itemprop="name">Others</span>
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
                   </a>
                 </span>
 
@@ -271,8 +263,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/12/28/Sublime-Text-3/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/28/Sublime-Text-3/" itemprop="commentsCount"></span>
+                <a href="/2014/12/17/如何给UITextView增加一个Placeholder/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/12/17/如何给UITextView增加一个Placeholder/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -291,21 +283,20 @@
       
 
       
-        <span itemprop="articleBody"><h2 id="1-_安装Sublime_Text_3">1. 安装Sublime Text 3</h2><p>百度网盘链接: <a href="http://pan.baidu.com/s/1qWOE5L6" target="_blank" rel="external">http://pan.baidu.com/s/1qWOE5L6</a> 密码: vuch</p>
-<h2 id="2-_插件">2. 插件</h2><h3 id="2-1_Package_Control">2.1 Package Control</h3><ul>
-<li>按Ctrl+`调出console（注：安装有QQ输入法的这个快捷键会有冲突的，输入法属性设置-输入法管理-取消热键切换至QQ拼音）</li>
-<li>粘贴以下代码到底部命令行并回车：<a id="more"></a>
+        <span itemprop="articleBody"><p>UITextField想必大家都很熟悉，其中有个叫placeholder的属性。那么当我们不得不用到UITextView时，如何给它也添加一个placeholder呢？实现效果如下图。<br><a id="more"></a><br><img src="http://img.blog.csdn.net/20151218110716035" alt=""></p>
+<p>其实思路也很简单，在textView上增加一个Label就好，但也有一些值得注意的细节，具体流程如下。</p>
+<ul>
+<li><p>定义<code>@property (nonatomic, strong) UILabel *placeHolderLabel;</code></p>
+</li>
+<li><p>初始化(label必须设置为不可用)</p>
 </li>
 </ul>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request,os; pf = <span class="string">'Package Control.sublime-package'</span>; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.<span class="keyword">join</span>(ipp, pf), <span class="string">'wb'</span>).<span class="keyword">write</span>(urllib.request.urlopen( <span class="string">'http://sublime.wbond.net/'</span> + pf.replace(<span class="string">' '</span>,<span class="string">'%20'</span>)).<span class="keyword">read</span>())</span><br></pre></td></tr></table></figure>
-<p>如果是 Sublime Text 2，代码为</p>
-<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import urllib2,os; pf=<span class="string">'Package Control.sublime-package'</span>; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) <span class="keyword">if</span> <span class="keyword">not</span> os.path.<span class="keyword">exists</span>(ipp) <span class="keyword">else</span> None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler( ))); <span class="keyword">open</span>( os.path.<span class="keyword">join</span>( ipp, pf), <span class="string">'wb'</span> ).<span class="keyword">write</span>( urllib2.urlopen( <span class="string">'http://sublime.wbond.net/'</span> +pf.replace( <span class="string">' '</span>,<span class="string">'%20'</span> )).<span class="keyword">read</span>()); <span class="keyword">print</span>( <span class="string">'Please restart Sublime Text to finish installation'</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="2-2_JSFormat">2.2 JSFormat</h3><h3 id="2-3_AndyJs2">2.3 AndyJs2</h3><p>下载地址<a href="http://pan.baidu.com/s/1ntmO1QD" target="_blank" rel="external">http://pan.baidu.com/s/1ntmO1QD</a></p>
-<p>下载后解压缩放在安装目录下Packages文件夹即可</p>
-<h3 id="2-4_ColorPicker">2.4 ColorPicker</h3><p>快捷键 Shift + Cmd + C</p>
-<h3 id="2-5_MarkDown_Editing">2.5 MarkDown Editing</h3><h3 id="2-6_Ctags">2.6 Ctags</h3><p>下载ctags-5.8.tar.gz源码包  <a href="http://download.csdn.net/detail/jiuyueguang/5711867" target="_blank" rel="external">http://download.csdn.net/detail/jiuyueguang/5711867</a></p>
-<p>配置方法 <a href="http://jingyan.baidu.com/article/48206aeafba820216ad6b3f5.html" target="_blank" rel="external">http://jingyan.baidu.com/article/48206aeafba820216ad6b3f5.html</a></p>
-<h3 id="2-7_Git">2.7 Git</h3><h2 id="3-_JS控制台">3. JS控制台</h2><p>源网址<a href="http://www.tuicool.com/articles/Uf2uauv" target="_blank" rel="external">http://www.tuicool.com/articles/Uf2uauv</a></p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">_placeHolderLabel = [[<span class="built_in">UILabel</span> alloc] 	</span><br><span class="line">_placeHolderLabel<span class="variable">.frame</span> =<span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">50</span>, <span class="number">15</span>);</span><br><span class="line">   _placeHolderLabel<span class="variable">.text</span> = <span class="string">@"请输入文字..."</span>;</span><br><span class="line">   _placeHolderLabel<span class="variable">.enabled</span> = <span class="literal">NO</span>;<span class="comment">//lable必须设置为不可用</span></span><br><span class="line">   _placeHolderLabel<span class="variable">.textColor</span> = <span class="built_in">UIColorFromRGB</span>(<span class="number">0x999999</span>);</span><br><span class="line">    _placeHolderLabel<span class="variable">.font</span> = [<span class="built_in">UIFont</span> systemFontOfSize:<span class="number">13.0</span>f];</span><br><span class="line">       </span><br><span class="line"> [<span class="keyword">self</span><span class="variable">.textView</span> addSubview:<span class="keyword">self</span><span class="variable">.placeHolderLabel</span>];</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在textView的代理方法里实现相应方法，<strong>注意</strong>，此前要将textView的delegate设置为self</li>
+</ul>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)textViewDidBeginEditing:(UITextView *)textView</span><br><span class="line">&#123;</span><br><span class="line">    _placeHolderLabel.<span class="built_in">text</span> = @<span class="string">""</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)textViewDidEndEditing:(UITextView *)textView</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (textView.<span class="built_in">text</span>.length == <span class="number">0</span>) &#123;</span><br><span class="line">        _placeHolderLabel.<span class="built_in">text</span> = @<span class="string">"请输入文字..."</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        _placeHolderLabel.<span class="built_in">text</span> = @<span class="string">""</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上。</p>
 </span>
       
     </div>
@@ -314,9 +305,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+            <a href="/tags/Placeholder/" rel="tag">#Placeholder</a>
           
-            <a href="/tags/Sublime-Text/" rel="tag">#Sublime Text</a>
+            <a href="/tags/UITextView/" rel="tag">#UITextView</a>
+          
+            <a href="/tags/iOS/" rel="tag">#iOS</a>
           
         </div>
       
@@ -325,16 +318,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/18/iOS开发-NSPredicate谓词的用法详解/" rel="next" title="[iOS开发]NSPredicate谓词的用法详解">
-                <i class="fa fa-chevron-left"></i> [iOS开发]NSPredicate谓词的用法详解
+              <a href="/2014/12/15/一些UINavgationBar的实用技巧/" rel="next" title="一些UINavgationBar的实用技巧">
+                <i class="fa fa-chevron-left"></i> 一些UINavgationBar的实用技巧
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/01/04/UIButton中拖动与点击事件重合的处理方法/" rel="prev" title="UIButton中拖动与点击事件重合的处理方法">
-                UIButton中拖动与点击事件重合的处理方法 <i class="fa fa-chevron-right"></i>
+              <a href="/2015/11/13/3DTouch-ShortcutItem/" rel="prev" title="3DTouch_ShortcutItem">
+                3DTouch_ShortcutItem <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -362,8 +355,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/12/28/Sublime-Text-3/"
-           data-title="Sublime Text 3" data-url="http://yoursite.com/2015/12/28/Sublime-Text-3/">
+      <div class="ds-thread" data-thread-key="2014/12/17/如何给UITextView增加一个Placeholder/"
+           data-title="如何给UITextView增加一个Placeholder" data-url="http://yoursite.com/2014/12/17/如何给UITextView增加一个Placeholder/">
       </div>
     
   </div>
@@ -398,21 +391,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-count">26</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">43</span>
+              <span class="site-state-item-count">67</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>

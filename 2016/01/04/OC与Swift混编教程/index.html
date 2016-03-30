@@ -64,11 +64,12 @@
 1. 创建一个swift或者oc的工程我这里是创建的Swift语言的工程
 2. 在工程中代码目录下创建一个oc的类，选择oc语言之后会出一个对话框，选择Create Bridging Header">
 <meta property="og:image" content="http://img.blog.csdn.net/20160104165138216">
+<meta property="og:image" content="http://img.blog.csdn.net/20160106102111878">
 <meta property="og:image" content="http://img.blog.csdn.net/20160104165151903">
 <meta property="og:image" content="http://img.blog.csdn.net/20160104165209436">
 <meta property="og:image" content="http://img.blog.csdn.net/20160104165215673">
 <meta property="og:image" content="http://img.blog.csdn.net/20160104165221793">
-<meta property="og:updated_time" content="2016-01-07T14:07:59.000Z">
+<meta property="og:updated_time" content="2016-02-01T03:09:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OC与Swift混编教程">
 <meta name="twitter:description" content="本文会介绍一下OC与Swift的混编教程，按步骤来，简单易懂
@@ -80,7 +81,7 @@
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: 'post',
+    sidebar: '[object Object]',
     motion: true
   };
 </script>
@@ -298,11 +299,14 @@
 <h3 id="2-_在工程中代码目录下创建一个oc的类，选择oc语言">2. 在工程中代码目录下创建一个oc的类，选择oc语言</h3><p>之后会出一个对话框，选择Create Bridging Header</p>
 <a id="more"></a>
 <p><img src="http://img.blog.csdn.net/20160104165138216" alt=""></p>
+<blockquote>
+<h5 id="如果没有提示这一步，可以自己手动设置">如果没有提示这一步，可以自己手动设置</h5><p><img src="http://img.blog.csdn.net/20160106102111878" alt=""></p>
+</blockquote>
 <h3 id="3-_这时会在工程里看到下图这样一个头文件">3. 这时会在工程里看到下图这样一个头文件</h3><p><img src="http://img.blog.csdn.net/20160104165151903" alt=""></p>
 <h3 id="4-_在这个头文件里添加你的OC文件的-h文件">4. 在这个头文件里添加你的OC文件的.h文件</h3><p>就和OC中的引入差不多，这样做后就可以在任意swift文件中自行调用所包含的oc文件了。<br><img src="http://img.blog.csdn.net/20160104165209436" alt=""></p>
 <h3 id="5-_接下来在工程的target-》build_Setting-&gt;package下个性如下两项">5. 接下来在工程的target-》build Setting-&gt;package下个性如下两项</h3><p><img src="http://img.blog.csdn.net/20160104165215673" alt=""></p>
 <h3 id="6-_然后在OC代码的-m文件中引入_+_“-swift-h”_这样一个头文件">6. 然后在OC代码的.m文件中引入  + “-swift.h” 这样一个头文件</h3><p>如下图所示，这步之后你的.m文件就可以随便调用swift文件了。<br><img src="http://img.blog.csdn.net/20160104165221793" alt=""></p>
-<p>其实如果你设置的Defines Module = YES了，xcode就会默认生成Product Module Name - swift.h这样一个头文件，这个头文件下会有你所有.swift文件的.h信息。 </p>
+<p>其实如果你设置的<code>Defines Module = YES</code>了，xcode就会默认生成<code>&quot;Product Module Name&quot;-swift.h</code>这样一个头文件，这个头文件下会有你所有.swift文件的.h信息。 </p>
 </span>
       
     </div>
@@ -333,6 +337,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/01/12/如何取消必应首页花哨的背景图片/" rel="prev" title="如何取消必应首页花哨的背景图片">
+                如何取消必应首页花哨的背景图片 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -395,21 +403,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-count">26</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">43</span>
+              <span class="site-state-item-count">67</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>

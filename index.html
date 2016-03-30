@@ -66,7 +66,7 @@
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: 'post',
+    sidebar: '[object Object]',
     motion: true
   };
 </script>
@@ -210,6 +210,529 @@
 
     
     
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/04/mutableAttributeString/" itemprop="url">
+                  mutableAttributeString
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-03-04T10:23:15+08:00" content="2016-03-04">
+              2016-03-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/04/mutableAttributeString/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/04/mutableAttributeString/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> <span class="built_in">NSString</span> *text = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%@ 年化收益"</span>,model<span class="variable">.rate</span>];</span><br><span class="line">    <span class="built_in">NSMutableAttributedString</span> *str = [[<span class="built_in">NSMutableAttributedString</span> alloc] initWithString:text];</span><br><span class="line">    <span class="built_in">NSRange</span> ran = [text rangeOfString:model<span class="variable">.rate</span>];</span><br><span class="line"></span><br><span class="line">    <span class="built_in">NSDictionary</span> *dict = @&#123;<span class="built_in">NSForegroundColorAttributeName</span>:[<span class="built_in">UIColor</span> orangeColor],<span class="built_in">NSFontAttributeName</span>:[<span class="built_in">UIFont</span> systemFontOfSize:<span class="number">20</span>]&#125;;</span><br><span class="line">    [str addAttributes:dict range:ran];</span><br><span class="line">    _shouYiLvLable<span class="variable">.attributedText</span> = str;</span><br><span class="line"></span><br><span class="line">效果:</span><br><span class="line">   <span class="number">10</span>%(黄色,<span class="number">20</span>号大字体) 年化收益(黑色,<span class="number">12</span>号小字体)</span><br></pre></td></tr></table></figure>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/01/20/UI分析利器 - Reveal/" itemprop="url">
+                  UI分析利器 - Reveal
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-01-20T12:21:17+08:00" content="2016-01-20">
+              2016-01-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/必先利其器/" itemprop="url" rel="index">
+                    <span itemprop="name">必先利其器</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/20/UI分析利器 - Reveal/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/20/UI分析利器 - Reveal/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>在iOS开发中，UI是十分重要的一环，它直观的展示给用户，在日益强调用户体验的今天，UI的优劣，可以立竿见影的影响用户对其体验的判断，平常不管用真机还是模拟器，虽然没有方便但分析力度微乎其微，而Reveal这个工具，适时的弥补了这一不足，是我们学习UI或者日常工作使用UI的辅助神器。</p>
+<h3 id="一-_基础_-_Reveal查看自己的app">一. 基础 - Reveal查看自己的app</h3><ol>
+<li><p>打开Reveal（<a href="http://revealapp.com">http://revealapp.com</a>下载）</p>
+</li>
+<li><p>Reveal —&gt; Help —&gt; Show Reveal Library in Finder</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/01/20/UI分析利器 - Reveal/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/01/18/Swift-Refactor，可视化编程利器/" itemprop="url">
+                  Swift_Refactor，可视化编程利器
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-01-18T17:53:20+08:00" content="2016-01-18">
+              2016-01-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Swift/" itemprop="url" rel="index">
+                    <span itemprop="name">Swift</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/18/Swift-Refactor，可视化编程利器/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/18/Swift-Refactor，可视化编程利器/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>Refactor是iOS9推出的新特性，如果还不会用实在是太暴殄天物了<em>（虽然我也是今天才开始用的）</em></p>
+<p>尽管平时开发我更倾向于纯代码编程，很享受一连串代码行云流水的敲打过程，但不得不说可视化编程在有些时候会更加方便且快速。而之所以搁浅可视化编程是因为在团队开发时，会遇到一些不太友好的操作，当每个成员使用了一个Storyboard，这样项目就存在了很多个Storyboard，最后我们需要通过代码，将多个Storyboard整合在一起的，实在是非常的麻烦。而有了这个<code>Storyboard Refactor</code>，这将变得超级简单。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/01/18/Swift-Refactor，可视化编程利器/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/01/13/React-Native学习里程01-环境搭建/" itemprop="url">
+                  React Native学习里程01--环境搭建
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-01-13T15:41:34+08:00" content="2016-01-13">
+              2016-01-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/React-Native-js/" itemprop="url" rel="index">
+                    <span itemprop="name">React Native(js)</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/13/React-Native学习里程01-环境搭建/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/13/React-Native学习里程01-环境搭建/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h4 id="1-安装node-js">1.安装node.js</h4><ul>
+<li>nodejs版本需要在4.0以上,官网下载安装即可<a href="http://nodejs.cn">http://nodejs.cn</a></li>
+</ul>
+<h4 id="2-安装Homebrew">2.安装Homebrew</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby <span class="operator">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/01/13/React-Native学习里程01-环境搭建/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/01/12/如何取消必应首页花哨的背景图片/" itemprop="url">
+                  如何取消必应首页花哨的背景图片
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-01-12T10:23:15+08:00" content="2016-01-12">
+              2016-01-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Others/" itemprop="url" rel="index">
+                    <span itemprop="name">Others</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/12/如何取消必应首页花哨的背景图片/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/12/如何取消必应首页花哨的背景图片/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>近日某度的贴吧事件被炒得如火如荼，虽然早已习惯了它的产品，但本着良心（以下省略千字..），因此，找到了这款不错的搜索引擎，Bing必应<a href="cn.bing.com">cn.bing.com</a></p>
+<p>它是微软旗下的一款搜索引擎。搜索工具大家都不陌生，而必应与其他搜索感官上的最大不同恐怕就是首页的富含知识的背景图了。旖旎的风光，动人的瞬间，以及图片背后的故事，都可以为搜索用户提供丰富而快乐的体验。它让每天数以亿计用户频繁访问的搜索引擎首页，不一定仅仅是白板加Logo。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/01/12/如何取消必应首页花哨的背景图片/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
 
     
       
@@ -441,8 +964,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/12/28/Sublime-Text-3/" itemprop="url">
-                  Sublime Text 3
+                <a class="post-title-link" href="/2015/12/28/Sublime Text 3 - 全栈er的编辑器/" itemprop="url">
+                  Sublime Text 3 - 全栈er的编辑器
                 </a>
               
             
@@ -462,8 +985,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Others/" itemprop="url" rel="index">
-                    <span itemprop="name">Others</span>
+                  <a href="/categories/必先利其器/" itemprop="url" rel="index">
+                    <span itemprop="name">必先利其器</span>
                   </a>
                 </span>
 
@@ -478,8 +1001,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/12/28/Sublime-Text-3/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/28/Sublime-Text-3/" itemprop="commentsCount"></span>
+                <a href="/2015/12/28/Sublime Text 3 - 全栈er的编辑器/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/28/Sublime Text 3 - 全栈er的编辑器/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -504,7 +1027,7 @@
 <li>按Ctrl+`调出console（注：安装有QQ输入法的这个快捷键会有冲突的，输入法属性设置-输入法管理-取消热键切换至QQ拼音）</li>
 <li>粘贴以下代码到底部命令行并回车：
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/28/Sublime-Text-3/#more" rel="contents">
+            <a class="btn" href="/2015/12/28/Sublime Text 3 - 全栈er的编辑器/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -741,533 +1264,12 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/11/27/如何注册一个美国的Apple-ID（最新）/" itemprop="url">
-                  如何注册一个美国的Apple ID（最新）
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-11-27T15:41:57+08:00" content="2015-11-27">
-              2015-11-27
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/11/27/如何注册一个美国的Apple-ID（最新）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/27/如何注册一个美国的Apple-ID（最新）/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="Before">Before</h2><p>一个美国的Apple ID并不是为了装逼或者好玩，而是真的有许多方便之处。最常见的便是下载一些境内未发布的App或者游戏了。之前有一种比较轻便的方法是用自己的Apple ID，然后<strong>直接点击修改“国家/地区”也可以达到相同效果</strong>，我也曾这样成功过，但今天又去捣鼓一番，<strong>屡屡卡在了填写“付款方式”这一步</strong>，问题是这个“付款方式”怎么填怎么错，除非你有国外的信用卡（国内的Visa也不行），所以成功的关键就是如何<strong>跳过填写“付款方式”</strong>这一步骤，话不多说，下面将会详细的说说怎样成功的申请一个ID。</p>
-<h2 id="进入正题">进入正题</h2><p>按图操作即可（截图好辛苦= =）</p>
-<h3 id="1-_进入手机App_Store,点击_查看_Apple_ID">1. 进入手机App Store,点击 查看 Apple ID</h3>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/27/如何注册一个美国的Apple-ID（最新）/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/11/19/网络编程之TCP以及TLV报文编解码/" itemprop="url">
-                  网络编程之TCP以及TLV报文编解码
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-11-19T15:26:47+08:00" content="2015-11-19">
-              2015-11-19
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/11/19/网络编程之TCP以及TLV报文编解码/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/19/网络编程之TCP以及TLV报文编解码/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/11/18/iOS9与XCode7中不能使用http连接的解决办法/" itemprop="url">
-                  iOS9与XCode7中不能使用http连接的解决办法
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-11-18T10:58:00+08:00" content="2015-11-18">
-              2015-11-18
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/11/18/iOS9与XCode7中不能使用http连接的解决办法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/18/iOS9与XCode7中不能使用http连接的解决办法/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>在Xcode7.0及以上版本中编译iOS APP时，默认会使用iOS9的一项新特性，使得所有http连接被禁用，项目里使用的API没有https支持，就悲剧了。差了官方文档，有这么一段话<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/18/iOS9与XCode7中不能使用http连接的解决办法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/11/13/iOS：一种直接修改frame的某个属性的方法/" itemprop="url">
-                  iOS：一种直接修改frame的某个属性的方法
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-11-13T17:22:19+08:00" content="2015-11-13">
-              2015-11-13
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/11/13/iOS：一种直接修改frame的某个属性的方法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/13/iOS：一种直接修改frame的某个属性的方法/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>在iOS中，view的frame属性使用地十分频繁，特别是调整UI。而正常情况下我们无法对frame的某个属性(如x,y,width,height等)进行单独修改，比如：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">someView<span class="class">.frame</span><span class="class">.x</span> = <span class="number">100</span>；	<span class="comment">// This is a wrong code;</span></span><br></pre></td></tr></table></figure>
-<p>这种方式是不允许的，但实际上我们更经常遇到的是frame的大部分元素值保持不变，只改变其中的一部分。相信这个烦恼困扰了不少人，于是我们不得不用以下两种方法去达到目的：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">法<span class="number">1</span>：</span><br><span class="line">CGRect frame = someView.frame;</span><br><span class="line">frame.x =<span class="number">100</span>;</span><br><span class="line">frame.width = <span class="number">200</span>;</span><br><span class="line">someView.frame = frame;</span><br><span class="line"> </span><br><span class="line">法<span class="number">2</span>：</span><br><span class="line">someView.frame = CGRectMake(<span class="number">100</span>, XXX, <span class="number">200</span>, XXX);</span><br></pre></td></tr></table></figure>
-<p>法2看起来也很精简，但实际上也很麻烦，因为实际应用场景中x, y, width, height四个值都是依赖别的变量，导致法2的语句非常长。简而言之，以上方法都不够“优雅”。那怎样才算优雅呢？我觉得如果我们能如下这样直接修改某个值就完美了：<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/13/iOS：一种直接修改frame的某个属性的方法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/11/13/3DTouch-ShortcutItem/" itemprop="url">
-                  3DTouch_ShortcutItem
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-11-13T10:23:15+08:00" content="2015-11-13">
-              2015-11-13
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/11/13/3DTouch-ShortcutItem/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/13/3DTouch-ShortcutItem/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="3D_Touch，新一代_Multi‑Touch。">3D Touch，新一代 Multi‑Touch。</h2><p>iPhone 6s 推出了一种可以让你与手机进行互动的全新方式。这一次，iPhone 能够感应你按压屏幕的力度。除了轻点、轻扫、双指开合这些熟悉的 Multi‑Touch 手势之外，3D Touch 还带来 Peek 和 Pop，为 iPhone 的使用体验开拓出全新的维度。而且，当你使用 3D Touch 时，iPhone 将回以轻微的触感，让你不仅能够看到按下屏幕的操作效果，还能感觉得到。</p>
-<p><img src="http://ww3.sinaimg.cn/large/9c2363adgw1exgwgxs3xrj208j0gyt9t.jpg" alt="pic1"><br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/13/3DTouch-ShortcutItem/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1308,21 +1310,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-count">26</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">43</span>
+              <span class="site-state-item-count">67</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
