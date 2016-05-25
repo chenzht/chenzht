@@ -321,6 +321,641 @@
 
 
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2014/12/17/如何给UITextView增加一个Placeholder/" itemprop="url">
+                  如何给UITextView增加一个Placeholder
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2014-12-17T22:15:12+08:00" content="2014-12-17">
+              2014-12-17
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/12/17/如何给UITextView增加一个Placeholder/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/12/17/如何给UITextView增加一个Placeholder/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>UITextField想必大家都很熟悉，其中有个叫placeholder的属性。那么当我们不得不用到UITextView时，如何给它也添加一个placeholder呢？实现效果如下图。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2014/12/17/如何给UITextView增加一个Placeholder/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2014/12/15/一些UINavgationBar的实用技巧/" itemprop="url">
+                  一些UINavgationBar的实用技巧
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2014-12-15T22:36:53+08:00" content="2014-12-15">
+              2014-12-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/12/15/一些UINavgationBar的实用技巧/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/12/15/一些UINavgationBar的实用技巧/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>开发中几乎每个页面都会碰大盘Navgation，那么如何定制它的一些属性来满足不同的页面要求呢，下面就会列举一些。</p>
+<h3 id="1-_Nav背景/Title颜色">1. Nav背景/Title颜色</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//set NavigationBar 背景颜色&amp;title 颜色（全局）</span></span><br><span class="line">    [<span class="keyword">self</span><span class="variable">.navigationBar</span> setBarTintColor:[<span class="built_in">UIColor</span> colorWithRed:<span class="number">20</span>/<span class="number">255.0</span> green:<span class="number">155</span>/<span class="number">255.0</span> blue:<span class="number">213</span>/<span class="number">255.0</span> alpha:<span class="number">1.0</span>]];</span><br><span class="line">    [<span class="keyword">self</span><span class="variable">.navigationBar</span> setTitleTextAttributes:[<span class="built_in">NSDictionary</span> dictionaryWithObjectsAndKeys:[<span class="built_in">UIColor</span> whiteColor],<span class="built_in">UITextAttributeTextColor</span>,<span class="literal">nil</span>]];</span><br><span class="line">    </span><br><span class="line"><span class="comment">//设置NavigationBar背景颜色（当前）</span></span><br><span class="line">	[[<span class="built_in">UINavigationBar</span> appearance] setBarTintColor:[<span class="built_in">UIColor</span> redColor]];</span><br><span class="line"><span class="comment">//@&#123;&#125;代表Dictionary</span></span><br><span class="line">	[[<span class="built_in">UINavigationBar</span> appearance] setTitleTextAttributes:@&#123;<span class="built_in">NSForegroundColorAttributeName</span>:[<span class="built_in">UIColor</span> whiteColor]&#125;];</span><br></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2014/12/15/一些UINavgationBar的实用技巧/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2014/12/11/如何隐藏TableView多余的Cell/" itemprop="url">
+                  如何隐藏UITableView多余的Cell
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2014-12-11T11:06:54+08:00" content="2014-12-11">
+              2014-12-11
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/12/11/如何隐藏TableView多余的Cell/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/12/11/如何隐藏TableView多余的Cell/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>在我们的日常开发中，UITableView想必是一个十分熟悉的控件，几乎每个页面都要用到它，本文就讲一讲一些关于UITableView的实用小操作。</p>
+<h2 id="1-_如何隐藏UITableView多余的Cell">1. 如何隐藏UITableView多余的Cell</h2><p>所谓多余的cell便是指那些没有赋值的cell。如果没有隐藏分割线，或者tableView与父view颜色不一致，而恰巧有值cell的行数不足以填充整个屏幕，由于cell的复用性，导致空的cell会填充屏幕，如下图所示。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2014/12/11/如何隐藏TableView多余的Cell/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2014/11/15/TableView如何实现只选择一行cell/" itemprop="url">
+                  TableView如何实现只选择一行cell
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2014-11-15T23:02:14+08:00" content="2014-11-15">
+              2014-11-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/11/15/TableView如何实现只选择一行cell/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/11/15/TableView如何实现只选择一行cell/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>相信大家总遇到这样的情况，我们需要写一个tableView，让其实现“选项卡”的功能，即每次只能选择其中一行cell，而且cell前会有一个小对勾，这个用自定义的cell，或者给selectedBackgroundView赋值，也不难实现，但cell有一个叫accessoryType得属性，可以让我们轻松实现以上功能，而且十分轻便。</p>
+<p>换不多说，上代码。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2014/11/15/TableView如何实现只选择一行cell/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2011/11/16/Markdown简明教程/" itemprop="url">
+                  Markdown简明教程
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2011-11-16T13:58:38+08:00" content="2011-11-16">
+              2011-11-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Others/" itemprop="url" rel="index">
+                    <span itemprop="name">Others</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2011/11/16/Markdown简明教程/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2011/11/16/Markdown简明教程/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <ul>
+<li><p>“ # ” 与几级标题息息相关</p>
+</li>
+<li><p>“ * ” 一个是斜体，两个是粗体（包围）</p>
+</li>
+<li><p>“ ` ” 一个是行内代码，两个来嵌套，三个是代码块（包围）</p>
+</li>
+<li><p>“ ~~ “ 前后包围语句，从而实现删除线效果</p>
+</li>
+<li><p>“ — “ 分割线，上面必须是一个空行</p>
+</li>
+<li><p>“ 1. “ 有序标题</p>
+</li>
+<li><p>“ - ” 无序标题</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2011/11/16/Markdown简明教程/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2011/05/16/简单记录博主使用Hexo搭建博客历程(一)/" itemprop="url">
+                  简单记录博主使用Hexo搭建博客历程(一)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2011-05-16T13:58:38+08:00" content="2011-05-16">
+              2011-05-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2011/05/16/简单记录博主使用Hexo搭建博客历程(一)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2011/05/16/简单记录博主使用Hexo搭建博客历程(一)/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>网上的各种教程鱼龙混杂，自己也一路摸爬滚打，无论怎样，总算将博客搭建成现在这个样子也算小成了，那就这里抛砖引玉，尽量去繁就简，也会将自己所遇到过的问题贴出来供大家参考。</p>
+<h2 id="hexo介绍">hexo介绍</h2><p>这么官方的内容我就贴个链接就好，就不增加阅读量，影响搭建效率了。<a href="http://www.oschina.net/p/hexo">Hexo</a><br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2011/05/16/简单记录博主使用Hexo搭建博客历程(一)/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
 
   </section>
 

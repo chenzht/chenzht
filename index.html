@@ -291,27 +291,14 @@
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>近日博客频频登陆不上，遂登入GitCafe看看是啥状况，谁知看到这一惊天“噩耗”，虽然合并本是一件好事，但由于之前访问仓库频繁的不稳定，以及实在懒得再Coding上再花时间部署，于是就将博客仓库转到了比较熟悉的Github上来，不过坑依然很多，下面择取几个讲讲看</p>
+          <p>近日博客频频登陆不上，遂登入GitCafe看看是啥状况，谁知看到这一惊天“噩耗”，虽然合并本是一件好事，但由于之前访问仓库频繁的不稳定，以及实在懒得再Coding上再花时间部署，于是就将博客仓库转到了比较熟悉的Github上来，不过坑依然很多，下面择取几个讲讲看</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/530671-fa5a436f985d1c0e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<h3 id="1-_每次_hexo_d_都要输入github的账号密码">1. 每次 hexo d 都要输入github的账号密码</h3><p>这一操作实在是令人抓狂，不过解决办法也相当简单。<br><img src="http://upload-images.jianshu.io/upload_images/530671-ed530833f10f8f91.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>如果<strong>repository</strong>之前是使用<strong><a href="https://github.com/xxx/xxx.github.io.git" target="_blank" rel="external">https://github.com/xxx/xxx.github.io.git</a></strong>，改为<strong>git@github.com:xxx/xxx.github.io.git</strong>即可。</p>
-<blockquote>
-<p>本文所有“xxx”均指github用户名</p>
-</blockquote>
-<h3 id="2-_Github自定义域名">2. Github自定义域名</h3><p>Github的设置里面，并没有直接可以设置自定义域名的选项，这就导致，我通过 xxx.github.io能访问到了博客，但是通过www.kohmax.com却访问不了，一直显示Github Pages Error..这需要我们创建一个<strong>CNAME</strong>文件，记住要全大写，且没有后缀名，用文本编辑器打开，填入自己的自定义域名，不要加“<a href="https://”的前缀，如下图" target="_blank" rel="external">https://”的前缀，如下图</a></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/530671-4250b97f19f9d5fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>那么这个文件上传到哪里呢？网上的好多攻略没有交代太清楚，导致我饶了很久，后来看了下Github的Help，确定把这个文件上传到博客仓库的根目录下，即“xxx.github.io”这个repositorie，放好之后刷新，点击改仓库的Setting。<br><img src="http://upload-images.jianshu.io/upload_images/530671-2797faf18ec59f2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/530671-bd40639da60cf478.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>出现上图图所示的情况时，则代表已经成功，然后通过域名访问博客即可。</p>
-<h3 id="3-_域名的购买与管理">3. 域名的购买与管理</h3><p>博主域名是在<a href="https://sg.godaddy.com" target="_blank" rel="external">goDaddy</a>上买的，默认英文，可以选择地区到新加坡切换到中文页面。</p>
-<p>域名管理是在<a href="https://www.dnspod.cn" target="_blank" rel="external">DNSPod</a>，当然在DNSPod也可以购买域名，有时反而更便宜，可以自行比较。<br><img src="http://upload-images.jianshu.io/upload_images/530671-58d101fc8b946f20.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>在DNSPod进行上述设置，其中马赛克的部分是通过控制台输入“Ping xxx.github.io”得来的IP地址，分别填入即可，同时，在goDaddy的域名管理中进行下面一系列操作。目的是将DNSPod里的默认记录值“f1g1ns1.dnspod.net”，“f1g1ns2.dnspod.net”写入域名管理中。<br><img src="http://upload-images.jianshu.io/upload_images/530671-bfd3a761ecba68dd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<h4 id="然后选择需要管理的域名">然后选择需要管理的域名</h4><p><img src="http://upload-images.jianshu.io/upload_images/530671-99a35bcdc13e8be7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/530671-a6afefbbdc566e7b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>暂时只有这么多了，后续有问题继续补充。</p>
-<p>That’s all, thank you.</p>
-
-            
-          </span>
+<h3 id="1-_每次_hexo_d_都要输入github的账号密码">1. 每次 hexo d 都要输入github的账号密码</h3><p>这一操作实在是令人抓狂，不过解决办法也相当简单。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/25/将Hexo博客从GitCafe转移到Github时所遇到的问题详解/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
