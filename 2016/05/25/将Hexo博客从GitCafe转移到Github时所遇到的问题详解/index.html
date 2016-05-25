@@ -37,7 +37,7 @@
 <link href="/css/main.css?v=0.4.5.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Objective-C,Swift,Xcode,混编," />
+  <meta name="keywords" content="GitCafe,Github,Hexo,coding," />
 
 
 
@@ -53,28 +53,30 @@
 
 
 
-<meta name="description" content="本文会介绍一下OC与Swift的混编教程，按步骤来，简单易懂
-1. 创建一个swift或者oc的工程我这里是创建的Swift语言的工程
-2. 在工程中代码目录下创建一个oc的类，选择oc语言之后会出一个对话框，选择Create Bridging Header">
+<meta name="description" content="近日博客频频登陆不上，遂登入GitCafe看看是啥状况，谁知看到这一惊天“噩耗”，虽然合并本是一件好事，但由于之前访问仓库频繁的不稳定，以及实在懒得再Coding上再花时间部署，于是就将博客仓库转到了比较熟悉的Github上来，不过坑依然很多，下面择取几个讲讲看
+
+1. Github自定义域名Github的设置里面，并没有直接可以设置自定义域名的选项，这就导致，我通过 xxx.github.io能">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OC与Swift混编教程">
-<meta property="og:url" content="http://yoursite.com/2016/01/04/OC与Swift混编教程/index.html">
+<meta property="og:title" content="将Hexo博客从GitCafe转移到Github时所遇到的问题详解">
+<meta property="og:url" content="http://yoursite.com/2016/05/25/将Hexo博客从GitCafe转移到Github时所遇到的问题详解/index.html">
 <meta property="og:site_name" content="科勒的小刀">
-<meta property="og:description" content="本文会介绍一下OC与Swift的混编教程，按步骤来，简单易懂
-1. 创建一个swift或者oc的工程我这里是创建的Swift语言的工程
-2. 在工程中代码目录下创建一个oc的类，选择oc语言之后会出一个对话框，选择Create Bridging Header">
-<meta property="og:image" content="http://img.blog.csdn.net/20160104165138216">
-<meta property="og:image" content="http://img.blog.csdn.net/20160106102111878">
-<meta property="og:image" content="http://img.blog.csdn.net/20160104165151903">
-<meta property="og:image" content="http://img.blog.csdn.net/20160104165209436">
-<meta property="og:image" content="http://img.blog.csdn.net/20160104165215673">
-<meta property="og:image" content="http://img.blog.csdn.net/20160104165221793">
-<meta property="og:updated_time" content="2016-02-01T03:09:48.000Z">
+<meta property="og:description" content="近日博客频频登陆不上，遂登入GitCafe看看是啥状况，谁知看到这一惊天“噩耗”，虽然合并本是一件好事，但由于之前访问仓库频繁的不稳定，以及实在懒得再Coding上再花时间部署，于是就将博客仓库转到了比较熟悉的Github上来，不过坑依然很多，下面择取几个讲讲看
+
+1. Github自定义域名Github的设置里面，并没有直接可以设置自定义域名的选项，这就导致，我通过 xxx.github.io能">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/530671-fa5a436f985d1c0e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/530671-4250b97f19f9d5fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/530671-2797faf18ec59f2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/530671-bd40639da60cf478.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/530671-58d101fc8b946f20.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/530671-bfd3a761ecba68dd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/530671-99a35bcdc13e8be7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/530671-a6afefbbdc566e7b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2016-05-25T07:47:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="OC与Swift混编教程">
-<meta name="twitter:description" content="本文会介绍一下OC与Swift的混编教程，按步骤来，简单易懂
-1. 创建一个swift或者oc的工程我这里是创建的Swift语言的工程
-2. 在工程中代码目录下创建一个oc的类，选择oc语言之后会出一个对话框，选择Create Bridging Header">
+<meta name="twitter:title" content="将Hexo博客从GitCafe转移到Github时所遇到的问题详解">
+<meta name="twitter:description" content="近日博客频频登陆不上，遂登入GitCafe看看是啥状况，谁知看到这一惊天“噩耗”，虽然合并本是一件好事，但由于之前访问仓库频繁的不稳定，以及实在懒得再Coding上再花时间部署，于是就将博客仓库转到了比较熟悉的Github上来，不过坑依然很多，下面择取几个讲讲看
+
+1. Github自定义域名Github的设置里面，并没有直接可以设置自定义域名的选项，这就导致，我通过 xxx.github.io能">
 
 
 
@@ -86,7 +88,7 @@
   };
 </script>
 
-  <title> OC与Swift混编教程 | 科勒的小刀 </title>
+  <title> 将Hexo博客从GitCafe转移到Github时所遇到的问题详解 | 科勒的小刀 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -239,7 +241,7 @@
             
             
               
-                OC与Swift混编教程
+                将Hexo博客从GitCafe转移到Github时所遇到的问题详解
               
             
           </h1>
@@ -248,8 +250,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-01-04T16:43:14+08:00" content="2016-01-04">
-              2016-01-04
+            <time itemprop="dateCreated" datetime="2016-05-25T15:14:46+08:00" content="2016-05-25">
+              2016-05-25
             </time>
           </span>
 
@@ -258,8 +260,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Swift/" itemprop="url" rel="index">
-                    <span itemprop="name">Swift</span>
+                  <a href="/categories/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
                   </a>
                 </span>
 
@@ -274,8 +276,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/04/OC与Swift混编教程/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/04/OC与Swift混编教程/" itemprop="commentsCount"></span>
+                <a href="/2016/05/25/将Hexo博客从GitCafe转移到Github时所遇到的问题详解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/25/将Hexo博客从GitCafe转移到Github时所遇到的问题详解/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -294,19 +296,18 @@
       
 
       
-        <span itemprop="articleBody"><p>本文会介绍一下OC与Swift的混编教程，按步骤来，简单易懂</p>
-<h3 id="1-_创建一个swift或者oc的工程">1. 创建一个swift或者oc的工程</h3><p>我这里是创建的Swift语言的工程</p>
-<h3 id="2-_在工程中代码目录下创建一个oc的类，选择oc语言">2. 在工程中代码目录下创建一个oc的类，选择oc语言</h3><p>之后会出一个对话框，选择Create Bridging Header</p>
-<a id="more"></a>
-<p><img src="http://img.blog.csdn.net/20160104165138216" alt=""></p>
-<blockquote>
-<h5 id="如果没有提示这一步，可以自己手动设置">如果没有提示这一步，可以自己手动设置</h5><p><img src="http://img.blog.csdn.net/20160106102111878" alt=""></p>
-</blockquote>
-<h3 id="3-_这时会在工程里看到下图这样一个头文件">3. 这时会在工程里看到下图这样一个头文件</h3><p><img src="http://img.blog.csdn.net/20160104165151903" alt=""></p>
-<h3 id="4-_在这个头文件里添加你的OC文件的-h文件">4. 在这个头文件里添加你的OC文件的.h文件</h3><p>就和OC中的引入差不多，这样做后就可以在任意swift文件中自行调用所包含的oc文件了。<br><img src="http://img.blog.csdn.net/20160104165209436" alt=""></p>
-<h3 id="5-_接下来在工程的target-》build_Setting-&gt;package下个性如下两项">5. 接下来在工程的target-》build Setting-&gt;package下个性如下两项</h3><p><img src="http://img.blog.csdn.net/20160104165215673" alt=""></p>
-<h3 id="6-_然后在OC代码的-m文件中引入_+_“-swift-h”_这样一个头文件">6. 然后在OC代码的.m文件中引入  + “-swift.h” 这样一个头文件</h3><p>如下图所示，这步之后你的.m文件就可以随便调用swift文件了。<br><img src="http://img.blog.csdn.net/20160104165221793" alt=""></p>
-<p>其实如果你设置的<code>Defines Module = YES</code>了，xcode就会默认生成<code>&quot;Product Module Name&quot;-swift.h</code>这样一个头文件，这个头文件下会有你所有.swift文件的.h信息。 </p>
+        <span itemprop="articleBody"><p>近日博客频频登陆不上，遂登入GitCafe看看是啥状况，谁知看到这一惊天“噩耗”，虽然合并本是一件好事，但由于之前访问仓库频繁的不稳定，以及实在懒得再Coding上再花时间部署，于是就将博客仓库转到了比较熟悉的Github上来，不过坑依然很多，下面择取几个讲讲看</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/530671-fa5a436f985d1c0e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h3 id="1-_Github自定义域名">1. Github自定义域名</h3><p>Github的设置里面，并没有直接可以设置自定义域名的选项，这就导致，我通过 xxx.github.io能访问到了博客，但是通过www.kohmax.com却访问不了，一直显示Github Pages Error..这需要我们创建一个<strong>CNAME</strong>文件，记住要全大写，且没有后缀名，用文本编辑器打开，填入自己的自定义域名，不要加“<a href="https://”的前缀，如下图" target="_blank" rel="external">https://”的前缀，如下图</a></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/530671-4250b97f19f9d5fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>那么这个文件上传到哪里呢？网上的好多攻略没有交代太清楚，导致我饶了很久，后来看了下Github的Help，确定把这个文件上传到博客仓库的根目录下，即“xxx.github.io”这个repositorie，放好之后刷新，点击改仓库的Setting。<br><img src="http://upload-images.jianshu.io/upload_images/530671-2797faf18ec59f2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/530671-bd40639da60cf478.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>出现上图图所示的情况时，则代表已经成功，然后通过域名访问博客即可。</p>
+<h3 id="2-_域名的购买与管理">2. 域名的购买与管理</h3><p>博主域名是在<a href="https://sg.godaddy.com" target="_blank" rel="external">goDaddy</a>上买的，默认英文，可以选择地区到新加坡切换到中文页面。</p>
+<p>域名管理是在<a href="https://www.dnspod.cn" target="_blank" rel="external">DNSPod</a>，当然在DNSPod也可以购买域名，有时反而更便宜，可以自行比较。<br><img src="http://upload-images.jianshu.io/upload_images/530671-58d101fc8b946f20.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>在DNSPod进行上述设置，其中马赛克的部分是通过控制台输入“Ping xxx.github.io”得来的IP地址，分别填入即可，同时，在goDaddy的域名管理中进行下面一系列操作。目的是将DNSPod里的默认记录值“f1g1ns1.dnspod.net”，“f1g1ns2.dnspod.net”写入域名管理中。<br><img src="http://upload-images.jianshu.io/upload_images/530671-bfd3a761ecba68dd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h4 id="然后选择需要管理的域名">然后选择需要管理的域名</h4><p><img src="http://upload-images.jianshu.io/upload_images/530671-99a35bcdc13e8be7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/530671-a6afefbbdc566e7b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>暂时只有这么多了，后续有问题继续补充。</p>
+<p>That’s all, thank you.</p>
 </span>
       
     </div>
@@ -315,13 +316,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Objective-C/" rel="tag">#Objective-C</a>
+            <a href="/tags/GitCafe/" rel="tag">#GitCafe</a>
           
-            <a href="/tags/Swift/" rel="tag">#Swift</a>
+            <a href="/tags/Github/" rel="tag">#Github</a>
           
-            <a href="/tags/Xcode/" rel="tag">#Xcode</a>
+            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
           
-            <a href="/tags/混编/" rel="tag">#混编</a>
+            <a href="/tags/coding/" rel="tag">#coding</a>
           
         </div>
       
@@ -330,17 +331,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/04/UIButton中拖动与点击事件重合的处理方法/" rel="next" title="UIButton中拖动与点击事件重合的处理方法">
-                <i class="fa fa-chevron-left"></i> UIButton中拖动与点击事件重合的处理方法
+              <a href="/2016/03/04/mutableAttributeString/" rel="next" title="mutableAttributeString">
+                <i class="fa fa-chevron-left"></i> mutableAttributeString
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/01/12/如何取消必应首页花哨的背景图片/" rel="prev" title="如何取消必应首页花哨的背景图片">
-                如何取消必应首页花哨的背景图片 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -367,8 +364,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/01/04/OC与Swift混编教程/"
-           data-title="OC与Swift混编教程" data-url="http://yoursite.com/2016/01/04/OC与Swift混编教程/">
+      <div class="ds-thread" data-thread-key="2016/05/25/将Hexo博客从GitCafe转移到Github时所遇到的问题详解/"
+           data-title="将Hexo博客从GitCafe转移到Github时所遇到的问题详解" data-url="http://yoursite.com/2016/05/25/将Hexo博客从GitCafe转移到Github时所遇到的问题详解/">
       </div>
     
   </div>
