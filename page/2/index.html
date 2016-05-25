@@ -210,11 +210,6 @@
 
     
     
-      
-      
-
-      
-    
 
     
       
@@ -301,6 +296,335 @@
 <h3 id="1-_进入手机App_Store,点击_查看_Apple_ID">1. 进入手机App Store,点击 查看 Apple ID</h3>
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/11/27/如何注册一个美国的Apple-ID（最新）/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/11/27/Swift_Guard，开启保镖模式副本/" itemprop="url">
+                  Swift_Closure，闭包
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-11-27T09:23:33+08:00" content="2015-11-27">
+              2015-11-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Swift/" itemprop="url" rel="index">
+                    <span itemprop="name">Swift</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/27/Swift_Guard，开启保镖模式副本/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/27/Swift_Guard，开启保镖模式副本/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p><strong>闭包</strong>（<em>Closure</em>）与OC中的Block语法并无太大区别，只是名字与写法变了而已，要想使用起来也并不复杂。</p>
+<h3 id="1-_基本语法">1. 基本语法</h3><ul>
+<li>闭包作为变量</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> sumClosure</span>: ((<span class="typename">Int</span>, <span class="typename">Int</span>) -&gt; <span class="typename">Int</span>)! = nil</span><br></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/27/Swift_Guard，开启保镖模式副本/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/11/27/Swift_Guard，开启保镖模式/" itemprop="url">
+                  Swift_Guard，开启保镖模式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-11-27T01:11:52+08:00" content="2015-11-27">
+              2015-11-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Swift/" itemprop="url" rel="index">
+                    <span itemprop="name">Swift</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/27/Swift_Guard，开启保镖模式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/27/Swift_Guard，开启保镖模式/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h3 id="1-_guard简介">1. guard简介</h3><p><code>guard</code>特性是在Swift 2.0后推出的，所以请使用Xcode 7.X版本来编写代码</p>
+<p>值得提及的是，<code>guard</code>和<code>if..else..</code>有很大程度的相似性，下面我将对它们进行一些比较</p>
+<ol>
+<li>guard语句和if..else..语句有类似的地方，都是做判断处理</li>
+<li>与if语句相同的是，guard也是基于一个表达式的布尔值去判断一段代码是否该被执行</li>
+<li>与if语句不同的是，guard只有在条件不满足的时候才会执行这段代码</li>
+<li>guard语句有且仅有else语句，当条件不成立时，执行else部分；当条件成立时，执行guard后面的代码</li>
+<li>guard中声明的变量或者常量，在guard下面可以使用，但不能在else分支中使用</li>
+</ol>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/27/Swift_Guard，开启保镖模式/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/11/27/Swift，截取字符串/" itemprop="url">
+                  Swift，截取字符串
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-11-27T01:11:52+08:00" content="2015-11-27">
+              2015-11-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Swift/" itemprop="url" rel="index">
+                    <span itemprop="name">Swift</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/27/Swift，截取字符串/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/27/Swift，截取字符串/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>下面介绍2种swift的字符串截取方法,实际上用到了</p>
+<ul>
+<li>substringFromIndex</li>
+<li>substringToIndex</li>
+<li>substringWithRange</li>
+</ul>
+<p>这三个方法，相信大家在OC中肯定对此不会陌生，因此我们可以</p>
+<h5 id="1-_将String转化为NSString再截取">1. 将String转化为NSString再截取</h5><p>具体做法如下</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="keyword">str</span> = (<span class="keyword">self</span> <span class="keyword">as</span> NSString).substringFromIndex(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/27/Swift，截取字符串/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -506,6 +830,215 @@
           <p>在Xcode7.0及以上版本中编译iOS APP时，默认会使用iOS9的一项新特性，使得所有http连接被禁用，项目里使用的API没有https支持，就悲剧了。差了官方文档，有这么一段话<br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/11/18/iOS9与XCode7中不能使用http连接的解决办法/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/11/17/Swift_Singleton，深入浅出单例设计模式/" itemprop="url">
+                  Swift_Singleton，深入浅出单例设计模式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-11-17T00:21:13+08:00" content="2015-11-17">
+              2015-11-17
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Swift/" itemprop="url" rel="index">
+                    <span itemprop="name">Swift</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/17/Swift_Singleton，深入浅出单例设计模式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/17/Swift_Singleton，深入浅出单例设计模式/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h3 id="单例设计模式">单例设计模式</h3><p>开发项目的时候，有时候需要很多工具类，这时候单例的使用就尤为重要。在OC中，单例的写法想必大家很清晰了，在这里给大家介绍下Swift中几种单例的写法：</p>
+<h4 id="1-_最直接的写法">1. 最直接的写法</h4><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">static var instance: DBHelper? = nil<span class="keyword"></span><br><span class="line">static</span> func<span class="function"> sharedInstance(</span><span class="function">)</span> -&gt; DBHelper &#123;</span><br><span class="line"></span><br><span class="line">   <span class="instruction"> if </span>instance == nil &#123;</span><br><span class="line">       <span class="instruction"> instance </span>=<span class="function"> DBHelper(</span><span class="function">)</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">   <span class="instruction"> return </span>instance!</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/17/Swift_Singleton，深入浅出单例设计模式/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/11/14/Swift_lazy，延迟存储属性/" itemprop="url">
+                  Swift_lazy，延迟存储属性
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-11-14T10:21:13+08:00" content="2015-11-14">
+              2015-11-14
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Swift/" itemprop="url" rel="index">
+                    <span itemprop="name">Swift</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/14/Swift_lazy，延迟存储属性/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/14/Swift_lazy，延迟存储属性/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>所谓的延迟存储属性，就是我们OC中所谓的懒加载对象，也就是把创建对象的步骤放在重写的getter方法中进行。这样，只有当我们使用这个属性的getter方法的时候，才会创建对象，可以为我们节省不必要得内存开销。</p>
+<p>在OC中，UIViewController的view属性是懒加载对象，还有，UITableViewCell的textLabel、detailTextLabel、imageView属性也都是懒加载对象，只有当我们使用的时候才会被创建。除了这些，我们自己也可以写很多。</p>
+<p>那么，在Swift中，如何实现所谓的懒加载对象呢？<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/14/Swift_lazy，延迟存储属性/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
