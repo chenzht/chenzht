@@ -210,11 +210,113 @@
 
     
     
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/11/13/iOS：一种直接修改frame的某个属性的方法/" itemprop="url">
+                  iOS：一种直接修改frame的某个属性的方法
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-11-13T17:22:19+08:00" content="2015-11-13">
+              2015-11-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/13/iOS：一种直接修改frame的某个属性的方法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/13/iOS：一种直接修改frame的某个属性的方法/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
       
       
 
       
-    
+        
+          <p>在iOS中，view的frame属性使用地十分频繁，特别是调整UI。而正常情况下我们无法对frame的某个属性(如x,y,width,height等)进行单独修改，比如：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">someView<span class="class">.frame</span><span class="class">.x</span> = <span class="number">100</span>；	<span class="comment">// This is a wrong code;</span></span><br></pre></td></tr></table></figure>
+<p>这种方式是不允许的，但实际上我们更经常遇到的是frame的大部分元素值保持不变，只改变其中的一部分。相信这个烦恼困扰了不少人，于是我们不得不用以下两种方法去达到目的：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">法<span class="number">1</span>：</span><br><span class="line">CGRect frame = someView.frame;</span><br><span class="line">frame.x =<span class="number">100</span>;</span><br><span class="line">frame.width = <span class="number">200</span>;</span><br><span class="line">someView.frame = frame;</span><br><span class="line"> </span><br><span class="line">法<span class="number">2</span>：</span><br><span class="line">someView.frame = CGRectMake(<span class="number">100</span>, XXX, <span class="number">200</span>, XXX);</span><br></pre></td></tr></table></figure>
+<p>法2看起来也很精简，但实际上也很麻烦，因为实际应用场景中x, y, width, height四个值都是依赖别的变量，导致法2的语句非常长。简而言之，以上方法都不够“优雅”。那怎样才算优雅呢？我觉得如果我们能如下这样直接修改某个值就完美了：<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/13/iOS：一种直接修改frame的某个属性的方法/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
 
     
       
@@ -1002,21 +1104,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">28</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">69</span>
+              <span class="site-state-item-count">70</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
