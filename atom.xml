@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.kohmax.com/"/>
-  <updated>2016-05-28T09:42:40.000Z</updated>
+  <updated>2016-05-30T08:33:29.000Z</updated>
   <id>http://www.kohmax.com/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://www.kohmax.com/2016/05/30/test/"/>
+    <id>http://www.kohmax.com/2016/05/30/test/</id>
+    <published>2016-05-30T08:33:28.000Z</published>
+    <updated>2016-05-30T08:33:29.000Z</updated>
+    
+    <content type="html">&lt;p&gt;That’s all, thank you.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;That’s all, thank you.&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://www.kohmax.com/categories/iOS/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>JZShare - ShareSDK如何自定义分享UI</title>
@@ -927,53 +949,6 @@
       <category term="http" scheme="http://www.kohmax.com/tags/http/"/>
     
       <category term="info.plist" scheme="http://www.kohmax.com/tags/info-plist/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Swift_Singleton，深入浅出单例设计模式</title>
-    <link href="http://www.kohmax.com/2015/11/17/Swift_Singleton%EF%BC%8C%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E5%8D%95%E4%BE%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.kohmax.com/2015/11/17/Swift_Singleton，深入浅出单例设计模式/</id>
-    <published>2015-11-16T16:21:13.000Z</published>
-    <updated>2016-02-01T03:09:48.000Z</updated>
-    
-    <content type="html">&lt;h3 id=&quot;单例设计模式&quot;&gt;&lt;a href=&quot;#单例设计模式&quot; class=&quot;headerlink&quot; title=&quot;单例设计模式&quot;&gt;&lt;/a&gt;单例设计模式&lt;/h3&gt;&lt;p&gt;开发项目的时候，有时候需要很多工具类，这时候单例的使用就尤为重要。在OC中，单例的写法想必大家很清晰了，在这里给大家介绍下Swift中几种单例的写法：&lt;/p&gt;
-&lt;h4 id=&quot;1-最直接的写法&quot;&gt;&lt;a href=&quot;#1-最直接的写法&quot; class=&quot;headerlink&quot; title=&quot;1. 最直接的写法&quot;&gt;&lt;/a&gt;1. 最直接的写法&lt;/h4&gt;&lt;figure class=&quot;highlight smali&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;static var instance: DBHelper? = nil&lt;span class=&quot;keyword&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;static&lt;/span&gt; func sharedInstance() -&amp;gt; DBHelper &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;built_in&quot;&gt; if &lt;/span&gt;instance == nil &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &lt;span class=&quot;built_in&quot;&gt; instance &lt;/span&gt;= DBHelper()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;built_in&quot;&gt; return &lt;/span&gt;instance!&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;blockquote&gt;
-&lt;p&gt;这种写法的缺陷在于，没有处理线程安全的问题&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&quot;2-使用GCD&quot;&gt;&lt;a href=&quot;#2-使用GCD&quot; class=&quot;headerlink&quot; title=&quot;2. 使用GCD&quot;&gt;&lt;/a&gt;2. 使用GCD&lt;/h4&gt;&lt;figure class=&quot;highlight smali&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;static var sharedInstance: DBHelper &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    struct Static &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &lt;span class=&quot;keyword&quot;&gt; static&lt;/span&gt; var onceToken&lt;span class=&quot;keyword&quot;&gt; :&lt;/span&gt; dispatch_once_t = 0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &lt;span class=&quot;keyword&quot;&gt; static&lt;/span&gt; var&lt;span class=&quot;built_in&quot;&gt; instance &lt;/span&gt;: DBHelper? = nil&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    dispatch_once(&amp;amp;Static.onceToken) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        Static.instance = DBHelper()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;built_in&quot;&gt; return &lt;/span&gt;Static.instance!&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;p&gt;使用GCD可以帮助我们处理线程安全的问题，但缺陷在于写法太麻烦&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&quot;3-使用let变量简单的写法&quot;&gt;&lt;a href=&quot;#3-使用let变量简单的写法&quot; class=&quot;headerlink&quot; title=&quot;3. 使用let变量简单的写法&quot;&gt;&lt;/a&gt;3. 使用let变量简单的写法&lt;/h4&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;sharedInstance&lt;/span&gt;: &lt;span class=&quot;title&quot;&gt;DBHelper&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Static&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; instance: &lt;span class=&quot;type&quot;&gt;DBHelper&lt;/span&gt; = &lt;span class=&quot;type&quot;&gt;DBHelper&lt;/span&gt;()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;Static&lt;/span&gt;.instance&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;p&gt;使用常量来实现单例对象，虽然没有问题，但是写法还不够简洁&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&quot;4-最方便的写法&quot;&gt;&lt;a href=&quot;#4-最方便的写法&quot; class=&quot;headerlink&quot; title=&quot;4. 最方便的写法&quot;&gt;&lt;/a&gt;4. 最方便的写法&lt;/h4&gt;&lt;figure class=&quot;highlight smali&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;private&lt;span class=&quot;keyword&quot;&gt; static&lt;/span&gt; let&lt;span class=&quot;built_in&quot;&gt; instance &lt;/span&gt;= DBHelper()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;class var sharedInstance: DBHelper &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;built_in&quot;&gt; return &lt;/span&gt;instance&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;p&gt;本人用的最多的也就是最下面这一种了，十分简单明了，也希望大家能喜欢。&lt;/p&gt;
-&lt;/blockquote&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;单例设计模式&quot;&gt;&lt;a href=&quot;#单例设计模式&quot; class=&quot;headerlink&quot; title=&quot;单例设计模式&quot;&gt;&lt;/a&gt;单例设计模式&lt;/h3&gt;&lt;p&gt;开发项目的时候，有时候需要很多工具类，这时候单例的使用就尤为重要。在OC中，单例的写法想必大家很清晰了，在这里给大家介绍下Swift中几种单例的写法：&lt;/p&gt;
-&lt;h4 id=&quot;1-最直接的写法&quot;&gt;&lt;a href=&quot;#1-最直接的写法&quot; class=&quot;headerlink&quot; title=&quot;1. 最直接的写法&quot;&gt;&lt;/a&gt;1. 最直接的写法&lt;/h4&gt;&lt;figure class=&quot;highlight smali&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;static var instance: DBHelper? = nil&lt;span class=&quot;keyword&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;static&lt;/span&gt; func sharedInstance() -&amp;gt; DBHelper &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;built_in&quot;&gt; if &lt;/span&gt;instance == nil &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &lt;span class=&quot;built_in&quot;&gt; instance &lt;/span&gt;= DBHelper()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;built_in&quot;&gt; return &lt;/span&gt;instance!&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Swift" scheme="http://www.kohmax.com/categories/Swift/"/>
-    
-    
-      <category term="iOS" scheme="http://www.kohmax.com/tags/iOS/"/>
-    
-      <category term="Swift" scheme="http://www.kohmax.com/tags/Swift/"/>
-    
-      <category term="Singleton" scheme="http://www.kohmax.com/tags/Singleton/"/>
-    
-      <category term="单例" scheme="http://www.kohmax.com/tags/%E5%8D%95%E4%BE%8B/"/>
     
   </entry>
   
