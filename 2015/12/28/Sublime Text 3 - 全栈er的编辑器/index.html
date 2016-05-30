@@ -1,6 +1,8 @@
 <!doctype html>
 <html class="theme-next   use-motion ">
 <head>
+
+
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -43,8 +45,6 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Jozo的博客" type="application/atom+xml" />
-
 
 
 
@@ -80,7 +80,7 @@
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: '[object Object]',
+    sidebar: 'post',
     motion: true
   };
 </script>
@@ -174,22 +174,6 @@
           <a href="/about/index.html" rel="section">
             
             关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-rss">
-          <a href="/atom.xml" rel="section">
-            
-            menu.rss
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-sitemap">
-          <a href="/sitemap.xml" rel="section">
-            
-            menu.sitemap
           </a>
         </li>
       
@@ -309,21 +293,21 @@
       
 
       
-        <span itemprop="articleBody"><h2 id="1-_安装Sublime_Text_3">1. 安装Sublime Text 3</h2><p>百度网盘链接: <a href="http://pan.baidu.com/s/1qWOE5L6" target="_blank" rel="external">http://pan.baidu.com/s/1qWOE5L6</a> 密码: vuch</p>
-<h2 id="2-_插件">2. 插件</h2><h3 id="2-1_Package_Control">2.1 Package Control</h3><ul>
+        <span itemprop="articleBody"><h2 id="1-安装Sublime-Text-3"><a href="#1-安装Sublime-Text-3" class="headerlink" title="1. 安装Sublime Text 3"></a>1. 安装Sublime Text 3</h2><p>百度网盘链接: <a href="http://pan.baidu.com/s/1qWOE5L6" target="_blank" rel="external">http://pan.baidu.com/s/1qWOE5L6</a> 密码: vuch</p>
+<h2 id="2-插件"><a href="#2-插件" class="headerlink" title="2. 插件"></a>2. 插件</h2><h3 id="2-1-Package-Control"><a href="#2-1-Package-Control" class="headerlink" title="2.1 Package Control"></a>2.1 Package Control</h3><ul>
 <li>按Ctrl+`调出console（注：安装有QQ输入法的这个快捷键会有冲突的，输入法属性设置-输入法管理-取消热键切换至QQ拼音）</li>
 <li>粘贴以下代码到底部命令行并回车：<a id="more"></a>
 </li>
 </ul>
 <figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request,os; pf = <span class="string">'Package Control.sublime-package'</span>; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.<span class="keyword">join</span>(ipp, pf), <span class="string">'wb'</span>).<span class="keyword">write</span>(urllib.request.urlopen( <span class="string">'http://sublime.wbond.net/'</span> + pf.replace(<span class="string">' '</span>,<span class="string">'%20'</span>)).<span class="keyword">read</span>())</span><br></pre></td></tr></table></figure>
 <p>如果是 Sublime Text 2，代码为</p>
-<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import urllib2,os; pf=<span class="string">'Package Control.sublime-package'</span>; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) <span class="keyword">if</span> <span class="keyword">not</span> os.path.<span class="keyword">exists</span>(ipp) <span class="keyword">else</span> None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler( ))); <span class="keyword">open</span>( os.path.<span class="keyword">join</span>( ipp, pf), <span class="string">'wb'</span> ).<span class="keyword">write</span>( urllib2.urlopen( <span class="string">'http://sublime.wbond.net/'</span> +pf.replace( <span class="string">' '</span>,<span class="string">'%20'</span> )).<span class="keyword">read</span>()); <span class="keyword">print</span>( <span class="string">'Please restart Sublime Text to finish installation'</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="2-2_JSFormat">2.2 JSFormat</h3><h3 id="2-3_AndyJs2">2.3 AndyJs2</h3><p>下载地址<a href="http://pan.baidu.com/s/1ntmO1QD" target="_blank" rel="external">http://pan.baidu.com/s/1ntmO1QD</a></p>
+<figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib2,<span class="built_in">os</span>; pf=<span class="string">'Package Control.sublime-package'</span>; ipp = sublime.installed_packages_path(); <span class="built_in">os</span>.makedirs( ipp ) <span class="keyword">if</span> <span class="keyword">not</span> <span class="built_in">os</span>.path.exists(ipp) <span class="keyword">else</span> None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler( ))); open( <span class="built_in">os</span>.path.join( ipp, pf), <span class="string">'wb'</span> ).write( urllib2.urlopen( <span class="string">'http://sublime.wbond.net/'</span> +pf.replace( <span class="string">' '</span>,<span class="string">'%20'</span> )).read()); <span class="built_in">print</span>( <span class="string">'Please restart Sublime Text to finish installation'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="2-2-JSFormat"><a href="#2-2-JSFormat" class="headerlink" title="2.2 JSFormat"></a>2.2 JSFormat</h3><h3 id="2-3-AndyJs2"><a href="#2-3-AndyJs2" class="headerlink" title="2.3 AndyJs2"></a>2.3 AndyJs2</h3><p>下载地址<a href="http://pan.baidu.com/s/1ntmO1QD" target="_blank" rel="external">http://pan.baidu.com/s/1ntmO1QD</a></p>
 <p>下载后解压缩放在安装目录下Packages文件夹即可</p>
-<h3 id="2-4_ColorPicker">2.4 ColorPicker</h3><p>快捷键 Shift + Cmd + C</p>
-<h3 id="2-5_MarkDown_Editing">2.5 MarkDown Editing</h3><h3 id="2-6_Ctags">2.6 Ctags</h3><p>下载ctags-5.8.tar.gz源码包  <a href="http://download.csdn.net/detail/jiuyueguang/5711867" target="_blank" rel="external">http://download.csdn.net/detail/jiuyueguang/5711867</a></p>
+<h3 id="2-4-ColorPicker"><a href="#2-4-ColorPicker" class="headerlink" title="2.4 ColorPicker"></a>2.4 ColorPicker</h3><p>快捷键 Shift + Cmd + C</p>
+<h3 id="2-5-MarkDown-Editing"><a href="#2-5-MarkDown-Editing" class="headerlink" title="2.5 MarkDown Editing"></a>2.5 MarkDown Editing</h3><h3 id="2-6-Ctags"><a href="#2-6-Ctags" class="headerlink" title="2.6 Ctags"></a>2.6 Ctags</h3><p>下载ctags-5.8.tar.gz源码包  <a href="http://download.csdn.net/detail/jiuyueguang/5711867" target="_blank" rel="external">http://download.csdn.net/detail/jiuyueguang/5711867</a></p>
 <p>配置方法 <a href="http://jingyan.baidu.com/article/48206aeafba820216ad6b3f5.html" target="_blank" rel="external">http://jingyan.baidu.com/article/48206aeafba820216ad6b3f5.html</a></p>
-<h3 id="2-7_Git">2.7 Git</h3><h2 id="3-_JS控制台">3. JS控制台</h2><p>源网址<a href="http://www.tuicool.com/articles/Uf2uauv" target="_blank" rel="external">http://www.tuicool.com/articles/Uf2uauv</a></p>
+<h3 id="2-7-Git"><a href="#2-7-Git" class="headerlink" title="2.7 Git"></a>2.7 Git</h3><h2 id="3-JS控制台"><a href="#3-JS控制台" class="headerlink" title="3. JS控制台"></a>3. JS控制台</h2><p>源网址<a href="http://www.tuicool.com/articles/Uf2uauv" target="_blank" rel="external">http://www.tuicool.com/articles/Uf2uauv</a></p>
 </span>
       
     </div>
@@ -437,13 +421,6 @@
 
         </nav>
 
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
         
 
         <div class="links-of-author motion-element">
@@ -757,33 +734,13 @@ translateInitilization();
 
   
   
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    });
-  </script>
-
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for (i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-    });
-  </script>
-
-  
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/MathJax.js"></script>
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/config/TeX-AMS-MML_HTMLorMML.js"></script>
-  
-
 
   
   
+
+
+
+
 
 </body>
 </html>

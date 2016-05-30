@@ -1,6 +1,8 @@
 <!doctype html>
 <html class="theme-next   use-motion ">
 <head>
+
+
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -37,13 +39,11 @@
 <link href="/css/main.css?v=0.4.5.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Refactor,Storyboard,Swift,iOS,可视化编程,团队开发," />
+  <meta name="keywords" content="iOS,Swift,可视化编程,Storyboard,Refactor,团队开发," />
 
 
 
 
-
-  <link rel="alternate" href="/atom.xml" title="Jozo的博客" type="application/atom+xml" />
 
 
 
@@ -74,13 +74,14 @@
 <meta name="twitter:title" content="Swift_Refactor，可视化编程利器">
 <meta name="twitter:description" content="Refactor是iOS9推出的新特性，如果还不会用实在是太暴殄天物了（虽然我也是今天才开始用的）
 尽管平时开发我更倾向于纯代码编程，很享受一连串代码行云流水的敲打过程，但不得不说可视化编程在有些时候会更加方便且快速。而之所以搁浅可视化编程是因为在团队开发时，会遇到一些不太友好的操作，当每个成员使用了一个Storyboard，这样项目就存在了很多个Storyboard，最后我们需要通过代码，将多个">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20160118180641068">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: '[object Object]',
+    sidebar: 'post',
     motion: true
   };
 </script>
@@ -174,22 +175,6 @@
           <a href="/about/index.html" rel="section">
             
             关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-rss">
-          <a href="/atom.xml" rel="section">
-            
-            menu.rss
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-sitemap">
-          <a href="/sitemap.xml" rel="section">
-            
-            menu.sitemap
           </a>
         </li>
       
@@ -311,12 +296,12 @@
       
         <span itemprop="articleBody"><p>Refactor是iOS9推出的新特性，如果还不会用实在是太暴殄天物了<em>（虽然我也是今天才开始用的）</em></p>
 <p>尽管平时开发我更倾向于纯代码编程，很享受一连串代码行云流水的敲打过程，但不得不说可视化编程在有些时候会更加方便且快速。而之所以搁浅可视化编程是因为在团队开发时，会遇到一些不太友好的操作，当每个成员使用了一个Storyboard，这样项目就存在了很多个Storyboard，最后我们需要通过代码，将多个Storyboard整合在一起的，实在是非常的麻烦。而有了这个<code>Storyboard Refactor</code>，这将变得超级简单。<br><a id="more"></a></p>
-<h4 id="1-_使用Storyboard搭建一个框架">1. 使用Storyboard搭建一个框架</h4><p><img src="http://img.blog.csdn.net/20160118180641068" alt=""><br>仅仅一个简单框架下的Storyboard中就存在了很多的控制器，操作起来也非常的麻烦。并且在团队开发的过程中，同时处理这一个Storyboard会造成svn/git同步混乱等问题</p>
+<h4 id="1-使用Storyboard搭建一个框架"><a href="#1-使用Storyboard搭建一个框架" class="headerlink" title="1. 使用Storyboard搭建一个框架"></a>1. 使用Storyboard搭建一个框架</h4><p><img src="http://img.blog.csdn.net/20160118180641068" alt=""><br>仅仅一个简单框架下的Storyboard中就存在了很多的控制器，操作起来也非常的麻烦。并且在团队开发的过程中，同时处理这一个Storyboard会造成svn/git同步混乱等问题</p>
 <p>比较好的方法是：把每一个模块都抽成一个Storyboard，然后分别在自己里面处理，团队开发的时候，也不至于修改了别人的文件。</p>
 <p>之前我们都是通过代码进行关联，现在则可以使用新的工具Refactor。</p>
-<h4 id="2-_选中需要抽离的控制器">2. 选中需要抽离的控制器</h4><p><img src="http://img.blog.csdn.net/20160118180748319" alt=""></p>
-<h4 id="3-_选择菜单_-&gt;_Editor_-&gt;_Refactor">3. 选择菜单 -&gt; Editor -&gt; Refactor</h4><p><img src="http://img.blog.csdn.net/20160118180646098" alt=""></p>
-<h4 id="4-_输入名称">4. 输入名称</h4><p><img src="http://img.blog.csdn.net/20160118180650689" alt=""></p>
+<h4 id="2-选中需要抽离的控制器"><a href="#2-选中需要抽离的控制器" class="headerlink" title="2. 选中需要抽离的控制器"></a>2. 选中需要抽离的控制器</h4><p><img src="http://img.blog.csdn.net/20160118180748319" alt=""></p>
+<h4 id="3-选择菜单-gt-Editor-gt-Refactor"><a href="#3-选择菜单-gt-Editor-gt-Refactor" class="headerlink" title="3. 选择菜单 -&gt; Editor -&gt; Refactor"></a>3. 选择菜单 -&gt; Editor -&gt; Refactor</h4><p><img src="http://img.blog.csdn.net/20160118180646098" alt=""></p>
+<h4 id="4-输入名称"><a href="#4-输入名称" class="headerlink" title="4. 输入名称"></a>4. 输入名称</h4><p><img src="http://img.blog.csdn.net/20160118180650689" alt=""></p>
 <p>保存之后原来的Main.storyboard会相应的改变如下图。</p>
 <p><img src="http://img.blog.csdn.net/20160118180655308" alt=""></p>
 <p>图中标记圈中的玩意儿就是Storyboard Reference，它代表一个Storyboard，这样就可以从一个Storyboard关联到另一个Storyboard了，然后你可以在一个新的storyboard里找到刚才抽离的控制器，如下图所示</p>
@@ -331,15 +316,15 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Refactor/" rel="tag">#Refactor</a>
-          
-            <a href="/tags/Storyboard/" rel="tag">#Storyboard</a>
+            <a href="/tags/iOS/" rel="tag">#iOS</a>
           
             <a href="/tags/Swift/" rel="tag">#Swift</a>
           
-            <a href="/tags/iOS/" rel="tag">#iOS</a>
-          
             <a href="/tags/可视化编程/" rel="tag">#可视化编程</a>
+          
+            <a href="/tags/Storyboard/" rel="tag">#Storyboard</a>
+          
+            <a href="/tags/Refactor/" rel="tag">#Refactor</a>
           
             <a href="/tags/团队开发/" rel="tag">#团队开发</a>
           
@@ -444,13 +429,6 @@
 
         </nav>
 
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
         
 
         <div class="links-of-author motion-element">
@@ -764,33 +742,13 @@ translateInitilization();
 
   
   
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    });
-  </script>
-
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for (i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-    });
-  </script>
-
-  
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/MathJax.js"></script>
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/config/TeX-AMS-MML_HTMLorMML.js"></script>
-  
-
 
   
   
+
+
+
+
 
 </body>
 </html>

@@ -1,6 +1,8 @@
 <!doctype html>
 <html class="theme-next   use-motion ">
 <head>
+
+
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -37,13 +39,11 @@
 <link href="/css/main.css?v=0.4.5.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="JavaScript,React Native," />
+  <meta name="keywords" content="React Native,JavaScript," />
 
 
 
 
-
-  <link rel="alternate" href="/atom.xml" title="Jozo的博客" type="application/atom+xml" />
 
 
 
@@ -76,13 +76,14 @@ nodejs版本需要在4.0以上,官网下载安装即可http://nodejs.cn
 nodejs版本需要在4.0以上,官网下载安装即可http://nodejs.cn
 
 2.安装Homebrew1ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20160113162319213">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: '[object Object]',
+    sidebar: 'post',
     motion: true
   };
 </script>
@@ -176,22 +177,6 @@ nodejs版本需要在4.0以上,官网下载安装即可http://nodejs.cn
           <a href="/about/index.html" rel="section">
             
             关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-rss">
-          <a href="/atom.xml" rel="section">
-            
-            menu.rss
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-sitemap">
-          <a href="/sitemap.xml" rel="section">
-            
-            menu.sitemap
           </a>
         </li>
       
@@ -311,28 +296,28 @@ nodejs版本需要在4.0以上,官网下载安装即可http://nodejs.cn
       
 
       
-        <span itemprop="articleBody"><h4 id="1-安装node-js">1.安装node.js</h4><ul>
+        <span itemprop="articleBody"><h4 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1.安装node.js"></a>1.安装node.js</h4><ul>
 <li>nodejs版本需要在4.0以上,官网下载安装即可<a href="http://nodejs.cn" target="_blank" rel="external">http://nodejs.cn</a></li>
 </ul>
-<h4 id="2-安装Homebrew">2.安装Homebrew</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby <span class="operator">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-安装Homebrew"><a href="#2-安装Homebrew" class="headerlink" title="2.安装Homebrew"></a>2.安装Homebrew</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby <span class="_">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h4 id="3-安装watchman以及flow">3.安装watchman以及flow</h4><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span>install watchman</span><br><span class="line"><span class="keyword">brew </span>install flow</span><br></pre></td></tr></table></figure>
-<h4 id="4-安装react-native-cli。有两种方式，">4.安装react-native-cli。有两种方式，</h4><ul>
+<h4 id="3-安装watchman以及flow"><a href="#3-安装watchman以及flow" class="headerlink" title="3.安装watchman以及flow"></a>3.安装watchman以及flow</h4><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span><span class="keyword">install </span>watchman</span><br><span class="line"><span class="keyword">brew </span><span class="keyword">install </span>flow</span><br></pre></td></tr></table></figure>
+<h4 id="4-安装react-native-cli。有两种方式，"><a href="#4-安装react-native-cli。有两种方式，" class="headerlink" title="4.安装react-native-cli。有两种方式，"></a>4.安装react-native-cli。有两种方式，</h4><ul>
 <li><p>第一种：直接在命令行输入：<code>npm install -g react-native-cli</code></p>
 </li>
 <li><p>第二种：在<a href="https://github.com/facebook/react-native/" target="_blank" rel="external">https://github.com/facebook/react-native/</a>上将源码下载下来,之后切换到react-native-cli文件夹，然后使用npm install -g进行安装.<br>如果安装失败，在命令前加上sudo，再进行尝试</p>
 </li>
 </ul>
-<h4 id="5-创建项目">5.创建项目</h4><ul>
+<h4 id="5-创建项目"><a href="#5-创建项目" class="headerlink" title="5.创建项目"></a>5.创建项目</h4><ul>
 <li>使用react-native init “Proj Name” 来创建项目</li>
 </ul>
 <p>因为npm的registry是在国外，访问很慢，甚至可能无法创建完成。<br>所以需要设置以下两条来将镜像指向国内的镜像（第二条常被遗漏）</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="keyword">set</span> registry https:<span class="comment">//registry.npm.taobao.org</span></span><br><span class="line">npm config <span class="keyword">set</span> disturl https:<span class="comment">//npm.taobao.org/dist</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="keyword">set</span> registry <span class="comment">https:</span>//<span class="comment">registry.npm.taobao.org</span></span><br><span class="line">npm <span class="comment">config set disturl https:</span>//<span class="comment">npm.taobao.org</span>/dist</span><br></pre></td></tr></table></figure>
 <p>要看镜像地址配置是否成功，可以使用npm config list来进行查看配置是否生效。</p>
 <blockquote>
 <p><em>PS</em>: 即使是指向国内的镜像也会很慢，如果想要查看进度，可以在后面加上 <strong>–verbose</strong> 来查看详细信息。<br>有的时候使用淘宝的镜像创建项目的时候会出现问题，此时可以使用VPN来下载、</p>
 </blockquote>
-<h4 id="6-项目的运行">6.项目的运行</h4><ul>
+<h4 id="6-项目的运行"><a href="#6-项目的运行" class="headerlink" title="6.项目的运行"></a>6.项目的运行</h4><ul>
 <li>iOS，使用Xcode打开项目目录下的iOS目录中的iOS的项目文件（*.xcodeproj）,点击运行即可。</li>
 <li>Android，在项目的根目录使用<code>react-native run-android</code>命令直接运行。</li>
 </ul>
@@ -346,15 +331,15 @@ nodejs版本需要在4.0以上,官网下载安装即可http://nodejs.cn
 <p><em>PS</em>：值得注意的是，iOS项目需要检查AppDelegate.m 与 index.ios.js 两个文件中的以下两行代码<br><img src="http://img.blog.csdn.net/20160113162319213" alt=""><br><img src="http://img.blog.csdn.net/20160113162327158" alt=""></p>
 <p>两个地方必须保持一致</p>
 </blockquote>
-<h4 id="7-项目的调试">7.项目的调试</h4><p>React Native 的项目可以在Chrome上进行调试。<br>可以在Chrome上安装<strong>React Developer Tools</strong>  ，调试工具可以在Chrome的应用商店上下载。</p>
+<h4 id="7-项目的调试"><a href="#7-项目的调试" class="headerlink" title="7.项目的调试"></a>7.项目的调试</h4><p>React Native 的项目可以在Chrome上进行调试。<br>可以在Chrome上安装<strong>React Developer Tools</strong>  ，调试工具可以在Chrome的应用商店上下载。</p>
 <p>如果因为条件限制不能访问Chrome的应用商店，可以在<a href="https://github.com/facebook/react-devtools/releases" target="_blank" rel="external">https://github.com/facebook/react-devtools/releases</a>上下载到工具。</p>
 <p>安装完调试工具之后，可以在运行的设备上摇一摇，然后选择Debug in Chrome即可开始调试。调试的方法和调试网页的方法一样，可以打断点，可以看输出，都很方便。</p>
 <!--PS：这个地方有个小坑。如果开启了Debug in Chrome 的设备在运行的时候，出现了 Runtime is not ready 的错误，此时，是因为你的Chrome没有打开调试的网页。可以选择打开调试的网页（http://localhost:8081/debugger-ui），或者关闭设备的Debug in Chrome 模式即可、如果Chrome无法打开上述的调试网页，请检查你的网络，是否开了VPN或者各种网络代理之类的。而且，localhost是可能会随着服务器的地址变化而发生改变，请注意保持一致。
 ![](http://img.blog.csdn.net/20160113161927806)-->
-<h4 id="8-_遭遇的问题">8. 遭遇的问题</h4><p>运行时会自动弹出终端，而如果终端上显示如下文字，就意味着并未正常运行</p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Error building DependencyGraph:</span><br><span class="line"> Error: Watcher took too <span class="keyword">long</span> <span class="built_in">to</span> <span class="built_in">load</span></span><br><span class="line">Try running `watchman <span class="built_in">version</span>` <span class="built_in">from</span> your terminal</span><br><span class="line"><span class="keyword">https</span>://facebook.github.io/watchman/docs/troubleshooting.html</span><br><span class="line">    <span class="keyword">at</span> [object Object].<span class="title">_on</span>Timeout (index.js:<span class="number">103</span>:<span class="number">16</span>)</span><br><span class="line">    <span class="keyword">at</span> Timer.listOnTimeout (timers.js:<span class="number">92</span>:<span class="number">15</span>)</span><br><span class="line">~</span><br><span class="line">Process terminated. Press &lt;enter&gt; <span class="built_in">to</span> <span class="built_in">close</span> <span class="operator">the</span> window</span><br></pre></td></tr></table></figure>
+<h4 id="8-遭遇的问题"><a href="#8-遭遇的问题" class="headerlink" title="8. 遭遇的问题"></a>8. 遭遇的问题</h4><p>运行时会自动弹出终端，而如果终端上显示如下文字，就意味着并未正常运行</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Error building DependencyGraph:</span><br><span class="line"> Error: Watcher took too <span class="keyword">long</span> <span class="built_in">to</span> <span class="built_in">load</span></span><br><span class="line">Try running `watchman <span class="built_in">version</span>` <span class="built_in">from</span> your terminal</span><br><span class="line"><span class="keyword">https</span>://facebook.github.io/watchman/docs/troubleshooting.html</span><br><span class="line">    <span class="keyword">at</span> [object Object].<span class="title">_on</span>Timeout (index.js:<span class="number">103</span>:<span class="number">16</span>)</span><br><span class="line">    <span class="keyword">at</span> Timer.listOnTimeout (timers.js:<span class="number">92</span>:<span class="number">15</span>)</span><br><span class="line">~</span><br><span class="line">Process terminated. Press &lt;enter&gt; <span class="built_in">to</span> <span class="built_in">close</span> <span class="keyword">the</span> window</span><br></pre></td></tr></table></figure>
 <p>很显然是watchman出了问题，那么在terminal里运行如下指令</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew <span class="operator"><span class="keyword">uninstall</span> watchman</span><br><span class="line">brew <span class="keyword">install</span> <span class="comment">--HEAD watchman</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span>uninstall watchman</span><br><span class="line"><span class="keyword">brew </span><span class="keyword">install </span>--HEAD watchman</span><br></pre></td></tr></table></figure>
 <p>如果仍然不行，再试试将这个文件中的MAX_WAIT_TIME值改得更大一些，文件路径是<code>node_modules\react-native\packager\react-packager\src\DependencyResolver\FileWatcher\index.js</code>或<code>node_modules/react-native/packager/react-packager/src/FileWatcher/index.js</code></p>
 <p>再cmd + R 运行程序，Congratulation！~到此环境就搭建完成啦。</p>
 <blockquote>
@@ -369,9 +354,9 @@ nodejs版本需要在4.0以上,官网下载安装即可http://nodejs.cn
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
-          
             <a href="/tags/React-Native/" rel="tag">#React Native</a>
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
           
         </div>
       
@@ -474,13 +459,6 @@ nodejs版本需要在4.0以上,官网下载安装即可http://nodejs.cn
 
         </nav>
 
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
         
 
         <div class="links-of-author motion-element">
@@ -794,33 +772,13 @@ translateInitilization();
 
   
   
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    });
-  </script>
-
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for (i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-    });
-  </script>
-
-  
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/MathJax.js"></script>
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/config/TeX-AMS-MML_HTMLorMML.js"></script>
-  
-
 
   
   
+
+
+
+
 
 </body>
 </html>

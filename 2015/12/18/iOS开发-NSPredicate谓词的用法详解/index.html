@@ -1,6 +1,8 @@
 <!doctype html>
 <html class="theme-next   use-motion ">
 <head>
+
+
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -37,13 +39,11 @@
 <link href="/css/main.css?v=0.4.5.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="NSArray,NSPredicate,iOS," />
+  <meta name="keywords" content="iOS,NSPredicate,NSArray," />
 
 
 
 
-
-  <link rel="alternate" href="/atom.xml" title="Jozo的博客" type="application/atom+xml" />
 
 
 
@@ -77,7 +77,7 @@
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: '[object Object]',
+    sidebar: 'post',
     motion: true
   };
 </script>
@@ -171,22 +171,6 @@
           <a href="/about/index.html" rel="section">
             
             关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-rss">
-          <a href="/atom.xml" rel="section">
-            
-            menu.rss
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-sitemap">
-          <a href="/sitemap.xml" rel="section">
-            
-            menu.sitemap
           </a>
         </li>
       
@@ -306,14 +290,14 @@
       
 
       
-        <span itemprop="articleBody"><h3 id="1-_引">1. 引</h3><p>在开发中也许会需要用到过滤数组的情况，如<strong>本机通讯录中新增或者删除了联系人后，App端读取通讯录时的处理</strong>，因为我们往往会把通讯录先保存到本地数据库，这样读取时就会更加迅捷，而一旦源数据改变了，怎样快速更新村粗在本地数据库中的数据呢？这就是本文要探讨的内容</p>
+        <span itemprop="articleBody"><h3 id="1-引"><a href="#1-引" class="headerlink" title="1. 引"></a>1. 引</h3><p>在开发中也许会需要用到过滤数组的情况，如<strong>本机通讯录中新增或者删除了联系人后，App端读取通讯录时的处理</strong>，因为我们往往会把通讯录先保存到本地数据库，这样读取时就会更加迅捷，而一旦源数据改变了，怎样快速更新村粗在本地数据库中的数据呢？这就是本文要探讨的内容</p>
 <blockquote>
 <p>举个例子</p>
 </blockquote>
 <a id="more"></a>
 <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSArray</span> *arr1 = @[<span class="string">@"1"</span>, <span class="string">@"2"</span>, <span class="string">@"3"</span>, <span class="string">@"6"</span>];</span><br><span class="line"></span><br><span class="line"><span class="built_in">NSArray</span> *arr2 = @[<span class="string">@"1"</span>, <span class="string">@"2"</span>, <span class="string">@"3"</span>, <span class="string">@"4"</span>, <span class="string">@"5"</span>];</span><br><span class="line"></span><br><span class="line"><span class="built_in">NSPredicate</span> * filterPredicate = [<span class="built_in">NSPredicate</span> predicateWithFormat:<span class="string">@"NOT (SELF IN %@)"</span>,arr1];</span><br><span class="line"></span><br><span class="line"><span class="comment">//过滤数组</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">NSArray</span> * reslutFilteredArray1 = [arr2 filteredArrayUsingPredicate:filterPredicate];</span><br><span class="line"></span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"Reslut Filtered Array = %@"</span>,reslutFilteredArray1);</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">filterPredicate = [<span class="built_in">NSPredicate</span> predicateWithFormat:<span class="string">@"NOT (SELF IN %@)"</span>,arr2];</span><br><span class="line"><span class="built_in">NSArray</span> * reslutFilteredArray2 = [arr1 filteredArrayUsingPredicate:filterPredicate];</span><br><span class="line"></span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"Reslut Filtered Array = %@"</span>,reslutFilteredArray2);</span><br></pre></td></tr></table></figure>
 <p>以上两数组打印的结果分别是<code>{4,5}</code>和<code>{6}</code>,即arr2相较arr1多余的元素，以及arr1相较arr2多余的元素，之后的操作就要看具体需求了。</p>
-<h3 id="2-_文">2. 文</h3><p>当然，上面赘述了那么多，无非是想引出一个关键字<code>NSPredicate</code>，下面我将继续挖掘。</p>
+<h3 id="2-文"><a href="#2-文" class="headerlink" title="2. 文"></a>2. 文</h3><p>当然，上面赘述了那么多，无非是想引出一个关键字<code>NSPredicate</code>，下面我将继续挖掘。</p>
 </span>
       
     </div>
@@ -322,11 +306,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/NSArray/" rel="tag">#NSArray</a>
+            <a href="/tags/iOS/" rel="tag">#iOS</a>
           
             <a href="/tags/NSPredicate/" rel="tag">#NSPredicate</a>
           
-            <a href="/tags/iOS/" rel="tag">#iOS</a>
+            <a href="/tags/NSArray/" rel="tag">#NSArray</a>
           
         </div>
       
@@ -429,13 +413,6 @@
 
         </nav>
 
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
         
 
         <div class="links-of-author motion-element">
@@ -749,33 +726,13 @@ translateInitilization();
 
   
   
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    });
-  </script>
-
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for (i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-    });
-  </script>
-
-  
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/MathJax.js"></script>
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/config/TeX-AMS-MML_HTMLorMML.js"></script>
-  
-
 
   
   
+
+
+
+
 
 </body>
 </html>

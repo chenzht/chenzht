@@ -1,6 +1,8 @@
 <!doctype html>
 <html class="theme-next   use-motion ">
 <head>
+
+
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -37,13 +39,11 @@
 <link href="/css/main.css?v=0.4.5.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Swift,iOS,lazy,延迟存储属性,懒加载," />
+  <meta name="keywords" content="iOS,Swift,懒加载,lazy,延迟存储属性," />
 
 
 
 
-
-  <link rel="alternate" href="/atom.xml" title="Jozo的博客" type="application/atom+xml" />
 
 
 
@@ -74,7 +74,7 @@
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: '[object Object]',
+    sidebar: 'post',
     motion: true
   };
 </script>
@@ -168,22 +168,6 @@
           <a href="/about/index.html" rel="section">
             
             关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-rss">
-          <a href="/atom.xml" rel="section">
-            
-            menu.rss
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-sitemap">
-          <a href="/sitemap.xml" rel="section">
-            
-            menu.sitemap
           </a>
         </li>
       
@@ -310,17 +294,17 @@
 <p>在Swift中，只需要一个lazy关键字即可实现，叫做延迟存储属性!</p>
 </blockquote>
 <p>首先看看OC中如何实现懒加载对象的吧。。。</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">ViewController</span> ()</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 声明可变数组属性</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) <span class="built_in">NSMutableArray</span> *allDataArray;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">ViewController</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 重写getter方法，成为懒加载对象</span></span><br><span class="line">- (<span class="built_in">NSMutableArray</span> *)allDataArray</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (_allDataArray == <span class="literal">nil</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span><span class="variable">.allDataArray</span> = [<span class="built_in">NSMutableArray</span> array];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> _allDataArray;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)viewDidLoad</span><br><span class="line">&#123;</span><br><span class="line">    [<span class="keyword">super</span> viewDidLoad];</span><br><span class="line">    <span class="comment">// 当我们访问allDataArray的getter方法的时候，数组才被创建</span></span><br><span class="line">    [<span class="keyword">self</span><span class="variable">.allDataArray</span> addObject:<span class="string">@"first object"</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">ViewController</span> ()</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 声明可变数组属性</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) <span class="built_in">NSMutableArray</span> *allDataArray;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">ViewController</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 重写getter方法，成为懒加载对象</span></span><br><span class="line">- (<span class="built_in">NSMutableArray</span> *)allDataArray</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (_allDataArray == <span class="literal">nil</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.allDataArray = [<span class="built_in">NSMutableArray</span> array];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> _allDataArray;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)viewDidLoad</span><br><span class="line">&#123;</span><br><span class="line">    [<span class="keyword">super</span> viewDidLoad];</span><br><span class="line">    <span class="comment">// 当我们访问allDataArray的getter方法的时候，数组才被创建</span></span><br><span class="line">    [<span class="keyword">self</span>.allDataArray addObject:<span class="string">@"first object"</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
 <p>在Swift中，普通的存储属性这样声明，当我们创建当前类的对象时候，属性也被创建了</p>
 <figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">DataManager</span>: <span class="title">NSObject</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 声明可变数组属性</span></span><br><span class="line">    <span class="keyword">let</span> allDataArray = NSMutableArray()</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建对象</span></span><br><span class="line"><span class="keyword">let</span> manager = DataManager()</span><br></pre></td></tr></table></figure>
 <p>当manager对象被创建的时候，allDataArray数组就被创建，如果我们长时间不使用allDataArray数组，这块空间就被浪费了，可以改成如下写法：在属性声明前面添加lazy关键字</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DataManager2</span>: <span class="typename">NSObject &#123;</span></span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 声明可变数组属性</span></span><br><span class="line">    lazy <span class="variable"><span class="keyword">var</span> allDataArray</span> = NSMutableArray()</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建对象</span></span><br><span class="line">let manager2 = DataManager2()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用allDataArray属性</span></span><br><span class="line">manager2.allDataArray.addObject(<span class="string">"first obj"</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class DataManager2: NSObject &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 声明可变数组属性</span></span><br><span class="line">    lazy <span class="selector-tag">var</span> allDataArray = NSMutableArray()</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建对象</span></span><br><span class="line">let manager2 = DataManager2()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用allDataArray属性</span></span><br><span class="line">manager2<span class="selector-class">.allDataArray</span><span class="selector-class">.addObject</span>(<span class="string">"first obj"</span>)</span><br></pre></td></tr></table></figure>
 <p>在属性前面添加一个lazy关键字，这个属性就成了延迟存储属性，或者叫做懒加载对象。意思就是：只有当我们使用这个属性的时候，这个对象才被创建。如果我们不使用这个对象，也不会造成我们内存的浪费了。</p>
 <blockquote>
 <p>注意:延迟存储属性必须是变量(var),不可以是常量(let)</p>
 </blockquote>
 <p>还可以有如下写法：</p>
-<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class DataManager3: NSObject &#123;</span><br><span class="line"></span><br><span class="line">    // 声明延迟存储属性，当调用的时候才被创建</span><br><span class="line">    lazy var allDataArray: NSMutableArray = &#123;</span><br><span class="line"></span><br><span class="line">            let<span class="instruction"> array </span>=<span class="function"> NSMutableArray(</span><span class="function">)</span></span><br><span class="line">           <span class="function"> array.addObject(</span><span class="string">"first"</span><span class="function">)</span></span><br><span class="line">           <span class="function"> array.addObject(</span><span class="string">"second"</span><span class="function">)</span></span><br><span class="line">           <span class="instruction"> return </span>array</span><br><span class="line"></span><br><span class="line">       <span class="function"> &#125;(</span><span class="function">)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class DataManager3: NSObject &#123;</span><br><span class="line"></span><br><span class="line">    // 声明延迟存储属性，当调用的时候才被创建</span><br><span class="line">    lazy var allDataArray: NSMutableArray = &#123;</span><br><span class="line"></span><br><span class="line">            let<span class="built_in"> array </span>= NSMutableArray()</span><br><span class="line">            array.addObject(<span class="string">"first"</span>)</span><br><span class="line">            array.addObject(<span class="string">"second"</span>)</span><br><span class="line">           <span class="built_in"> return </span>array</span><br><span class="line"></span><br><span class="line">        &#125;()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>哦了。在项目中，某些地方使用延迟存储属性可以提高我们的代码质量，慢慢习惯使用吧</p>
 </span>
       
@@ -330,15 +314,15 @@
       
         <div class="post-tags">
           
+            <a href="/tags/iOS/" rel="tag">#iOS</a>
+          
             <a href="/tags/Swift/" rel="tag">#Swift</a>
           
-            <a href="/tags/iOS/" rel="tag">#iOS</a>
+            <a href="/tags/懒加载/" rel="tag">#懒加载</a>
           
             <a href="/tags/lazy/" rel="tag">#lazy</a>
           
             <a href="/tags/延迟存储属性/" rel="tag">#延迟存储属性</a>
-          
-            <a href="/tags/懒加载/" rel="tag">#懒加载</a>
           
         </div>
       
@@ -441,13 +425,6 @@
 
         </nav>
 
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
         
 
         <div class="links-of-author motion-element">
@@ -761,33 +738,13 @@ translateInitilization();
 
   
   
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    });
-  </script>
-
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for (i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-    });
-  </script>
-
-  
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/MathJax.js"></script>
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/config/TeX-AMS-MML_HTMLorMML.js"></script>
-  
-
 
   
   
+
+
+
+
 
 </body>
 </html>

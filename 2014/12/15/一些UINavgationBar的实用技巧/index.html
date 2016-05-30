@@ -1,6 +1,8 @@
 <!doctype html>
 <html class="theme-next   use-motion ">
 <head>
+
+
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -37,13 +39,11 @@
 <link href="/css/main.css?v=0.4.5.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="UINavgationBar,iOS," />
+  <meta name="keywords" content="iOS,UINavgationBar," />
 
 
 
 
-
-  <link rel="alternate" href="/atom.xml" title="Jozo的博客" type="application/atom+xml" />
 
 
 
@@ -74,7 +74,7 @@
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: '[object Object]',
+    sidebar: 'post',
     motion: true
   };
 </script>
@@ -168,22 +168,6 @@
           <a href="/about/index.html" rel="section">
             
             关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-rss">
-          <a href="/atom.xml" rel="section">
-            
-            menu.rss
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-sitemap">
-          <a href="/sitemap.xml" rel="section">
-            
-            menu.sitemap
           </a>
         </li>
       
@@ -304,11 +288,11 @@
 
       
         <span itemprop="articleBody"><p>开发中几乎每个页面都会碰大盘Navgation，那么如何定制它的一些属性来满足不同的页面要求呢，下面就会列举一些。</p>
-<h3 id="1-_Nav背景/Title颜色">1. Nav背景/Title颜色</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//set NavigationBar 背景颜色&amp;title 颜色（全局）</span></span><br><span class="line">    [<span class="keyword">self</span><span class="variable">.navigationBar</span> setBarTintColor:[<span class="built_in">UIColor</span> colorWithRed:<span class="number">20</span>/<span class="number">255.0</span> green:<span class="number">155</span>/<span class="number">255.0</span> blue:<span class="number">213</span>/<span class="number">255.0</span> alpha:<span class="number">1.0</span>]];</span><br><span class="line">    [<span class="keyword">self</span><span class="variable">.navigationBar</span> setTitleTextAttributes:[<span class="built_in">NSDictionary</span> dictionaryWithObjectsAndKeys:[<span class="built_in">UIColor</span> whiteColor],<span class="built_in">UITextAttributeTextColor</span>,<span class="literal">nil</span>]];</span><br><span class="line">    </span><br><span class="line"><span class="comment">//设置NavigationBar背景颜色（当前）</span></span><br><span class="line">	[[<span class="built_in">UINavigationBar</span> appearance] setBarTintColor:[<span class="built_in">UIColor</span> redColor]];</span><br><span class="line"><span class="comment">//@&#123;&#125;代表Dictionary</span></span><br><span class="line">	[[<span class="built_in">UINavigationBar</span> appearance] setTitleTextAttributes:@&#123;<span class="built_in">NSForegroundColorAttributeName</span>:[<span class="built_in">UIColor</span> whiteColor]&#125;];</span><br></pre></td></tr></table></figure>
+<h3 id="1-Nav背景-Title颜色"><a href="#1-Nav背景-Title颜色" class="headerlink" title="1. Nav背景/Title颜色"></a>1. Nav背景/Title颜色</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//set NavigationBar 背景颜色&amp;title 颜色（全局）</span></span><br><span class="line">    [<span class="keyword">self</span>.navigationBar setBarTintColor:[<span class="built_in">UIColor</span> colorWithRed:<span class="number">20</span>/<span class="number">255.0</span> green:<span class="number">155</span>/<span class="number">255.0</span> blue:<span class="number">213</span>/<span class="number">255.0</span> alpha:<span class="number">1.0</span>]];</span><br><span class="line">    [<span class="keyword">self</span>.navigationBar setTitleTextAttributes:[<span class="built_in">NSDictionary</span> dictionaryWithObjectsAndKeys:[<span class="built_in">UIColor</span> whiteColor],<span class="built_in">UITextAttributeTextColor</span>,<span class="literal">nil</span>]];</span><br><span class="line">    </span><br><span class="line"><span class="comment">//设置NavigationBar背景颜色（当前）</span></span><br><span class="line">	[[<span class="built_in">UINavigationBar</span> appearance] setBarTintColor:[<span class="built_in">UIColor</span> redColor]];</span><br><span class="line"><span class="comment">//@&#123;&#125;代表Dictionary</span></span><br><span class="line">	[[<span class="built_in">UINavigationBar</span> appearance] setTitleTextAttributes:@&#123;<span class="built_in">NSForegroundColorAttributeName</span>:[<span class="built_in">UIColor</span> whiteColor]&#125;];</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h3 id="2-_隐藏navigationbar底部黑线">2. 隐藏navigationbar底部黑线</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//隐藏navigationbar底部黑线</span></span><br><span class="line">    <span class="keyword">if</span> ([<span class="keyword">self</span><span class="variable">.navigationBar</span> respondsToSelector:<span class="keyword">@selector</span>( setBackgroundImage:forBarMetrics:)])&#123;</span><br><span class="line">        <span class="built_in">NSArray</span> *list = <span class="keyword">self</span><span class="variable">.navigationBar</span><span class="variable">.subviews</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">id</span> obj <span class="keyword">in</span> list) &#123;</span><br><span class="line">            <span class="keyword">if</span> ([obj isKindOfClass:[<span class="built_in">UIImageView</span> class]]) &#123;</span><br><span class="line">                <span class="built_in">UIImageView</span> *imageView=(<span class="built_in">UIImageView</span> *)obj;</span><br><span class="line">                <span class="built_in">NSArray</span> *list2=imageView<span class="variable">.subviews</span>;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">id</span> obj2 <span class="keyword">in</span> list2) &#123;</span><br><span class="line">                    <span class="keyword">if</span> ([obj2 isKindOfClass:[<span class="built_in">UIImageView</span> class]]) &#123;</span><br><span class="line">                        <span class="built_in">UIImageView</span> *imageView2=(<span class="built_in">UIImageView</span> *)obj2;</span><br><span class="line">                        imageView2<span class="variable">.hidden</span>=<span class="literal">YES</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="3-_自定义返回键">3. 自定义返回键</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 自定义返回键</span></span><br><span class="line"></span><br><span class="line">	<span class="built_in">UIButton</span> *backBtn = [<span class="built_in">UIButton</span> buttonWithType:<span class="built_in">UIButtonTypeCustom</span>];</span><br><span class="line"></span><br><span class="line">	backBtn<span class="variable">.frame</span> = <span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">44</span>, <span class="number">44</span>);</span><br><span class="line"></span><br><span class="line">	[backBtn setImage:[<span class="built_in">UIImage</span> imageNamed:<span class="string">@"back.png"</span>] forState:<span class="built_in">UIControlStateNormal</span>];</span><br><span class="line"></span><br><span class="line">	[backBtn addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(doBack:) forControlEvents:<span class="built_in">UIControlEventTouchUpInside</span>];</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">UIBarButtonItem</span> *backItem = [[<span class="built_in">UIBarButtonItem</span> alloc] initWithCustomView:backBtn];</span><br><span class="line"></span><br><span class="line">	<span class="keyword">self</span><span class="variable">.navigationItem</span><span class="variable">.leftBarButtonItem</span> = backItem;</span><br></pre></td></tr></table></figure>
-<h3 id="4-_再来一个tabbar的,改变tabbar线条颜色">4. 再来一个tabbar的,改变tabbar线条颜色</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//改变tabbar 线条颜色</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">CGRect</span> rect = <span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, kScreenWidth, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">UIGraphicsBeginImageContext</span>(rect<span class="variable">.size</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">CGContextRef</span> context = <span class="built_in">UIGraphicsGetCurrentContext</span>();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">CGContextSetFillColorWithColor</span>(context, [[<span class="built_in">UIColor</span> clearColor] <span class="built_in">CGColor</span>]);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">CGContextFillRect</span>(context, rect);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">UIImage</span> *img = <span class="built_in">UIGraphicsGetImageFromCurrentImageContext</span>();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">UIGraphicsEndImageContext</span>();</span><br><span class="line"></span><br><span class="line">    　[<span class="keyword">self</span><span class="variable">.tabBar</span> setShadowImage:img];</span><br><span class="line"></span><br><span class="line">    　[<span class="keyword">self</span><span class="variable">.tabBar</span> setBackgroundImage:[[<span class="built_in">UIImage</span> alloc]init]];</span><br><span class="line"></span><br><span class="line">    [<span class="keyword">self</span><span class="variable">.tabBar</span> setShadowImage:img];</span><br><span class="line"></span><br><span class="line">    [<span class="keyword">self</span><span class="variable">.tabBar</span> setBackgroundImage:[[<span class="built_in">UIImage</span> alloc]init]];</span><br></pre></td></tr></table></figure></span>
+<h3 id="2-隐藏navigationbar底部黑线"><a href="#2-隐藏navigationbar底部黑线" class="headerlink" title="2. 隐藏navigationbar底部黑线"></a>2. 隐藏navigationbar底部黑线</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//隐藏navigationbar底部黑线</span></span><br><span class="line">    <span class="keyword">if</span> ([<span class="keyword">self</span>.navigationBar respondsToSelector:<span class="keyword">@selector</span>( setBackgroundImage:forBarMetrics:)])&#123;</span><br><span class="line">        <span class="built_in">NSArray</span> *list = <span class="keyword">self</span>.navigationBar.subviews;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">id</span> obj <span class="keyword">in</span> list) &#123;</span><br><span class="line">            <span class="keyword">if</span> ([obj isKindOfClass:[<span class="built_in">UIImageView</span> class]]) &#123;</span><br><span class="line">                <span class="built_in">UIImageView</span> *imageView=(<span class="built_in">UIImageView</span> *)obj;</span><br><span class="line">                <span class="built_in">NSArray</span> *list2=imageView.subviews;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">id</span> obj2 <span class="keyword">in</span> list2) &#123;</span><br><span class="line">                    <span class="keyword">if</span> ([obj2 isKindOfClass:[<span class="built_in">UIImageView</span> class]]) &#123;</span><br><span class="line">                        <span class="built_in">UIImageView</span> *imageView2=(<span class="built_in">UIImageView</span> *)obj2;</span><br><span class="line">                        imageView2.hidden=<span class="literal">YES</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-自定义返回键"><a href="#3-自定义返回键" class="headerlink" title="3. 自定义返回键"></a>3. 自定义返回键</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 自定义返回键</span></span><br><span class="line"></span><br><span class="line">	<span class="built_in">UIButton</span> *backBtn = [<span class="built_in">UIButton</span> buttonWithType:<span class="built_in">UIButtonTypeCustom</span>];</span><br><span class="line"></span><br><span class="line">	backBtn.frame = <span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">44</span>, <span class="number">44</span>);</span><br><span class="line"></span><br><span class="line">	[backBtn setImage:[<span class="built_in">UIImage</span> imageNamed:<span class="string">@"back.png"</span>] forState:<span class="built_in">UIControlStateNormal</span>];</span><br><span class="line"></span><br><span class="line">	[backBtn addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(doBack:) forControlEvents:<span class="built_in">UIControlEventTouchUpInside</span>];</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">UIBarButtonItem</span> *backItem = [[<span class="built_in">UIBarButtonItem</span> alloc] initWithCustomView:backBtn];</span><br><span class="line"></span><br><span class="line">	<span class="keyword">self</span>.navigationItem.leftBarButtonItem = backItem;</span><br></pre></td></tr></table></figure>
+<h3 id="4-再来一个tabbar的-改变tabbar线条颜色"><a href="#4-再来一个tabbar的-改变tabbar线条颜色" class="headerlink" title="4. 再来一个tabbar的,改变tabbar线条颜色"></a>4. 再来一个tabbar的,改变tabbar线条颜色</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//改变tabbar 线条颜色</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">CGRect</span> rect = <span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, kScreenWidth, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">UIGraphicsBeginImageContext</span>(rect.size);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">CGContextRef</span> context = <span class="built_in">UIGraphicsGetCurrentContext</span>();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">CGContextSetFillColorWithColor</span>(context, [[<span class="built_in">UIColor</span> clearColor] <span class="built_in">CGColor</span>]);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">CGContextFillRect</span>(context, rect);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">UIImage</span> *img = <span class="built_in">UIGraphicsGetImageFromCurrentImageContext</span>();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">UIGraphicsEndImageContext</span>();</span><br><span class="line"></span><br><span class="line">    　[<span class="keyword">self</span>.tabBar setShadowImage:img];</span><br><span class="line"></span><br><span class="line">    　[<span class="keyword">self</span>.tabBar setBackgroundImage:[[<span class="built_in">UIImage</span> alloc]init]];</span><br><span class="line"></span><br><span class="line">    [<span class="keyword">self</span>.tabBar setShadowImage:img];</span><br><span class="line"></span><br><span class="line">    [<span class="keyword">self</span>.tabBar setBackgroundImage:[[<span class="built_in">UIImage</span> alloc]init]];</span><br></pre></td></tr></table></figure></span>
       
     </div>
 
@@ -316,9 +300,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/UINavgationBar/" rel="tag">#UINavgationBar</a>
-          
             <a href="/tags/iOS/" rel="tag">#iOS</a>
+          
+            <a href="/tags/UINavgationBar/" rel="tag">#UINavgationBar</a>
           
         </div>
       
@@ -421,13 +405,6 @@
 
         </nav>
 
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
         
 
         <div class="links-of-author motion-element">
@@ -741,33 +718,13 @@ translateInitilization();
 
   
   
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    });
-  </script>
-
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for (i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-    });
-  </script>
-
-  
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/MathJax.js"></script>
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/config/TeX-AMS-MML_HTMLorMML.js"></script>
-  
-
 
   
   
+
+
+
+
 
 </body>
 </html>

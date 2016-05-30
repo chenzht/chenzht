@@ -1,6 +1,8 @@
 <!doctype html>
 <html class="theme-next   use-motion ">
 <head>
+
+
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -37,13 +39,11 @@
 <link href="/css/main.css?v=0.4.5.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="GitCafe,Github,Hexo,coding," />
+  <meta name="keywords" content="Hexo,Github,GitCafe,coding," />
 
 
 
 
-
-  <link rel="alternate" href="/atom.xml" title="Jozo的博客" type="application/atom+xml" />
 
 
 
@@ -80,13 +80,14 @@
 <meta name="twitter:description" content="近日博客频频登陆不上，遂登入GitCafe看看是啥状况，谁知看到这一惊天“噩耗”，虽然合并本是一件好事，但由于之前访问仓库频繁的不稳定，以及实在懒得再Coding上再花时间部署，于是就将博客仓库转到了比较熟悉的Github上来，不过坑依然很多，下面择取几个讲讲看
 
 1. 每次 hexo d 都要输入github的账号密码这一操作实在是令人抓狂，不过解决办法也相当简单。">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20160528155002415">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: '[object Object]',
+    sidebar: 'post',
     motion: true
   };
 </script>
@@ -180,22 +181,6 @@
           <a href="/about/index.html" rel="section">
             
             关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-rss">
-          <a href="/atom.xml" rel="section">
-            
-            menu.rss
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-sitemap">
-          <a href="/sitemap.xml" rel="section">
-            
-            menu.sitemap
           </a>
         </li>
       
@@ -317,23 +302,23 @@
       
         <span itemprop="articleBody"><p>近日博客频频登陆不上，遂登入GitCafe看看是啥状况，谁知看到这一惊天“噩耗”，虽然合并本是一件好事，但由于之前访问仓库频繁的不稳定，以及实在懒得再Coding上再花时间部署，于是就将博客仓库转到了比较熟悉的Github上来，不过坑依然很多，下面择取几个讲讲看</p>
 <p><img src="http://img.blog.csdn.net/20160528155002415" alt=""></p>
-<h3 id="1-_每次_hexo_d_都要输入github的账号密码">1. 每次 hexo d 都要输入github的账号密码</h3><p>这一操作实在是令人抓狂，不过解决办法也相当简单。<br><a id="more"></a><br><img src="http://img.blog.csdn.net/20160528155009504" alt=""></p>
+<h3 id="1-每次-hexo-d-都要输入github的账号密码"><a href="#1-每次-hexo-d-都要输入github的账号密码" class="headerlink" title="1. 每次 hexo d 都要输入github的账号密码"></a>1. 每次 hexo d 都要输入github的账号密码</h3><p>这一操作实在是令人抓狂，不过解决办法也相当简单。<br><a id="more"></a><br><img src="http://img.blog.csdn.net/20160528155009504" alt=""></p>
 <p>如果<strong>repository</strong>之前是使用<strong><a href="https://github.com/xxx/xxx.github.io.git" target="_blank" rel="external">https://github.com/xxx/xxx.github.io.git</a></strong>，改为<strong>git@github.com:xxx/xxx.github.io.git</strong>即可。</p>
 <blockquote>
 <p>本文所有“xxx”均指github用户名</p>
 </blockquote>
-<h3 id="2-_Github自定义域名">2. Github自定义域名</h3><p>Github的设置里面，并没有直接可以设置自定义域名的选项，这就导致，我通过 xxx.github.io能访问到了博客，但是通过www.kohmax.com却访问不了，一直显示Github Pages Error..这需要我们创建一个<strong>CNAME</strong>文件，记住要全大写，且没有后缀名，用文本编辑器打开，填入自己的自定义域名，不要加“<a href="https://”的前缀，如下图" target="_blank" rel="external">https://”的前缀，如下图</a></p>
+<h3 id="2-Github自定义域名"><a href="#2-Github自定义域名" class="headerlink" title="2. Github自定义域名"></a>2. Github自定义域名</h3><p>Github的设置里面，并没有直接可以设置自定义域名的选项，这就导致，我通过 xxx.github.io能访问到了博客，但是通过www.kohmax.com却访问不了，一直显示Github Pages Error..这需要我们创建一个<strong>CNAME</strong>文件，记住要全大写，且没有后缀名，用文本编辑器打开，填入自己的自定义域名，不要加“<a href="https://”的前缀，如下图" target="_blank" rel="external">https://”的前缀，如下图</a></p>
 <p><img src="http://img.blog.csdn.net/20160528155014493" alt=""></p>
 <p>那么这个文件上传到哪里呢？网上的好多攻略没有交代太清楚，导致我饶了很久，后来看了下Github的Help，确定把这个文件上传到博客仓库的根目录下，即“xxx.github.io”这个repositorie，放好之后刷新，点击改仓库的Setting。</p>
 <p><img src="http://img.blog.csdn.net/20160528155510901" alt=""></p>
 <p><img src="http://img.blog.csdn.net/20160528155024942" alt=""></p>
 <p>出现上图图所示的情况时，则代表已经成功，然后通过域名访问博客即可。</p>
-<h3 id="3-_域名的购买与管理">3. 域名的购买与管理</h3><p>博主域名是在<a href="https://sg.godaddy.com" target="_blank" rel="external">goDaddy</a>上买的，默认英文，可以选择地区到新加坡切换到中文页面。</p>
+<h3 id="3-域名的购买与管理"><a href="#3-域名的购买与管理" class="headerlink" title="3. 域名的购买与管理"></a>3. 域名的购买与管理</h3><p>博主域名是在<a href="https://sg.godaddy.com" target="_blank" rel="external">goDaddy</a>上买的，默认英文，可以选择地区到新加坡切换到中文页面。</p>
 <p>域名管理是在<a href="https://www.dnspod.cn" target="_blank" rel="external">DNSPod</a>，当然在DNSPod也可以购买域名，有时反而更便宜，可以自行比较。</p>
 <p><img src="http://img.blog.csdn.net/20160528155020066" alt=""></p>
 <p>在DNSPod进行上述设置，其中马赛克的部分是通过控制台输入“Ping xxx.github.io”得来的IP地址，分别填入即可，同时，在goDaddy的域名管理中进行下面一系列操作。目的是将DNSPod里的默认记录值“f1g1ns1.dnspod.net”，“f1g1ns2.dnspod.net”写入域名管理中。</p>
 <p><img src="http://img.blog.csdn.net/20160528155030540" alt=""></p>
-<h4 id="然后选择需要管理的域名">然后选择需要管理的域名</h4><p><img src="http://img.blog.csdn.net/20160528155034473" alt=""></p>
+<h4 id="然后选择需要管理的域名"><a href="#然后选择需要管理的域名" class="headerlink" title="然后选择需要管理的域名"></a>然后选择需要管理的域名</h4><p><img src="http://img.blog.csdn.net/20160528155034473" alt=""></p>
 <p><img src="http://img.blog.csdn.net/20160528155040118" alt=""></p>
 <p>暂时只有这么多了，后续有问题继续补充。</p>
 <p>That’s all, thank you.</p>
@@ -345,11 +330,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/GitCafe/" rel="tag">#GitCafe</a>
+            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
           
             <a href="/tags/Github/" rel="tag">#Github</a>
           
-            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
+            <a href="/tags/GitCafe/" rel="tag">#GitCafe</a>
           
             <a href="/tags/coding/" rel="tag">#coding</a>
           
@@ -454,13 +439,6 @@
 
         </nav>
 
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
         
 
         <div class="links-of-author motion-element">
@@ -774,33 +752,13 @@ translateInitilization();
 
   
   
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    });
-  </script>
-
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for (i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-    });
-  </script>
-
-  
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/MathJax.js"></script>
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/config/TeX-AMS-MML_HTMLorMML.js"></script>
-  
-
 
   
   
+
+
+
+
 
 </body>
 </html>

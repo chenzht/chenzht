@@ -1,6 +1,8 @@
 <!doctype html>
 <html class="theme-next   use-motion ">
 <head>
+
+
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -37,13 +39,11 @@
 <link href="/css/main.css?v=0.4.5.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Bouncer Pattern,Swift,iOS,保镖模式," />
+  <meta name="keywords" content="iOS,Swift,Bouncer Pattern,保镖模式," />
 
 
 
 
-
-  <link rel="alternate" href="/atom.xml" title="Jozo的博客" type="application/atom+xml" />
 
 
 
@@ -86,7 +86,7 @@ guard语句和if..else..语句有类似的地方，都是做判断处理
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: '[object Object]',
+    sidebar: 'post',
     motion: true
   };
 </script>
@@ -180,22 +180,6 @@ guard语句和if..else..语句有类似的地方，都是做判断处理
           <a href="/about/index.html" rel="section">
             
             关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-rss">
-          <a href="/atom.xml" rel="section">
-            
-            menu.rss
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-sitemap">
-          <a href="/sitemap.xml" rel="section">
-            
-            menu.sitemap
           </a>
         </li>
       
@@ -315,7 +299,7 @@ guard语句和if..else..语句有类似的地方，都是做判断处理
       
 
       
-        <span itemprop="articleBody"><h3 id="1-_guard简介">1. guard简介</h3><p><code>guard</code>特性是在Swift 2.0后推出的，所以请使用Xcode 7.X版本来编写代码</p>
+        <span itemprop="articleBody"><h3 id="1-guard简介"><a href="#1-guard简介" class="headerlink" title="1. guard简介"></a>1. guard简介</h3><p><code>guard</code>特性是在Swift 2.0后推出的，所以请使用Xcode 7.X版本来编写代码</p>
 <p>值得提及的是，<code>guard</code>和<code>if..else..</code>有很大程度的相似性，下面我将对它们进行一些比较</p>
 <ol>
 <li>guard语句和if..else..语句有类似的地方，都是做判断处理</li>
@@ -325,9 +309,9 @@ guard语句和if..else..语句有类似的地方，都是做判断处理
 <li>guard中声明的变量或者常量，在guard下面可以使用，但不能在else分支中使用</li>
 </ol>
 <a id="more"></a>
-<h3 id="2-_guard的使用">2. guard的使用</h3><p>其实只要给出一段代码，大家都能一目了然</p>
+<h3 id="2-guard的使用"><a href="#2-guard的使用" class="headerlink" title="2. guard的使用"></a>2. guard的使用</h3><p>其实只要给出一段代码，大家都能一目了然</p>
 <p>就以安检为例</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">checkUp</span><span class="params">(person: [String: String!])</span></span> &#123;</span><br><span class="line">    <span class="comment">// 检查身份证</span></span><br><span class="line">    <span class="keyword">guard</span> <span class="keyword">let</span> id = person[<span class="string">"id"</span>] <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"没有携带身份证，禁止通行"</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 检查有无违禁品</span></span><br><span class="line">    <span class="keyword">guard</span> <span class="keyword">let</span> package = person[<span class="string">"package"</span>] <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"检测到违禁品，禁止通行"</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 可以通行</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"身份证号：<span class="subst">\(id)</span>  包裹检查：<span class="subst">\(package)</span> 可以通行..."</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">checkUp([<span class="string">"id"</span>: <span class="string">"****0621"</span>, <span class="string">"package"</span>: <span class="string">"something"</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">checkUp</span><span class="params">(person: [String: String!])</span></span> &#123;</span><br><span class="line">    <span class="comment">// 检查身份证</span></span><br><span class="line">    <span class="keyword">guard</span> <span class="keyword">let</span> id = person[<span class="string">"id"</span>] <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"没有携带身份证，禁止通行"</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 检查有无违禁品</span></span><br><span class="line">    <span class="keyword">guard</span> <span class="keyword">let</span> package = person[<span class="string">"package"</span>] <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"检测到违禁品，禁止通行"</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 可以通行</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"身份证号：<span class="subst">\(id)</span>  包裹检查：<span class="subst">\(package)</span> 可以通行..."</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">checkUp([<span class="string">"id"</span>: <span class="string">"****0621"</span>, <span class="string">"package"</span>: <span class="string">"something"</span>])</span><br></pre></td></tr></table></figure>
 <p>以上的解决方案是先对每个条件逐一做检查，如果不符合条件判断就退出。这就会让人容易看出来什么条件会让这个函数退出。</p>
 <p>我听说过这个叫<strong>保镖模式</strong>（<em>Bouncer Pattern</em>），这个模式十分的合理。你要在坏情况进门之前把它们挡出去。这让你每次只考虑一种情况，而不用去搞清楚如何同时将所有的条件判断安排在一起。</p>
 <p>这就是guard语句，他的好处是：</p>
@@ -348,11 +332,11 @@ guard语句和if..else..语句有类似的地方，都是做判断处理
       
         <div class="post-tags">
           
-            <a href="/tags/Bouncer-Pattern/" rel="tag">#Bouncer Pattern</a>
+            <a href="/tags/iOS/" rel="tag">#iOS</a>
           
             <a href="/tags/Swift/" rel="tag">#Swift</a>
           
-            <a href="/tags/iOS/" rel="tag">#iOS</a>
+            <a href="/tags/Bouncer-Pattern/" rel="tag">#Bouncer Pattern</a>
           
             <a href="/tags/保镖模式/" rel="tag">#保镖模式</a>
           
@@ -363,16 +347,16 @@ guard语句和if..else..语句有类似的地方，都是做判断处理
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/11/27/Swift，截取字符串/" rel="next" title="Swift，截取字符串">
-                <i class="fa fa-chevron-left"></i> Swift，截取字符串
+              <a href="/2015/11/19/网络编程之TCP以及TLV报文编解码/" rel="next" title="网络编程之TCP以及TLV报文编解码">
+                <i class="fa fa-chevron-left"></i> 网络编程之TCP以及TLV报文编解码
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/11/27/Swift_Guard，开启保镖模式副本/" rel="prev" title="Swift_Closure，闭包">
-                Swift_Closure，闭包 <i class="fa fa-chevron-right"></i>
+              <a href="/2015/11/27/Swift，截取字符串/" rel="prev" title="Swift，截取字符串">
+                Swift，截取字符串 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -457,13 +441,6 @@ guard语句和if..else..语句有类似的地方，都是做判断处理
 
         </nav>
 
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
         
 
         <div class="links-of-author motion-element">
@@ -777,33 +754,13 @@ translateInitilization();
 
   
   
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    });
-  </script>
-
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for (i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-    });
-  </script>
-
-  
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/MathJax.js"></script>
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/config/TeX-AMS-MML_HTMLorMML.js"></script>
-  
-
 
   
   
+
+
+
+
 
 </body>
 </html>
