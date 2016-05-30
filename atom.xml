@@ -399,9 +399,9 @@
       <category term="React Native(js)" scheme="http://www.kohmax.com/categories/React-Native-js/"/>
     
     
-      <category term="JavaScript" scheme="http://www.kohmax.com/tags/JavaScript/"/>
-    
       <category term="React Native" scheme="http://www.kohmax.com/tags/React-Native/"/>
+    
+      <category term="JavaScript" scheme="http://www.kohmax.com/tags/JavaScript/"/>
     
   </entry>
   
@@ -752,58 +752,6 @@
   </entry>
   
   <entry>
-    <title>Swift，截取字符串</title>
-    <link href="http://www.kohmax.com/2015/11/27/Swift%EF%BC%8C%E6%88%AA%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    <id>http://www.kohmax.com/2015/11/27/Swift，截取字符串/</id>
-    <published>2015-11-26T17:11:52.000Z</published>
-    <updated>2016-02-01T03:09:48.000Z</updated>
-    
-    <content type="html">&lt;p&gt;下面介绍2种swift的字符串截取方法,实际上用到了&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;substringFromIndex&lt;/li&gt;
-&lt;li&gt;substringToIndex&lt;/li&gt;
-&lt;li&gt;substringWithRange&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这三个方法，相信大家在OC中肯定对此不会陌生，因此我们可以&lt;/p&gt;
-&lt;h5 id=&quot;1-将String转化为NSString再截取&quot;&gt;&lt;a href=&quot;#1-将String转化为NSString再截取&quot; class=&quot;headerlink&quot; title=&quot;1. 将String转化为NSString再截取&quot;&gt;&lt;/a&gt;1. 将String转化为NSString再截取&lt;/h5&gt;&lt;p&gt;具体做法如下&lt;/p&gt;
-&lt;figure class=&quot;highlight rust&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;str&lt;/span&gt; = (&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; NSString).substringFromIndex(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h5 id=&quot;2-直接调用String的对应方法-推荐&quot;&gt;&lt;a href=&quot;#2-直接调用String的对应方法-推荐&quot; class=&quot;headerlink&quot; title=&quot;2. 直接调用String的对应方法(推荐)&quot;&gt;&lt;/a&gt;2. 直接调用String的对应方法(推荐)&lt;/h5&gt;&lt;p&gt;由于String对应的方法参数是String.Index类型而非Int类型,所以我们首先要创建String.Index类型参数值,代码如下&lt;/p&gt;
-&lt;figure class=&quot;highlight processing&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// var str=&quot;1234567890&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// let index = advance(str.startIndex, 5)  swift 1.x&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// let index2 = advance(str.endIndex, -6)  swift 1.x&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var &lt;span class=&quot;built_in&quot;&gt;str&lt;/span&gt; =&lt;span class=&quot;string&quot;&gt;&quot;1234567890&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;let index = &lt;span class=&quot;built_in&quot;&gt;str&lt;/span&gt;.startIndex.advancedBy(&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;) 		&lt;span class=&quot;comment&quot;&gt;//swift 2.0+&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;let index2 = &lt;span class=&quot;built_in&quot;&gt;str&lt;/span&gt;.endIndex.advancedBy(&lt;span class=&quot;number&quot;&gt;-6&lt;/span&gt;) 		&lt;span class=&quot;comment&quot;&gt;//swift 2.0+&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var range = Range&amp;lt;&lt;span class=&quot;keyword&quot;&gt;String&lt;/span&gt;.Index&amp;gt;(start: index2,end: index)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var str1:&lt;span class=&quot;keyword&quot;&gt;String&lt;/span&gt;=&lt;span class=&quot;built_in&quot;&gt;str&lt;/span&gt;.substringFromIndex(index)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var str2:&lt;span class=&quot;keyword&quot;&gt;String&lt;/span&gt;=&lt;span class=&quot;built_in&quot;&gt;str&lt;/span&gt;.substringToIndex(index2)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var str3=&lt;span class=&quot;built_in&quot;&gt;str&lt;/span&gt;.substringWithRange(range)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(str1)&lt;span class=&quot;comment&quot;&gt;//67890&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(str2)&lt;span class=&quot;comment&quot;&gt;//1234&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(str3)&lt;span class=&quot;comment&quot;&gt;//5&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;当然，上诉设计到&lt;code&gt;Range&lt;/code&gt;时会比较繁琐，因此我们可以扩展String&lt;/p&gt;
-&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; str=&lt;span class=&quot;string&quot;&gt;&quot;1234567890&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 扩展String&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;extension&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;String&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;subscript&lt;/span&gt; (range: &lt;span class=&quot;type&quot;&gt;Range&lt;/span&gt;&amp;lt;&lt;span class=&quot;type&quot;&gt;Int&lt;/span&gt;&amp;gt;) -&amp;gt; &lt;span class=&quot;type&quot;&gt;String&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;get&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; startIndex = &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.startIndex.advancedBy(range.startIndex)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; endIndex = &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.startIndex.advancedBy(range.endIndex)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;[&lt;span class=&quot;type&quot;&gt;Range&lt;/span&gt;(start: startIndex, end: endIndex)]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; str4 = str[&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;...&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(str4);&lt;span class=&quot;comment&quot;&gt;//345&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;扩展后我们需要截取时直接使用&lt;code&gt;aString[1...2]&lt;/code&gt;这样的语句就好了，是不是十分方便呢，赶快用起来吧。&lt;/p&gt;
-&lt;p&gt;That’s all, thank you.&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;下面介绍2种swift的字符串截取方法,实际上用到了&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;substringFromIndex&lt;/li&gt;
-&lt;li&gt;substringToIndex&lt;/li&gt;
-&lt;li&gt;substringWithRange&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这三个方法，相信大家在OC中肯定对此不会陌生，因此我们可以&lt;/p&gt;
-&lt;h5 id=&quot;1-将String转化为NSString再截取&quot;&gt;&lt;a href=&quot;#1-将String转化为NSString再截取&quot; class=&quot;headerlink&quot; title=&quot;1. 将String转化为NSString再截取&quot;&gt;&lt;/a&gt;1. 将String转化为NSString再截取&lt;/h5&gt;&lt;p&gt;具体做法如下&lt;/p&gt;
-&lt;figure class=&quot;highlight rust&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;str&lt;/span&gt; = (&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; NSString).substringFromIndex(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Swift" scheme="http://www.kohmax.com/categories/Swift/"/>
-    
-    
-      <category term="iOS" scheme="http://www.kohmax.com/tags/iOS/"/>
-    
-      <category term="Swift" scheme="http://www.kohmax.com/tags/Swift/"/>
-    
-      <category term="String" scheme="http://www.kohmax.com/tags/String/"/>
-    
-      <category term="截取字符串" scheme="http://www.kohmax.com/tags/%E6%88%AA%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Swift_Guard，开启保镖模式</title>
     <link href="http://www.kohmax.com/2015/11/27/Swift_Guard%EF%BC%8C%E5%BC%80%E5%90%AF%E4%BF%9D%E9%95%96%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.kohmax.com/2015/11/27/Swift_Guard，开启保镖模式/</id>
@@ -861,6 +809,58 @@
       <category term="Bouncer Pattern" scheme="http://www.kohmax.com/tags/Bouncer-Pattern/"/>
     
       <category term="保镖模式" scheme="http://www.kohmax.com/tags/%E4%BF%9D%E9%95%96%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Swift，截取字符串</title>
+    <link href="http://www.kohmax.com/2015/11/27/Swift%EF%BC%8C%E6%88%AA%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <id>http://www.kohmax.com/2015/11/27/Swift，截取字符串/</id>
+    <published>2015-11-26T17:11:52.000Z</published>
+    <updated>2016-02-01T03:09:48.000Z</updated>
+    
+    <content type="html">&lt;p&gt;下面介绍2种swift的字符串截取方法,实际上用到了&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;substringFromIndex&lt;/li&gt;
+&lt;li&gt;substringToIndex&lt;/li&gt;
+&lt;li&gt;substringWithRange&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这三个方法，相信大家在OC中肯定对此不会陌生，因此我们可以&lt;/p&gt;
+&lt;h5 id=&quot;1-将String转化为NSString再截取&quot;&gt;&lt;a href=&quot;#1-将String转化为NSString再截取&quot; class=&quot;headerlink&quot; title=&quot;1. 将String转化为NSString再截取&quot;&gt;&lt;/a&gt;1. 将String转化为NSString再截取&lt;/h5&gt;&lt;p&gt;具体做法如下&lt;/p&gt;
+&lt;figure class=&quot;highlight rust&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;str&lt;/span&gt; = (&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; NSString).substringFromIndex(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h5 id=&quot;2-直接调用String的对应方法-推荐&quot;&gt;&lt;a href=&quot;#2-直接调用String的对应方法-推荐&quot; class=&quot;headerlink&quot; title=&quot;2. 直接调用String的对应方法(推荐)&quot;&gt;&lt;/a&gt;2. 直接调用String的对应方法(推荐)&lt;/h5&gt;&lt;p&gt;由于String对应的方法参数是String.Index类型而非Int类型,所以我们首先要创建String.Index类型参数值,代码如下&lt;/p&gt;
+&lt;figure class=&quot;highlight processing&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// var str=&quot;1234567890&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// let index = advance(str.startIndex, 5)  swift 1.x&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// let index2 = advance(str.endIndex, -6)  swift 1.x&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var &lt;span class=&quot;built_in&quot;&gt;str&lt;/span&gt; =&lt;span class=&quot;string&quot;&gt;&quot;1234567890&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;let index = &lt;span class=&quot;built_in&quot;&gt;str&lt;/span&gt;.startIndex.advancedBy(&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;) 		&lt;span class=&quot;comment&quot;&gt;//swift 2.0+&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;let index2 = &lt;span class=&quot;built_in&quot;&gt;str&lt;/span&gt;.endIndex.advancedBy(&lt;span class=&quot;number&quot;&gt;-6&lt;/span&gt;) 		&lt;span class=&quot;comment&quot;&gt;//swift 2.0+&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var range = Range&amp;lt;&lt;span class=&quot;keyword&quot;&gt;String&lt;/span&gt;.Index&amp;gt;(start: index2,end: index)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var str1:&lt;span class=&quot;keyword&quot;&gt;String&lt;/span&gt;=&lt;span class=&quot;built_in&quot;&gt;str&lt;/span&gt;.substringFromIndex(index)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var str2:&lt;span class=&quot;keyword&quot;&gt;String&lt;/span&gt;=&lt;span class=&quot;built_in&quot;&gt;str&lt;/span&gt;.substringToIndex(index2)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var str3=&lt;span class=&quot;built_in&quot;&gt;str&lt;/span&gt;.substringWithRange(range)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(str1)&lt;span class=&quot;comment&quot;&gt;//67890&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(str2)&lt;span class=&quot;comment&quot;&gt;//1234&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(str3)&lt;span class=&quot;comment&quot;&gt;//5&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;当然，上诉设计到&lt;code&gt;Range&lt;/code&gt;时会比较繁琐，因此我们可以扩展String&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; str=&lt;span class=&quot;string&quot;&gt;&quot;1234567890&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 扩展String&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;extension&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;String&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;subscript&lt;/span&gt; (range: &lt;span class=&quot;type&quot;&gt;Range&lt;/span&gt;&amp;lt;&lt;span class=&quot;type&quot;&gt;Int&lt;/span&gt;&amp;gt;) -&amp;gt; &lt;span class=&quot;type&quot;&gt;String&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;get&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; startIndex = &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.startIndex.advancedBy(range.startIndex)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; endIndex = &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.startIndex.advancedBy(range.endIndex)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;[&lt;span class=&quot;type&quot;&gt;Range&lt;/span&gt;(start: startIndex, end: endIndex)]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; str4 = str[&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;...&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(str4);&lt;span class=&quot;comment&quot;&gt;//345&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;扩展后我们需要截取时直接使用&lt;code&gt;aString[1...2]&lt;/code&gt;这样的语句就好了，是不是十分方便呢，赶快用起来吧。&lt;/p&gt;
+&lt;p&gt;That’s all, thank you.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;下面介绍2种swift的字符串截取方法,实际上用到了&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;substringFromIndex&lt;/li&gt;
+&lt;li&gt;substringToIndex&lt;/li&gt;
+&lt;li&gt;substringWithRange&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这三个方法，相信大家在OC中肯定对此不会陌生，因此我们可以&lt;/p&gt;
+&lt;h5 id=&quot;1-将String转化为NSString再截取&quot;&gt;&lt;a href=&quot;#1-将String转化为NSString再截取&quot; class=&quot;headerlink&quot; title=&quot;1. 将String转化为NSString再截取&quot;&gt;&lt;/a&gt;1. 将String转化为NSString再截取&lt;/h5&gt;&lt;p&gt;具体做法如下&lt;/p&gt;
+&lt;figure class=&quot;highlight rust&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;str&lt;/span&gt; = (&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; NSString).substringFromIndex(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Swift" scheme="http://www.kohmax.com/categories/Swift/"/>
+    
+    
+      <category term="iOS" scheme="http://www.kohmax.com/tags/iOS/"/>
+    
+      <category term="Swift" scheme="http://www.kohmax.com/tags/Swift/"/>
+    
+      <category term="String" scheme="http://www.kohmax.com/tags/String/"/>
+    
+      <category term="截取字符串" scheme="http://www.kohmax.com/tags/%E6%88%AA%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
   </entry>
   
