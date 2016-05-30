@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Jozo的博客</title>
   
-  <link href="/child/atom.xml" rel="self"/>
+  <link href="/atom.xml" rel="self"/>
   
-  <link href="http://www.kohmax.com/child/"/>
+  <link href="http://www.kohmax.com/"/>
   <updated>2016-05-28T09:42:40.000Z</updated>
-  <id>http://www.kohmax.com/child/</id>
+  <id>http://www.kohmax.com/</id>
   
   <author>
     <name>Jozo.Chan</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>JZShare - ShareSDK如何自定义分享UI</title>
-    <link href="http://www.kohmax.com/child/2016/05/27/JZShare%20-%20ShareSDK%E5%A6%82%E4%BD%95%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%86%E4%BA%ABUI/"/>
-    <id>http://www.kohmax.com/child/2016/05/27/JZShare - ShareSDK如何自定义分享UI/</id>
+    <link href="http://www.kohmax.com/JZShare%20-%20ShareSDK%E5%A6%82%E4%BD%95%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%86%E4%BA%ABUI/"/>
+    <id>http://www.kohmax.com/JZShare - ShareSDK如何自定义分享UI/</id>
     <published>2016-05-27T02:22:01.000Z</published>
     <updated>2016-05-28T09:42:40.000Z</updated>
     
@@ -53,21 +53,21 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://www.kohmax.com/child/categories/iOS/"/>
+      <category term="iOS" scheme="http://www.kohmax.com/categories/iOS/"/>
     
     
-      <category term="ShareSDK" scheme="http://www.kohmax.com/child/tags/ShareSDK/"/>
+      <category term="ShareSDK" scheme="http://www.kohmax.com/tags/ShareSDK/"/>
     
-      <category term="自定义UI" scheme="http://www.kohmax.com/child/tags/%E8%87%AA%E5%AE%9A%E4%B9%89UI/"/>
+      <category term="自定义UI" scheme="http://www.kohmax.com/tags/%E8%87%AA%E5%AE%9A%E4%B9%89UI/"/>
     
-      <category term="分享， iOS" scheme="http://www.kohmax.com/child/tags/%E5%88%86%E4%BA%AB%EF%BC%8C-iOS/"/>
+      <category term="分享， iOS" scheme="http://www.kohmax.com/tags/%E5%88%86%E4%BA%AB%EF%BC%8C-iOS/"/>
     
   </entry>
   
   <entry>
     <title>如何理解Python中的装饰器</title>
-    <link href="http://www.kohmax.com/child/2016/05/26/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3Python%E4%B8%AD%E7%9A%84%E8%A3%85%E9%A5%B0%E5%99%A8/"/>
-    <id>http://www.kohmax.com/child/2016/05/26/如何理解Python中的装饰器/</id>
+    <link href="http://www.kohmax.com/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3Python%E4%B8%AD%E7%9A%84%E8%A3%85%E9%A5%B0%E5%99%A8/"/>
+    <id>http://www.kohmax.com/如何理解Python中的装饰器/</id>
     <published>2016-05-26T08:29:47.000Z</published>
     <updated>2016-05-26T09:20:29.000Z</updated>
     
@@ -116,17 +116,17 @@
     
     </summary>
     
-      <category term="Python" scheme="http://www.kohmax.com/child/categories/Python/"/>
+      <category term="Python" scheme="http://www.kohmax.com/categories/Python/"/>
     
     
-      <category term="Python" scheme="http://www.kohmax.com/child/tags/Python/"/>
+      <category term="Python" scheme="http://www.kohmax.com/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>将Hexo博客从GitCafe转移到Github时所遇到的问题详解</title>
-    <link href="http://www.kohmax.com/child/2016/05/25/%E5%B0%86Hexo%E5%8D%9A%E5%AE%A2%E4%BB%8EGitCafe%E8%BD%AC%E7%A7%BB%E5%88%B0Github%E6%97%B6%E6%89%80%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://www.kohmax.com/child/2016/05/25/将Hexo博客从GitCafe转移到Github时所遇到的问题详解/</id>
+    <link href="http://www.kohmax.com/%E5%B0%86Hexo%E5%8D%9A%E5%AE%A2%E4%BB%8EGitCafe%E8%BD%AC%E7%A7%BB%E5%88%B0Github%E6%97%B6%E6%89%80%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/"/>
+    <id>http://www.kohmax.com/将Hexo博客从GitCafe转移到Github时所遇到的问题详解/</id>
     <published>2016-05-25T07:14:46.000Z</published>
     <updated>2016-05-28T07:59:06.000Z</updated>
     
@@ -162,23 +162,23 @@
     
     </summary>
     
-      <category term="Hexo" scheme="http://www.kohmax.com/child/categories/Hexo/"/>
+      <category term="Hexo" scheme="http://www.kohmax.com/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="http://www.kohmax.com/child/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://www.kohmax.com/tags/Hexo/"/>
     
-      <category term="Github" scheme="http://www.kohmax.com/child/tags/Github/"/>
+      <category term="Github" scheme="http://www.kohmax.com/tags/Github/"/>
     
-      <category term="GitCafe" scheme="http://www.kohmax.com/child/tags/GitCafe/"/>
+      <category term="GitCafe" scheme="http://www.kohmax.com/tags/GitCafe/"/>
     
-      <category term="coding" scheme="http://www.kohmax.com/child/tags/coding/"/>
+      <category term="coding" scheme="http://www.kohmax.com/tags/coding/"/>
     
   </entry>
   
   <entry>
     <title>mutableAttributeString</title>
-    <link href="http://www.kohmax.com/child/2016/03/04/mutableAttributeString/"/>
-    <id>http://www.kohmax.com/child/2016/03/04/mutableAttributeString/</id>
+    <link href="http://www.kohmax.com/mutableAttributeString/"/>
+    <id>http://www.kohmax.com/mutableAttributeString/</id>
     <published>2016-03-04T02:23:15.000Z</published>
     <updated>2016-03-04T04:02:53.000Z</updated>
     
@@ -190,19 +190,19 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://www.kohmax.com/child/categories/iOS/"/>
+      <category term="iOS" scheme="http://www.kohmax.com/categories/iOS/"/>
     
     
-      <category term="iOS" scheme="http://www.kohmax.com/child/tags/iOS/"/>
+      <category term="iOS" scheme="http://www.kohmax.com/tags/iOS/"/>
     
-      <category term="mutableAttributeString" scheme="http://www.kohmax.com/child/tags/mutableAttributeString/"/>
+      <category term="mutableAttributeString" scheme="http://www.kohmax.com/tags/mutableAttributeString/"/>
     
   </entry>
   
   <entry>
     <title>UI分析利器 - Reveal</title>
-    <link href="http://www.kohmax.com/child/2016/01/20/UI%E5%88%86%E6%9E%90%E5%88%A9%E5%99%A8%20-%20Reveal/"/>
-    <id>http://www.kohmax.com/child/2016/01/20/UI分析利器 - Reveal/</id>
+    <link href="http://www.kohmax.com/UI%E5%88%86%E6%9E%90%E5%88%A9%E5%99%A8%20-%20Reveal/"/>
+    <id>http://www.kohmax.com/UI分析利器 - Reveal/</id>
     <published>2016-01-20T04:21:17.000Z</published>
     <updated>2016-02-01T03:09:48.000Z</updated>
     
@@ -266,25 +266,25 @@
     
     </summary>
     
-      <category term="必先利其器" scheme="http://www.kohmax.com/child/categories/%E5%BF%85%E5%85%88%E5%88%A9%E5%85%B6%E5%99%A8/"/>
+      <category term="必先利其器" scheme="http://www.kohmax.com/categories/%E5%BF%85%E5%85%88%E5%88%A9%E5%85%B6%E5%99%A8/"/>
     
     
-      <category term="iOS" scheme="http://www.kohmax.com/child/tags/iOS/"/>
+      <category term="iOS" scheme="http://www.kohmax.com/tags/iOS/"/>
     
-      <category term="UI" scheme="http://www.kohmax.com/child/tags/UI/"/>
+      <category term="UI" scheme="http://www.kohmax.com/tags/UI/"/>
     
-      <category term="Reveal" scheme="http://www.kohmax.com/child/tags/Reveal/"/>
+      <category term="Reveal" scheme="http://www.kohmax.com/tags/Reveal/"/>
     
-      <category term="工具" scheme="http://www.kohmax.com/child/tags/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="http://www.kohmax.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
-      <category term="Mac app" scheme="http://www.kohmax.com/child/tags/Mac-app/"/>
+      <category term="Mac app" scheme="http://www.kohmax.com/tags/Mac-app/"/>
     
   </entry>
   
   <entry>
     <title>Swift_Refactor，可视化编程利器</title>
-    <link href="http://www.kohmax.com/child/2016/01/18/Swift-Refactor%EF%BC%8C%E5%8F%AF%E8%A7%86%E5%8C%96%E7%BC%96%E7%A8%8B%E5%88%A9%E5%99%A8/"/>
-    <id>http://www.kohmax.com/child/2016/01/18/Swift-Refactor，可视化编程利器/</id>
+    <link href="http://www.kohmax.com/Swift-Refactor%EF%BC%8C%E5%8F%AF%E8%A7%86%E5%8C%96%E7%BC%96%E7%A8%8B%E5%88%A9%E5%99%A8/"/>
+    <id>http://www.kohmax.com/Swift-Refactor，可视化编程利器/</id>
     <published>2016-01-18T09:53:20.000Z</published>
     <updated>2016-02-01T03:09:48.000Z</updated>
     
@@ -311,27 +311,27 @@
     
     </summary>
     
-      <category term="Swift" scheme="http://www.kohmax.com/child/categories/Swift/"/>
+      <category term="Swift" scheme="http://www.kohmax.com/categories/Swift/"/>
     
     
-      <category term="iOS" scheme="http://www.kohmax.com/child/tags/iOS/"/>
+      <category term="iOS" scheme="http://www.kohmax.com/tags/iOS/"/>
     
-      <category term="Swift" scheme="http://www.kohmax.com/child/tags/Swift/"/>
+      <category term="Swift" scheme="http://www.kohmax.com/tags/Swift/"/>
     
-      <category term="可视化编程" scheme="http://www.kohmax.com/child/tags/%E5%8F%AF%E8%A7%86%E5%8C%96%E7%BC%96%E7%A8%8B/"/>
+      <category term="可视化编程" scheme="http://www.kohmax.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96%E7%BC%96%E7%A8%8B/"/>
     
-      <category term="Storyboard" scheme="http://www.kohmax.com/child/tags/Storyboard/"/>
+      <category term="Storyboard" scheme="http://www.kohmax.com/tags/Storyboard/"/>
     
-      <category term="Refactor" scheme="http://www.kohmax.com/child/tags/Refactor/"/>
+      <category term="Refactor" scheme="http://www.kohmax.com/tags/Refactor/"/>
     
-      <category term="团队开发" scheme="http://www.kohmax.com/child/tags/%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91/"/>
+      <category term="团队开发" scheme="http://www.kohmax.com/tags/%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
   <entry>
     <title>React Native学习里程01--环境搭建</title>
-    <link href="http://www.kohmax.com/child/2016/01/13/React-Native%E5%AD%A6%E4%B9%A0%E9%87%8C%E7%A8%8B01-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
-    <id>http://www.kohmax.com/child/2016/01/13/React-Native学习里程01-环境搭建/</id>
+    <link href="http://www.kohmax.com/React-Native%E5%AD%A6%E4%B9%A0%E9%87%8C%E7%A8%8B01-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    <id>http://www.kohmax.com/React-Native学习里程01-环境搭建/</id>
     <published>2016-01-13T07:41:34.000Z</published>
     <updated>2016-02-01T03:09:48.000Z</updated>
     
@@ -396,19 +396,19 @@
     
     </summary>
     
-      <category term="React Native(js)" scheme="http://www.kohmax.com/child/categories/React-Native-js/"/>
+      <category term="React Native(js)" scheme="http://www.kohmax.com/categories/React-Native-js/"/>
     
     
-      <category term="JavaScript" scheme="http://www.kohmax.com/child/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="http://www.kohmax.com/tags/JavaScript/"/>
     
-      <category term="React Native" scheme="http://www.kohmax.com/child/tags/React-Native/"/>
+      <category term="React Native" scheme="http://www.kohmax.com/tags/React-Native/"/>
     
   </entry>
   
   <entry>
     <title>如何取消必应首页花哨的背景图片</title>
-    <link href="http://www.kohmax.com/child/2016/01/12/%E5%A6%82%E4%BD%95%E5%8F%96%E6%B6%88%E5%BF%85%E5%BA%94%E9%A6%96%E9%A1%B5%E8%8A%B1%E5%93%A8%E7%9A%84%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87/"/>
-    <id>http://www.kohmax.com/child/2016/01/12/如何取消必应首页花哨的背景图片/</id>
+    <link href="http://www.kohmax.com/%E5%A6%82%E4%BD%95%E5%8F%96%E6%B6%88%E5%BF%85%E5%BA%94%E9%A6%96%E9%A1%B5%E8%8A%B1%E5%93%A8%E7%9A%84%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87/"/>
+    <id>http://www.kohmax.com/如何取消必应首页花哨的背景图片/</id>
     <published>2016-01-12T02:23:15.000Z</published>
     <updated>2016-02-01T03:09:48.000Z</updated>
     
@@ -430,21 +430,21 @@
     
     </summary>
     
-      <category term="Others" scheme="http://www.kohmax.com/child/categories/Others/"/>
+      <category term="Others" scheme="http://www.kohmax.com/categories/Others/"/>
     
     
-      <category term="微软" scheme="http://www.kohmax.com/child/tags/%E5%BE%AE%E8%BD%AF/"/>
+      <category term="微软" scheme="http://www.kohmax.com/tags/%E5%BE%AE%E8%BD%AF/"/>
     
-      <category term="Bing" scheme="http://www.kohmax.com/child/tags/Bing/"/>
+      <category term="Bing" scheme="http://www.kohmax.com/tags/Bing/"/>
     
-      <category term="搜索引擎" scheme="http://www.kohmax.com/child/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/"/>
+      <category term="搜索引擎" scheme="http://www.kohmax.com/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/"/>
     
   </entry>
   
   <entry>
     <title>OC与Swift混编教程</title>
-    <link href="http://www.kohmax.com/child/2016/01/04/OC%E4%B8%8ESwift%E6%B7%B7%E7%BC%96%E6%95%99%E7%A8%8B/"/>
-    <id>http://www.kohmax.com/child/2016/01/04/OC与Swift混编教程/</id>
+    <link href="http://www.kohmax.com/OC%E4%B8%8ESwift%E6%B7%B7%E7%BC%96%E6%95%99%E7%A8%8B/"/>
+    <id>http://www.kohmax.com/OC与Swift混编教程/</id>
     <published>2016-01-04T08:43:14.000Z</published>
     <updated>2016-02-01T03:09:48.000Z</updated>
     
@@ -471,23 +471,23 @@
     
     </summary>
     
-      <category term="Swift" scheme="http://www.kohmax.com/child/categories/Swift/"/>
+      <category term="Swift" scheme="http://www.kohmax.com/categories/Swift/"/>
     
     
-      <category term="Objective-C" scheme="http://www.kohmax.com/child/tags/Objective-C/"/>
+      <category term="Objective-C" scheme="http://www.kohmax.com/tags/Objective-C/"/>
     
-      <category term="Swift" scheme="http://www.kohmax.com/child/tags/Swift/"/>
+      <category term="Swift" scheme="http://www.kohmax.com/tags/Swift/"/>
     
-      <category term="混编" scheme="http://www.kohmax.com/child/tags/%E6%B7%B7%E7%BC%96/"/>
+      <category term="混编" scheme="http://www.kohmax.com/tags/%E6%B7%B7%E7%BC%96/"/>
     
-      <category term="Xcode" scheme="http://www.kohmax.com/child/tags/Xcode/"/>
+      <category term="Xcode" scheme="http://www.kohmax.com/tags/Xcode/"/>
     
   </entry>
   
   <entry>
     <title>UIButton中拖动与点击事件重合的处理方法</title>
-    <link href="http://www.kohmax.com/child/2016/01/04/UIButton%E4%B8%AD%E6%8B%96%E5%8A%A8%E4%B8%8E%E7%82%B9%E5%87%BB%E4%BA%8B%E4%BB%B6%E9%87%8D%E5%90%88%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/"/>
-    <id>http://www.kohmax.com/child/2016/01/04/UIButton中拖动与点击事件重合的处理方法/</id>
+    <link href="http://www.kohmax.com/UIButton%E4%B8%AD%E6%8B%96%E5%8A%A8%E4%B8%8E%E7%82%B9%E5%87%BB%E4%BA%8B%E4%BB%B6%E9%87%8D%E5%90%88%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/"/>
+    <id>http://www.kohmax.com/UIButton中拖动与点击事件重合的处理方法/</id>
     <published>2016-01-04T03:58:29.000Z</published>
     <updated>2016-01-07T14:07:59.000Z</updated>
     
@@ -507,21 +507,21 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://www.kohmax.com/child/categories/iOS/"/>
+      <category term="iOS" scheme="http://www.kohmax.com/categories/iOS/"/>
     
     
-      <category term="iOS" scheme="http://www.kohmax.com/child/tags/iOS/"/>
+      <category term="iOS" scheme="http://www.kohmax.com/tags/iOS/"/>
     
-      <category term="UIButton" scheme="http://www.kohmax.com/child/tags/UIButton/"/>
+      <category term="UIButton" scheme="http://www.kohmax.com/tags/UIButton/"/>
     
-      <category term="手势" scheme="http://www.kohmax.com/child/tags/%E6%89%8B%E5%8A%BF/"/>
+      <category term="手势" scheme="http://www.kohmax.com/tags/%E6%89%8B%E5%8A%BF/"/>
     
   </entry>
   
   <entry>
     <title>Sublime Text 3 - 全栈er的编辑器</title>
-    <link href="http://www.kohmax.com/child/2015/12/28/Sublime%20Text%203%20-%20%E5%85%A8%E6%A0%88er%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    <id>http://www.kohmax.com/child/2015/12/28/Sublime Text 3 - 全栈er的编辑器/</id>
+    <link href="http://www.kohmax.com/Sublime%20Text%203%20-%20%E5%85%A8%E6%A0%88er%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+    <id>http://www.kohmax.com/Sublime Text 3 - 全栈er的编辑器/</id>
     <published>2015-12-28T03:58:57.000Z</published>
     <updated>2016-02-01T03:09:48.000Z</updated>
     
@@ -551,19 +551,19 @@
     
     </summary>
     
-      <category term="必先利其器" scheme="http://www.kohmax.com/child/categories/%E5%BF%85%E5%85%88%E5%88%A9%E5%85%B6%E5%99%A8/"/>
+      <category term="必先利其器" scheme="http://www.kohmax.com/categories/%E5%BF%85%E5%85%88%E5%88%A9%E5%85%B6%E5%99%A8/"/>
     
     
-      <category term="JavaScript" scheme="http://www.kohmax.com/child/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="http://www.kohmax.com/tags/JavaScript/"/>
     
-      <category term="Sublime Text" scheme="http://www.kohmax.com/child/tags/Sublime-Text/"/>
+      <category term="Sublime Text" scheme="http://www.kohmax.com/tags/Sublime-Text/"/>
     
   </entry>
   
   <entry>
     <title>[iOS开发]NSPredicate谓词的用法详解</title>
-    <link href="http://www.kohmax.com/child/2015/12/18/iOS%E5%BC%80%E5%8F%91-NSPredicate%E8%B0%93%E8%AF%8D%E7%9A%84%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://www.kohmax.com/child/2015/12/18/iOS开发-NSPredicate谓词的用法详解/</id>
+    <link href="http://www.kohmax.com/iOS%E5%BC%80%E5%8F%91-NSPredicate%E8%B0%93%E8%AF%8D%E7%9A%84%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3/"/>
+    <id>http://www.kohmax.com/iOS开发-NSPredicate谓词的用法详解/</id>
     <published>2015-12-18T02:49:11.000Z</published>
     <updated>2016-01-07T14:07:59.000Z</updated>
     
@@ -586,21 +586,21 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://www.kohmax.com/child/categories/iOS/"/>
+      <category term="iOS" scheme="http://www.kohmax.com/categories/iOS/"/>
     
     
-      <category term="iOS" scheme="http://www.kohmax.com/child/tags/iOS/"/>
+      <category term="iOS" scheme="http://www.kohmax.com/tags/iOS/"/>
     
-      <category term="NSPredicate" scheme="http://www.kohmax.com/child/tags/NSPredicate/"/>
+      <category term="NSPredicate" scheme="http://www.kohmax.com/tags/NSPredicate/"/>
     
-      <category term="NSArray" scheme="http://www.kohmax.com/child/tags/NSArray/"/>
+      <category term="NSArray" scheme="http://www.kohmax.com/tags/NSArray/"/>
     
   </entry>
   
   <entry>
     <title>集成微信支付时跳转到只有一个确定的页面--问题处理</title>
-    <link href="http://www.kohmax.com/child/2015/12/03/%E9%9B%86%E6%88%90%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E6%97%B6%E8%B7%B3%E8%BD%AC%E5%88%B0%E5%8F%AA%E6%9C%89%E4%B8%80%E4%B8%AA%E7%A1%AE%E5%AE%9A%E7%9A%84%E9%A1%B5%E9%9D%A2-%E9%97%AE%E9%A2%98%E5%A4%84%E7%90%86/"/>
-    <id>http://www.kohmax.com/child/2015/12/03/集成微信支付时跳转到只有一个确定的页面-问题处理/</id>
+    <link href="http://www.kohmax.com/%E9%9B%86%E6%88%90%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E6%97%B6%E8%B7%B3%E8%BD%AC%E5%88%B0%E5%8F%AA%E6%9C%89%E4%B8%80%E4%B8%AA%E7%A1%AE%E5%AE%9A%E7%9A%84%E9%A1%B5%E9%9D%A2-%E9%97%AE%E9%A2%98%E5%A4%84%E7%90%86/"/>
+    <id>http://www.kohmax.com/集成微信支付时跳转到只有一个确定的页面-问题处理/</id>
     <published>2015-12-03T10:05:00.000Z</published>
     <updated>2016-05-26T08:28:26.000Z</updated>
     
@@ -633,25 +633,25 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://www.kohmax.com/child/categories/iOS/"/>
+      <category term="iOS" scheme="http://www.kohmax.com/categories/iOS/"/>
     
     
-      <category term="iOS" scheme="http://www.kohmax.com/child/tags/iOS/"/>
+      <category term="iOS" scheme="http://www.kohmax.com/tags/iOS/"/>
     
-      <category term="Wechat" scheme="http://www.kohmax.com/child/tags/Wechat/"/>
+      <category term="Wechat" scheme="http://www.kohmax.com/tags/Wechat/"/>
     
-      <category term="微信支付" scheme="http://www.kohmax.com/child/tags/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98/"/>
+      <category term="微信支付" scheme="http://www.kohmax.com/tags/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98/"/>
     
-      <category term="WxApi" scheme="http://www.kohmax.com/child/tags/WxApi/"/>
+      <category term="WxApi" scheme="http://www.kohmax.com/tags/WxApi/"/>
     
-      <category term="问题" scheme="http://www.kohmax.com/child/tags/%E9%97%AE%E9%A2%98/"/>
+      <category term="问题" scheme="http://www.kohmax.com/tags/%E9%97%AE%E9%A2%98/"/>
     
   </entry>
   
   <entry>
     <title>如何注册一个美国的Apple ID（最新）</title>
-    <link href="http://www.kohmax.com/child/2015/11/27/%E5%A6%82%E4%BD%95%E6%B3%A8%E5%86%8C%E4%B8%80%E4%B8%AA%E7%BE%8E%E5%9B%BD%E7%9A%84Apple-ID%EF%BC%88%E6%9C%80%E6%96%B0%EF%BC%89/"/>
-    <id>http://www.kohmax.com/child/2015/11/27/如何注册一个美国的Apple-ID（最新）/</id>
+    <link href="http://www.kohmax.com/%E5%A6%82%E4%BD%95%E6%B3%A8%E5%86%8C%E4%B8%80%E4%B8%AA%E7%BE%8E%E5%9B%BD%E7%9A%84Apple-ID%EF%BC%88%E6%9C%80%E6%96%B0%EF%BC%89/"/>
+    <id>http://www.kohmax.com/如何注册一个美国的Apple-ID（最新）/</id>
     <published>2015-11-27T07:41:57.000Z</published>
     <updated>2016-01-07T14:07:59.000Z</updated>
     
@@ -679,19 +679,19 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://www.kohmax.com/child/categories/iOS/"/>
+      <category term="iOS" scheme="http://www.kohmax.com/categories/iOS/"/>
     
     
-      <category term="Apple ID" scheme="http://www.kohmax.com/child/tags/Apple-ID/"/>
+      <category term="Apple ID" scheme="http://www.kohmax.com/tags/Apple-ID/"/>
     
-      <category term="USA" scheme="http://www.kohmax.com/child/tags/USA/"/>
+      <category term="USA" scheme="http://www.kohmax.com/tags/USA/"/>
     
   </entry>
   
   <entry>
     <title>Swift_Closure，闭包</title>
-    <link href="http://www.kohmax.com/child/2015/11/27/Swift_Guard%EF%BC%8C%E5%BC%80%E5%90%AF%E4%BF%9D%E9%95%96%E6%A8%A1%E5%BC%8F%E5%89%AF%E6%9C%AC/"/>
-    <id>http://www.kohmax.com/child/2015/11/27/Swift_Guard，开启保镖模式副本/</id>
+    <link href="http://www.kohmax.com/Swift_Guard%EF%BC%8C%E5%BC%80%E5%90%AF%E4%BF%9D%E9%95%96%E6%A8%A1%E5%BC%8F%E5%89%AF%E6%9C%AC/"/>
+    <id>http://www.kohmax.com/Swift_Guard，开启保镖模式副本/</id>
     <published>2015-11-27T01:23:33.000Z</published>
     <updated>2016-02-01T03:09:48.000Z</updated>
     
@@ -736,25 +736,25 @@
     
     </summary>
     
-      <category term="Swift" scheme="http://www.kohmax.com/child/categories/Swift/"/>
+      <category term="Swift" scheme="http://www.kohmax.com/categories/Swift/"/>
     
     
-      <category term="iOS" scheme="http://www.kohmax.com/child/tags/iOS/"/>
+      <category term="iOS" scheme="http://www.kohmax.com/tags/iOS/"/>
     
-      <category term="Swift" scheme="http://www.kohmax.com/child/tags/Swift/"/>
+      <category term="Swift" scheme="http://www.kohmax.com/tags/Swift/"/>
     
-      <category term="闭包" scheme="http://www.kohmax.com/child/tags/%E9%97%AD%E5%8C%85/"/>
+      <category term="闭包" scheme="http://www.kohmax.com/tags/%E9%97%AD%E5%8C%85/"/>
     
-      <category term="Closure" scheme="http://www.kohmax.com/child/tags/Closure/"/>
+      <category term="Closure" scheme="http://www.kohmax.com/tags/Closure/"/>
     
-      <category term="Block" scheme="http://www.kohmax.com/child/tags/Block/"/>
+      <category term="Block" scheme="http://www.kohmax.com/tags/Block/"/>
     
   </entry>
   
   <entry>
     <title>Swift，截取字符串</title>
-    <link href="http://www.kohmax.com/child/2015/11/27/Swift%EF%BC%8C%E6%88%AA%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    <id>http://www.kohmax.com/child/2015/11/27/Swift，截取字符串/</id>
+    <link href="http://www.kohmax.com/Swift%EF%BC%8C%E6%88%AA%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <id>http://www.kohmax.com/Swift，截取字符串/</id>
     <published>2015-11-26T17:11:52.000Z</published>
     <updated>2016-02-01T03:09:48.000Z</updated>
     
@@ -790,23 +790,23 @@
     
     </summary>
     
-      <category term="Swift" scheme="http://www.kohmax.com/child/categories/Swift/"/>
+      <category term="Swift" scheme="http://www.kohmax.com/categories/Swift/"/>
     
     
-      <category term="iOS" scheme="http://www.kohmax.com/child/tags/iOS/"/>
+      <category term="iOS" scheme="http://www.kohmax.com/tags/iOS/"/>
     
-      <category term="Swift" scheme="http://www.kohmax.com/child/tags/Swift/"/>
+      <category term="Swift" scheme="http://www.kohmax.com/tags/Swift/"/>
     
-      <category term="String" scheme="http://www.kohmax.com/child/tags/String/"/>
+      <category term="String" scheme="http://www.kohmax.com/tags/String/"/>
     
-      <category term="截取字符串" scheme="http://www.kohmax.com/child/tags/%E6%88%AA%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+      <category term="截取字符串" scheme="http://www.kohmax.com/tags/%E6%88%AA%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
   </entry>
   
   <entry>
     <title>Swift_Guard，开启保镖模式</title>
-    <link href="http://www.kohmax.com/child/2015/11/27/Swift_Guard%EF%BC%8C%E5%BC%80%E5%90%AF%E4%BF%9D%E9%95%96%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.kohmax.com/child/2015/11/27/Swift_Guard，开启保镖模式/</id>
+    <link href="http://www.kohmax.com/Swift_Guard%EF%BC%8C%E5%BC%80%E5%90%AF%E4%BF%9D%E9%95%96%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://www.kohmax.com/Swift_Guard，开启保镖模式/</id>
     <published>2015-11-26T17:11:52.000Z</published>
     <updated>2016-02-01T03:09:48.000Z</updated>
     
@@ -851,23 +851,23 @@
     
     </summary>
     
-      <category term="Swift" scheme="http://www.kohmax.com/child/categories/Swift/"/>
+      <category term="Swift" scheme="http://www.kohmax.com/categories/Swift/"/>
     
     
-      <category term="iOS" scheme="http://www.kohmax.com/child/tags/iOS/"/>
+      <category term="iOS" scheme="http://www.kohmax.com/tags/iOS/"/>
     
-      <category term="Swift" scheme="http://www.kohmax.com/child/tags/Swift/"/>
+      <category term="Swift" scheme="http://www.kohmax.com/tags/Swift/"/>
     
-      <category term="Bouncer Pattern" scheme="http://www.kohmax.com/child/tags/Bouncer-Pattern/"/>
+      <category term="Bouncer Pattern" scheme="http://www.kohmax.com/tags/Bouncer-Pattern/"/>
     
-      <category term="保镖模式" scheme="http://www.kohmax.com/child/tags/%E4%BF%9D%E9%95%96%E6%A8%A1%E5%BC%8F/"/>
+      <category term="保镖模式" scheme="http://www.kohmax.com/tags/%E4%BF%9D%E9%95%96%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>网络编程之TCP以及TLV报文编解码</title>
-    <link href="http://www.kohmax.com/child/2015/11/19/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E4%B9%8BTCP%E4%BB%A5%E5%8F%8ATLV%E6%8A%A5%E6%96%87%E7%BC%96%E8%A7%A3%E7%A0%81/"/>
-    <id>http://www.kohmax.com/child/2015/11/19/网络编程之TCP以及TLV报文编解码/</id>
+    <link href="http://www.kohmax.com/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E4%B9%8BTCP%E4%BB%A5%E5%8F%8ATLV%E6%8A%A5%E6%96%87%E7%BC%96%E8%A7%A3%E7%A0%81/"/>
+    <id>http://www.kohmax.com/网络编程之TCP以及TLV报文编解码/</id>
     <published>2015-11-19T07:26:47.000Z</published>
     <updated>2016-01-07T14:07:59.000Z</updated>
     
@@ -877,25 +877,25 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://www.kohmax.com/child/categories/iOS/"/>
+      <category term="iOS" scheme="http://www.kohmax.com/categories/iOS/"/>
     
     
-      <category term="TLV" scheme="http://www.kohmax.com/child/tags/TLV/"/>
+      <category term="TLV" scheme="http://www.kohmax.com/tags/TLV/"/>
     
-      <category term="TCP" scheme="http://www.kohmax.com/child/tags/TCP/"/>
+      <category term="TCP" scheme="http://www.kohmax.com/tags/TCP/"/>
     
-      <category term="网络编程" scheme="http://www.kohmax.com/child/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+      <category term="网络编程" scheme="http://www.kohmax.com/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
     
-      <category term="AsyncSocket" scheme="http://www.kohmax.com/child/tags/AsyncSocket/"/>
+      <category term="AsyncSocket" scheme="http://www.kohmax.com/tags/AsyncSocket/"/>
     
-      <category term="Json" scheme="http://www.kohmax.com/child/tags/Json/"/>
+      <category term="Json" scheme="http://www.kohmax.com/tags/Json/"/>
     
   </entry>
   
   <entry>
     <title>iOS9与XCode7中不能使用http连接的解决办法</title>
-    <link href="http://www.kohmax.com/child/2015/11/18/iOS9%E4%B8%8EXCode7%E4%B8%AD%E4%B8%8D%E8%83%BD%E4%BD%BF%E7%94%A8http%E8%BF%9E%E6%8E%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
-    <id>http://www.kohmax.com/child/2015/11/18/iOS9与XCode7中不能使用http连接的解决办法/</id>
+    <link href="http://www.kohmax.com/iOS9%E4%B8%8EXCode7%E4%B8%AD%E4%B8%8D%E8%83%BD%E4%BD%BF%E7%94%A8http%E8%BF%9E%E6%8E%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
+    <id>http://www.kohmax.com/iOS9与XCode7中不能使用http连接的解决办法/</id>
     <published>2015-11-18T02:58:00.000Z</published>
     <updated>2016-01-07T14:07:59.000Z</updated>
     
@@ -917,23 +917,23 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://www.kohmax.com/child/categories/iOS/"/>
+      <category term="iOS" scheme="http://www.kohmax.com/categories/iOS/"/>
     
     
-      <category term="iOS" scheme="http://www.kohmax.com/child/tags/iOS/"/>
+      <category term="iOS" scheme="http://www.kohmax.com/tags/iOS/"/>
     
-      <category term="XCode7" scheme="http://www.kohmax.com/child/tags/XCode7/"/>
+      <category term="XCode7" scheme="http://www.kohmax.com/tags/XCode7/"/>
     
-      <category term="http" scheme="http://www.kohmax.com/child/tags/http/"/>
+      <category term="http" scheme="http://www.kohmax.com/tags/http/"/>
     
-      <category term="info.plist" scheme="http://www.kohmax.com/child/tags/info-plist/"/>
+      <category term="info.plist" scheme="http://www.kohmax.com/tags/info-plist/"/>
     
   </entry>
   
   <entry>
     <title>Swift_Singleton，深入浅出单例设计模式</title>
-    <link href="http://www.kohmax.com/child/2015/11/17/Swift_Singleton%EF%BC%8C%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E5%8D%95%E4%BE%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.kohmax.com/child/2015/11/17/Swift_Singleton，深入浅出单例设计模式/</id>
+    <link href="http://www.kohmax.com/Swift_Singleton%EF%BC%8C%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E5%8D%95%E4%BE%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://www.kohmax.com/Swift_Singleton，深入浅出单例设计模式/</id>
     <published>2015-11-16T16:21:13.000Z</published>
     <updated>2016-02-01T03:09:48.000Z</updated>
     
@@ -964,16 +964,16 @@
     
     </summary>
     
-      <category term="Swift" scheme="http://www.kohmax.com/child/categories/Swift/"/>
+      <category term="Swift" scheme="http://www.kohmax.com/categories/Swift/"/>
     
     
-      <category term="iOS" scheme="http://www.kohmax.com/child/tags/iOS/"/>
+      <category term="iOS" scheme="http://www.kohmax.com/tags/iOS/"/>
     
-      <category term="Swift" scheme="http://www.kohmax.com/child/tags/Swift/"/>
+      <category term="Swift" scheme="http://www.kohmax.com/tags/Swift/"/>
     
-      <category term="Singleton" scheme="http://www.kohmax.com/child/tags/Singleton/"/>
+      <category term="Singleton" scheme="http://www.kohmax.com/tags/Singleton/"/>
     
-      <category term="单例" scheme="http://www.kohmax.com/child/tags/%E5%8D%95%E4%BE%8B/"/>
+      <category term="单例" scheme="http://www.kohmax.com/tags/%E5%8D%95%E4%BE%8B/"/>
     
   </entry>
   
