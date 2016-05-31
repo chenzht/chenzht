@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.kohmax.com/"/>
-  <updated>2016-05-28T09:42:40.000Z</updated>
+  <updated>2016-05-31T11:43:17.000Z</updated>
   <id>http://www.kohmax.com/</id>
   
   <author>
@@ -14,6 +14,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>摩擦摩擦，一步一步走近ThinkJS</title>
+    <link href="http://www.kohmax.com/%E6%91%A9%E6%93%A6%E6%91%A9%E6%93%A6%EF%BC%8C%E4%B8%80%E6%AD%A5%E4%B8%80%E6%AD%A5%E8%B5%B0%E8%BF%91ThinkJS/"/>
+    <id>http://www.kohmax.com/摩擦摩擦，一步一步走近ThinkJS/</id>
+    <published>2016-05-31T04:38:03.000Z</published>
+    <updated>2016-05-31T11:43:17.000Z</updated>
+    
+    <content type="html">&lt;p&gt;想起很久很久之前，我刚学完Objective-C的语法，以及一些简单的UI、UX，然后，第一份实习工作，老大让我写一个基于TLV协议的TCP连接的项目，当时我对网络编程的了解也仅限于ASI，而网路上对于TLV编码与解析的内容又寥寥无几，我以为我做不到，可是硬生生的憋了1周后，终于挤出了一点成效，2周后，终于和后台调通了第一个接口。那时的兴奋我至今还会记得，也成了我以后面对“不可能任务”时的信条。&lt;/p&gt;
+&lt;p&gt;而这一周的NodeJS之行，步履维艰，除了一点HTML和JS的基础，其余的都是零。期间还夹杂着家人、朋友的各种麻烦事儿。&lt;/p&gt;
+&lt;p&gt;That’s all, thank you.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;想起很久很久之前，我刚学完Objective-C的语法，以及一些简单的UI、UX，然后，第一份实习工作，老大让我写一个基于TLV协议的TCP连接的项目，当时我对网络编程的了解也仅限于ASI，而网路上对于TLV编码与解析的内容又寥寥无几，我以为我做不到，可是硬生生的憋了1周后
+    
+    </summary>
+    
+      <category term="Node.js" scheme="http://www.kohmax.com/categories/Node-js/"/>
+    
+    
+      <category term="Node.js" scheme="http://www.kohmax.com/tags/Node-js/"/>
+    
+      <category term="ThinkJS" scheme="http://www.kohmax.com/tags/ThinkJS/"/>
+    
+      <category term="Web开发" scheme="http://www.kohmax.com/tags/Web%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="全栈" scheme="http://www.kohmax.com/tags/%E5%85%A8%E6%A0%88/"/>
+    
+  </entry>
   
   <entry>
     <title>JZShare - ShareSDK如何自定义分享UI</title>
@@ -519,11 +550,11 @@
   </entry>
   
   <entry>
-    <title>Sublime Text 3 - 全栈er的编辑器</title>
-    <link href="http://www.kohmax.com/Sublime%20Text%203%20-%20%E5%85%A8%E6%A0%88er%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    <id>http://www.kohmax.com/Sublime Text 3 - 全栈er的编辑器/</id>
+    <title>Sublime Text 3 - Full Stack developer的编辑器</title>
+    <link href="http://www.kohmax.com/Sublime%20Text%203%20-%20Full%20Stack%20developer%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+    <id>http://www.kohmax.com/Sublime Text 3 - Full Stack developer的编辑器/</id>
     <published>2015-12-28T03:58:57.000Z</published>
-    <updated>2016-02-01T03:09:48.000Z</updated>
+    <updated>2016-05-31T12:10:58.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;1-安装Sublime-Text-3&quot;&gt;&lt;a href=&quot;#1-安装Sublime-Text-3&quot; class=&quot;headerlink&quot; title=&quot;1. 安装Sublime Text 3&quot;&gt;&lt;/a&gt;1. 安装Sublime Text 3&lt;/h2&gt;&lt;p&gt;百度网盘链接: &lt;a href=&quot;http://pan.baidu.com/s/1qWOE5L6&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://pan.baidu.com/s/1qWOE5L6&lt;/a&gt; 密码: vuch&lt;/p&gt;
 &lt;h2 id=&quot;2-插件&quot;&gt;&lt;a href=&quot;#2-插件&quot; class=&quot;headerlink&quot; title=&quot;2. 插件&quot;&gt;&lt;/a&gt;2. 插件&lt;/h2&gt;&lt;h3 id=&quot;2-1-Package-Control&quot;&gt;&lt;a href=&quot;#2-1-Package-Control&quot; class=&quot;headerlink&quot; title=&quot;2.1 Package Control&quot;&gt;&lt;/a&gt;2.1 Package Control&lt;/h3&gt;&lt;ul&gt;
@@ -534,12 +565,27 @@
 &lt;figure class=&quot;highlight gradle&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; urllib.request,os; pf = &lt;span class=&quot;string&quot;&gt;&#39;Package Control.sublime-package&#39;&lt;/span&gt;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.&lt;span class=&quot;keyword&quot;&gt;join&lt;/span&gt;(ipp, pf), &lt;span class=&quot;string&quot;&gt;&#39;wb&#39;&lt;/span&gt;).&lt;span class=&quot;keyword&quot;&gt;write&lt;/span&gt;(urllib.request.urlopen( &lt;span class=&quot;string&quot;&gt;&#39;http://sublime.wbond.net/&#39;&lt;/span&gt; + pf.replace(&lt;span class=&quot;string&quot;&gt;&#39; &#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;%20&#39;&lt;/span&gt;)).&lt;span class=&quot;keyword&quot;&gt;read&lt;/span&gt;())&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;如果是 Sublime Text 2，代码为&lt;/p&gt;
 &lt;figure class=&quot;highlight moonscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; urllib2,&lt;span class=&quot;built_in&quot;&gt;os&lt;/span&gt;; pf=&lt;span class=&quot;string&quot;&gt;&#39;Package Control.sublime-package&#39;&lt;/span&gt;; ipp = sublime.installed_packages_path(); &lt;span class=&quot;built_in&quot;&gt;os&lt;/span&gt;.makedirs( ipp ) &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;os&lt;/span&gt;.path.exists(ipp) &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler( ))); open( &lt;span class=&quot;built_in&quot;&gt;os&lt;/span&gt;.path.join( ipp, pf), &lt;span class=&quot;string&quot;&gt;&#39;wb&#39;&lt;/span&gt; ).write( urllib2.urlopen( &lt;span class=&quot;string&quot;&gt;&#39;http://sublime.wbond.net/&#39;&lt;/span&gt; +pf.replace( &lt;span class=&quot;string&quot;&gt;&#39; &#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;%20&#39;&lt;/span&gt; )).read()); &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;( &lt;span class=&quot;string&quot;&gt;&#39;Please restart Sublime Text to finish installation&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;2-2-JSFormat&quot;&gt;&lt;a href=&quot;#2-2-JSFormat&quot; class=&quot;headerlink&quot; title=&quot;2.2 JSFormat&quot;&gt;&lt;/a&gt;2.2 JSFormat&lt;/h3&gt;&lt;h3 id=&quot;2-3-AndyJs2&quot;&gt;&lt;a href=&quot;#2-3-AndyJs2&quot; class=&quot;headerlink&quot; title=&quot;2.3 AndyJs2&quot;&gt;&lt;/a&gt;2.3 AndyJs2&lt;/h3&gt;&lt;p&gt;下载地址&lt;a href=&quot;http://pan.baidu.com/s/1ntmO1QD&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://pan.baidu.com/s/1ntmO1QD&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;2-2-Emmet&quot;&gt;&lt;a href=&quot;#2-2-Emmet&quot; class=&quot;headerlink&quot; title=&quot;2.2 Emmet&quot;&gt;&lt;/a&gt;2.2 Emmet&lt;/h3&gt;&lt;p&gt;神器，可以自动生成诸多Html格式，快捷键 ctrl + E 或者 Tab&lt;br&gt;输入 ! 按下Tab，可以自动生成Html格式，如下图所示&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xusmm.com1.z0.glb.clouddn.com/mdJozo/1464696019071.png&quot; width=&quot;122&quot;&gt;&lt;/p&gt;
+&lt;p&gt;再者，输入一些常用标签，如 div, link等，也会有生成相应格式&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xusmm.com1.z0.glb.clouddn.com/mdJozo/1464696113139.png&quot; width=&quot;125&quot;&gt;&lt;/p&gt;
+&lt;p&gt;进阶版的话可以去这个网站看一下&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt; &lt;a href=&quot;http://www.w3cplus.com/tools/emmet-cheat-sheet.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;前端开发必备！Emmet使用手册&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;2-3-AndyJs2&quot;&gt;&lt;a href=&quot;#2-3-AndyJs2&quot; class=&quot;headerlink&quot; title=&quot;2.3 AndyJs2&quot;&gt;&lt;/a&gt;2.3 AndyJs2&lt;/h3&gt;&lt;p&gt;下载地址&lt;a href=&quot;http://pan.baidu.com/s/1ntmO1QD&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://pan.baidu.com/s/1ntmO1QD&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;下载后解压缩放在安装目录下Packages文件夹即可&lt;/p&gt;
-&lt;h3 id=&quot;2-4-ColorPicker&quot;&gt;&lt;a href=&quot;#2-4-ColorPicker&quot; class=&quot;headerlink&quot; title=&quot;2.4 ColorPicker&quot;&gt;&lt;/a&gt;2.4 ColorPicker&lt;/h3&gt;&lt;p&gt;快捷键 Shift + Cmd + C&lt;/p&gt;
-&lt;h3 id=&quot;2-5-MarkDown-Editing&quot;&gt;&lt;a href=&quot;#2-5-MarkDown-Editing&quot; class=&quot;headerlink&quot; title=&quot;2.5 MarkDown Editing&quot;&gt;&lt;/a&gt;2.5 MarkDown Editing&lt;/h3&gt;&lt;h3 id=&quot;2-6-Ctags&quot;&gt;&lt;a href=&quot;#2-6-Ctags&quot; class=&quot;headerlink&quot; title=&quot;2.6 Ctags&quot;&gt;&lt;/a&gt;2.6 Ctags&lt;/h3&gt;&lt;p&gt;下载ctags-5.8.tar.gz源码包  &lt;a href=&quot;http://download.csdn.net/detail/jiuyueguang/5711867&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://download.csdn.net/detail/jiuyueguang/5711867&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;配置方法 &lt;a href=&quot;http://jingyan.baidu.com/article/48206aeafba820216ad6b3f5.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://jingyan.baidu.com/article/48206aeafba820216ad6b3f5.html&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;2-7-Git&quot;&gt;&lt;a href=&quot;#2-7-Git&quot; class=&quot;headerlink&quot; title=&quot;2.7 Git&quot;&gt;&lt;/a&gt;2.7 Git&lt;/h3&gt;&lt;h2 id=&quot;3-JS控制台&quot;&gt;&lt;a href=&quot;#3-JS控制台&quot; class=&quot;headerlink&quot; title=&quot;3. JS控制台&quot;&gt;&lt;/a&gt;3. JS控制台&lt;/h2&gt;&lt;p&gt;源网址&lt;a href=&quot;http://www.tuicool.com/articles/Uf2uauv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.tuicool.com/articles/Uf2uauv&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;2-4-ColorPicker&quot;&gt;&lt;a href=&quot;#2-4-ColorPicker&quot; class=&quot;headerlink&quot; title=&quot;2.4 ColorPicker&quot;&gt;&lt;/a&gt;2.4 ColorPicker&lt;/h3&gt;&lt;p&gt;一款颜色选择器，默认快捷键 Shift + Cmd + C&lt;/p&gt;
+&lt;h3 id=&quot;2-5-Insert-Callback&quot;&gt;&lt;a href=&quot;#2-5-Insert-Callback&quot; class=&quot;headerlink&quot; title=&quot;2.5 Insert Callback&quot;&gt;&lt;/a&gt;2.5 Insert Callback&lt;/h3&gt;&lt;p&gt;按下快捷键 alt + C 后，可以快速插入回调函数。&lt;/p&gt;
+&lt;h3 id=&quot;2-6-GotoDocumentation&quot;&gt;&lt;a href=&quot;#2-6-GotoDocumentation&quot; class=&quot;headerlink&quot; title=&quot;2.6 GotoDocumentation&quot;&gt;&lt;/a&gt;2.6 GotoDocumentation&lt;/h3&gt;&lt;p&gt;快速查看手册，快捷键super+shift+h&lt;/p&gt;
+&lt;h3 id=&quot;2-7-Git&quot;&gt;&lt;a href=&quot;#2-7-Git&quot; class=&quot;headerlink&quot; title=&quot;2.7 Git&quot;&gt;&lt;/a&gt;2.7 Git&lt;/h3&gt;&lt;p&gt;不解释&lt;/p&gt;
+&lt;h3 id=&quot;2-8-DocBlackr&quot;&gt;&lt;a href=&quot;#2-8-DocBlackr&quot; class=&quot;headerlink&quot; title=&quot;2.8 DocBlackr&quot;&gt;&lt;/a&gt;2.8 DocBlackr&lt;/h3&gt;&lt;p&gt;快速注释神器&lt;/p&gt;
+&lt;h3 id=&quot;2-9-advanceNewFile&quot;&gt;&lt;a href=&quot;#2-9-advanceNewFile&quot; class=&quot;headerlink&quot; title=&quot;2.9 advanceNewFile&quot;&gt;&lt;/a&gt;2.9 advanceNewFile&lt;/h3&gt;&lt;p&gt;可以直接在当前目录下创建新文件，从WebStorm过来的同学可以找到一点熟悉感&lt;/p&gt;
+&lt;h3 id=&quot;2-10-autofilename&quot;&gt;&lt;a href=&quot;#2-10-autofilename&quot; class=&quot;headerlink&quot; title=&quot;2.10 autofilename&quot;&gt;&lt;/a&gt;2.10 autofilename&lt;/h3&gt;&lt;p&gt;当你要引入文件的时候，自动提示引入的文件名&lt;/p&gt;
+&lt;h3 id=&quot;2-11-SyncedSideBar&quot;&gt;&lt;a href=&quot;#2-11-SyncedSideBar&quot; class=&quot;headerlink&quot; title=&quot;2.11 SyncedSideBar&quot;&gt;&lt;/a&gt;2.11 SyncedSideBar&lt;/h3&gt;&lt;p&gt;打开文件时自动打开文件所在目录&lt;/p&gt;
+&lt;h3 id=&quot;2-12-Inc-Dec-Value&quot;&gt;&lt;a href=&quot;#2-12-Inc-Dec-Value&quot; class=&quot;headerlink&quot; title=&quot;2.12 Inc Dec Value&quot;&gt;&lt;/a&gt;2.12 Inc Dec Value&lt;/h3&gt;&lt;p&gt;alt+鼠标滚轮或者alt+上下，使得数值变化&lt;/p&gt;
+&lt;h3 id=&quot;2-13-alignment&quot;&gt;&lt;a href=&quot;#2-13-alignment&quot; class=&quot;headerlink&quot; title=&quot;2.13 alignment&quot;&gt;&lt;/a&gt;2.13 alignment&lt;/h3&gt;&lt;p&gt;对齐格式，快捷键ctrl + A&lt;/p&gt;
+&lt;h2 id=&quot;3-JS控制台&quot;&gt;&lt;a href=&quot;#3-JS控制台&quot; class=&quot;headerlink&quot; title=&quot;3. JS控制台&quot;&gt;&lt;/a&gt;3. JS控制台&lt;/h2&gt;&lt;p&gt;源网址&lt;a href=&quot;http://www.tuicool.com/articles/Uf2uauv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.tuicool.com/articles/Uf2uauv&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -927,53 +973,6 @@
       <category term="http" scheme="http://www.kohmax.com/tags/http/"/>
     
       <category term="info.plist" scheme="http://www.kohmax.com/tags/info-plist/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Swift_Singleton，深入浅出单例设计模式</title>
-    <link href="http://www.kohmax.com/Swift_Singleton%EF%BC%8C%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E5%8D%95%E4%BE%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.kohmax.com/Swift_Singleton，深入浅出单例设计模式/</id>
-    <published>2015-11-16T16:21:13.000Z</published>
-    <updated>2016-02-01T03:09:48.000Z</updated>
-    
-    <content type="html">&lt;h3 id=&quot;单例设计模式&quot;&gt;&lt;a href=&quot;#单例设计模式&quot; class=&quot;headerlink&quot; title=&quot;单例设计模式&quot;&gt;&lt;/a&gt;单例设计模式&lt;/h3&gt;&lt;p&gt;开发项目的时候，有时候需要很多工具类，这时候单例的使用就尤为重要。在OC中，单例的写法想必大家很清晰了，在这里给大家介绍下Swift中几种单例的写法：&lt;/p&gt;
-&lt;h4 id=&quot;1-最直接的写法&quot;&gt;&lt;a href=&quot;#1-最直接的写法&quot; class=&quot;headerlink&quot; title=&quot;1. 最直接的写法&quot;&gt;&lt;/a&gt;1. 最直接的写法&lt;/h4&gt;&lt;figure class=&quot;highlight smali&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;static var instance: DBHelper? = nil&lt;span class=&quot;keyword&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;static&lt;/span&gt; func sharedInstance() -&amp;gt; DBHelper &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;built_in&quot;&gt; if &lt;/span&gt;instance == nil &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &lt;span class=&quot;built_in&quot;&gt; instance &lt;/span&gt;= DBHelper()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;built_in&quot;&gt; return &lt;/span&gt;instance!&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;blockquote&gt;
-&lt;p&gt;这种写法的缺陷在于，没有处理线程安全的问题&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&quot;2-使用GCD&quot;&gt;&lt;a href=&quot;#2-使用GCD&quot; class=&quot;headerlink&quot; title=&quot;2. 使用GCD&quot;&gt;&lt;/a&gt;2. 使用GCD&lt;/h4&gt;&lt;figure class=&quot;highlight smali&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;static var sharedInstance: DBHelper &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    struct Static &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &lt;span class=&quot;keyword&quot;&gt; static&lt;/span&gt; var onceToken&lt;span class=&quot;keyword&quot;&gt; :&lt;/span&gt; dispatch_once_t = 0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &lt;span class=&quot;keyword&quot;&gt; static&lt;/span&gt; var&lt;span class=&quot;built_in&quot;&gt; instance &lt;/span&gt;: DBHelper? = nil&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    dispatch_once(&amp;amp;Static.onceToken) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        Static.instance = DBHelper()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;built_in&quot;&gt; return &lt;/span&gt;Static.instance!&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;p&gt;使用GCD可以帮助我们处理线程安全的问题，但缺陷在于写法太麻烦&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&quot;3-使用let变量简单的写法&quot;&gt;&lt;a href=&quot;#3-使用let变量简单的写法&quot; class=&quot;headerlink&quot; title=&quot;3. 使用let变量简单的写法&quot;&gt;&lt;/a&gt;3. 使用let变量简单的写法&lt;/h4&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;sharedInstance&lt;/span&gt;: &lt;span class=&quot;title&quot;&gt;DBHelper&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Static&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; instance: &lt;span class=&quot;type&quot;&gt;DBHelper&lt;/span&gt; = &lt;span class=&quot;type&quot;&gt;DBHelper&lt;/span&gt;()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;Static&lt;/span&gt;.instance&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;p&gt;使用常量来实现单例对象，虽然没有问题，但是写法还不够简洁&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&quot;4-最方便的写法&quot;&gt;&lt;a href=&quot;#4-最方便的写法&quot; class=&quot;headerlink&quot; title=&quot;4. 最方便的写法&quot;&gt;&lt;/a&gt;4. 最方便的写法&lt;/h4&gt;&lt;figure class=&quot;highlight smali&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;private&lt;span class=&quot;keyword&quot;&gt; static&lt;/span&gt; let&lt;span class=&quot;built_in&quot;&gt; instance &lt;/span&gt;= DBHelper()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;class var sharedInstance: DBHelper &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;built_in&quot;&gt; return &lt;/span&gt;instance&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;p&gt;本人用的最多的也就是最下面这一种了，十分简单明了，也希望大家能喜欢。&lt;/p&gt;
-&lt;/blockquote&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;单例设计模式&quot;&gt;&lt;a href=&quot;#单例设计模式&quot; class=&quot;headerlink&quot; title=&quot;单例设计模式&quot;&gt;&lt;/a&gt;单例设计模式&lt;/h3&gt;&lt;p&gt;开发项目的时候，有时候需要很多工具类，这时候单例的使用就尤为重要。在OC中，单例的写法想必大家很清晰了，在这里给大家介绍下Swift中几种单例的写法：&lt;/p&gt;
-&lt;h4 id=&quot;1-最直接的写法&quot;&gt;&lt;a href=&quot;#1-最直接的写法&quot; class=&quot;headerlink&quot; title=&quot;1. 最直接的写法&quot;&gt;&lt;/a&gt;1. 最直接的写法&lt;/h4&gt;&lt;figure class=&quot;highlight smali&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;static var instance: DBHelper? = nil&lt;span class=&quot;keyword&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;static&lt;/span&gt; func sharedInstance() -&amp;gt; DBHelper &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;built_in&quot;&gt; if &lt;/span&gt;instance == nil &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &lt;span class=&quot;built_in&quot;&gt; instance &lt;/span&gt;= DBHelper()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;built_in&quot;&gt; return &lt;/span&gt;instance!&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Swift" scheme="http://www.kohmax.com/categories/Swift/"/>
-    
-    
-      <category term="iOS" scheme="http://www.kohmax.com/tags/iOS/"/>
-    
-      <category term="Swift" scheme="http://www.kohmax.com/tags/Swift/"/>
-    
-      <category term="Singleton" scheme="http://www.kohmax.com/tags/Singleton/"/>
-    
-      <category term="单例" scheme="http://www.kohmax.com/tags/%E5%8D%95%E4%BE%8B/"/>
     
   </entry>
   
