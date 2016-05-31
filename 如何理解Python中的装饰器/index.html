@@ -1,0 +1,773 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Python," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Jozo的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="最近接触了一点Python，基本语法比较简单但十分惊艳，本来一路畅通，然后遇到了“装饰器”这个拦路虎，突然脑袋就短路并且开始怀疑人生。于是在网上搜索了很多博客，慢慢的也有了一点理解，下面就整理一下，也给大家提供一些思路。
+1. 装饰器的使用场景首先，说下装饰器的概念，装饰器是一个很著名的设计模式，经常被用于有切面需求的场景，较为经典的有插入日志、性能测试、事务处理等。装饰器是解决这类问题的绝佳设计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何理解Python中的装饰器">
+<meta property="og:url" content="http://www.kohmax.com/如何理解Python中的装饰器/index.html">
+<meta property="og:site_name" content="Jozo的博客">
+<meta property="og:description" content="最近接触了一点Python，基本语法比较简单但十分惊艳，本来一路畅通，然后遇到了“装饰器”这个拦路虎，突然脑袋就短路并且开始怀疑人生。于是在网上搜索了很多博客，慢慢的也有了一点理解，下面就整理一下，也给大家提供一些思路。
+1. 装饰器的使用场景首先，说下装饰器的概念，装饰器是一个很著名的设计模式，经常被用于有切面需求的场景，较为经典的有插入日志、性能测试、事务处理等。装饰器是解决这类问题的绝佳设计">
+<meta property="og:updated_time" content="2016-05-26T09:20:29.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何理解Python中的装饰器">
+<meta name="twitter:description" content="最近接触了一点Python，基本语法比较简单但十分惊艳，本来一路畅通，然后遇到了“装饰器”这个拦路虎，突然脑袋就短路并且开始怀疑人生。于是在网上搜索了很多博客，慢慢的也有了一点理解，下面就整理一下，也给大家提供一些思路。
+1. 装饰器的使用场景首先，说下装饰器的概念，装饰器是一个很著名的设计模式，经常被用于有切面需求的场景，较为经典的有插入日志、性能测试、事务处理等。装饰器是解决这类问题的绝佳设计">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 如何理解Python中的装饰器 | Jozo的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Jozo的博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            有料
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/index.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'wyXNFUWN_N8FU9Bcysd3','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                如何理解Python中的装饰器
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-26T16:29:47+08:00" content="2016-05-26">
+              2016-05-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/如何理解Python中的装饰器/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="如何理解Python中的装饰器/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>最近接触了一点Python，基本语法比较简单但十分惊艳，本来一路畅通，然后遇到了“装饰器”这个拦路虎，突然脑袋就短路并且开始怀疑人生。于是在网上搜索了很多博客，慢慢的也有了一点理解，下面就整理一下，也给大家提供一些思路。</p>
+<h3 id="1-装饰器的使用场景"><a href="#1-装饰器的使用场景" class="headerlink" title="1. 装饰器的使用场景"></a>1. 装饰器的使用场景</h3><p>首先，说下装饰器的概念，装饰器是一个很著名的<strong>设计模式</strong>，经常被用于有切面需求的场景，较为经典的有<strong>插入日志、性能测试、事务处理</strong>等。装饰器是解决这类问题的绝佳设计，有了装饰器，我们就可以抽离出大量函数中与函数功能本身无关的雷同代码并继续重用。概括的讲，<strong>装饰器的作用就是为已经存在的对象添加额外的功能</strong>。<br><a id="more"></a><br>这里给出一个例子解释一下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">'in foo()'</span></span><br><span class="line">foo()</span><br></pre></td></tr></table></figure>
+<p>这是一个很无聊的函数没错。但是突然有一个更无聊的人，我们称呼他为SBJ，说我想看看执行这个函数用了多长时间，好吧，那么我们可以这样做：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">    start = time.clock()</span><br><span class="line">    <span class="keyword">print</span> <span class="string">'in foo()'</span></span><br><span class="line">    end = time.clock()</span><br><span class="line">    <span class="keyword">print</span> <span class="string">'used:'</span>, end - start</span><br><span class="line"> </span><br><span class="line">foo()</span><br></pre></td></tr></table></figure>
+<p>看起来十分完美，可这时，SBJ又想在foo2里实现相同的功能，那把上面的代码再复制一份？非也，重复造轮子可是大忌，所以我们又有了下面的写法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">'in foo()'</span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">timeit</span><span class="params">(func)</span>:</span></span><br><span class="line">    start = time.clock()</span><br><span class="line">    func()</span><br><span class="line">    end =time.clock()</span><br><span class="line">    <span class="keyword">print</span> <span class="string">'used:'</span>, end - start</span><br><span class="line"> </span><br><span class="line">timeit(foo)</span><br></pre></td></tr></table></figure>
+<p>Good job！不再需要重复造轮子了，但似乎又引来了新的问题，之前我们<br>是这样调用的:foo()，修改后需要改为timeit(foo)，如果之前foo这个函数已经被调用了N次，那么就不得不去把这N处都改为timeit(foo)，而万一这个函数还有别人在用，你根本无从修改，所以，必须探索其他的出路。</p>
+<p>因此，我们必须想办法不修改调用的代码 –&gt; foo()必须等价于timeit(foo)  –&gt;  我们可以想到将timeit赋值给foo，但是timeit似乎带有一个参数 –&gt; 想办法把参数统一吧。<br>如果timeit(foo)不是直接产生调用效果，而是返回一个与foo参数列表一致的函数的话……就很好办了，将timeit(foo)的返回值赋值给foo，然后，调用foo()的代码完全不用修改！</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#-*- coding: UTF-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">'in foo()'</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 定义一个计时器，传入一个，并返回另一个附加了计时功能的方法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">timeit</span><span class="params">(func)</span>:</span></span><br><span class="line">     </span><br><span class="line">    <span class="comment"># 定义一个内嵌的包装函数，给传入的函数加上计时功能的包装</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">()</span>:</span></span><br><span class="line">        start = time.clock()</span><br><span class="line">        func()</span><br><span class="line">        end =time.clock()</span><br><span class="line">        <span class="keyword">print</span> <span class="string">'used:'</span>, end - start</span><br><span class="line">     </span><br><span class="line">    <span class="comment"># 将包装后的函数返回</span></span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"> </span><br><span class="line">foo = timeit(foo)</span><br><span class="line">foo()</span><br></pre></td></tr></table></figure>
+<p>这样，一个简易的计时器就做好了！我们只需要在定义foo以后调用foo之前，加上foo = timeit(foo)，就可以达到计时的目的，这也就是装饰器的概念，看起来像是foo被timeit装饰了。在在这个例子中，函数进入和退出时需要计时，这被称为一个横切面(Aspect)，这种编程方式被称为面向切面的编程(Aspect-Oriented Programming)。与传统编程习惯的从上往下执行方式相比较而言，像是在函数执行的流程中横向地插入了一段逻辑。在特定的业务领域里，能减少大量重复代码。面向切面编程还有相当多的术语，这里就不多做介绍，感兴趣的话可以去找找相关的资料。</p>
+<p>这个例子仅用于演示，并没有考虑foo带有参数和有返回值的情况，完善它的重任就交给你了 ：）</p>
+<p>上面这段代码看起来似乎已经不能再精简了，Python于是提供了一个语法糖来降低字符输入量。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">timeit</span><span class="params">(func)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">()</span>:</span></span><br><span class="line">        start = time.clock()</span><br><span class="line">        func()</span><br><span class="line">        end =time.clock()</span><br><span class="line">        <span class="keyword">print</span> <span class="string">'used:'</span>, end - start</span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"> </span><br><span class="line"><span class="meta">@timeit</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">'in foo()'</span></span><br><span class="line"> </span><br><span class="line">foo()</span><br></pre></td></tr></table></figure>
+<p>注意上面代码片段里的<strong>@timeit</strong>，在定义上加上这一行与另外写foo = timeit(foo)完全等价，千万不要以为@有另外的魔力。除了字符输入少了一些，还有一个额外的好处：这样看上去更有装饰器的感觉。</p>
+<hr>
+<p>要理解python的装饰器，我们首先必须明白在Python中函数也是被视为对象。这一点很重要。先看一个例子：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">shout</span><span class="params">(word=<span class="string">"yes"</span>)</span> :</span></span><br><span class="line">    <span class="keyword">return</span> word.capitalize()+<span class="string">" !"</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">print</span> shout()</span><br><span class="line"><span class="comment"># 输出 : 'Yes !'</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 作为一个对象，你可以把函数赋给任何其他对象变量 </span></span><br><span class="line"> </span><br><span class="line">scream = shout</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 注意我们没有使用圆括号，因为我们不是在调用函数</span></span><br><span class="line"><span class="comment"># 我们把函数shout赋给scream，也就是说你可以通过scream调用shout</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">print</span> scream()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出 : 'Yes !' </span></span><br><span class="line"><span class="comment"># 还有，你可以删除旧的名字shout，但是你仍然可以通过scream来访问该函数</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">del</span> shout</span><br><span class="line"><span class="keyword">try</span> :</span><br><span class="line">    <span class="keyword">print</span> shout()</span><br><span class="line"><span class="keyword">except</span> NameError, e :</span><br><span class="line">    <span class="keyword">print</span> e</span><br><span class="line">    </span><br><span class="line"><span class="comment">#输出 : "name 'shout' is not defined"</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">print</span> scream()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出 : 'Yes !'</span></span><br></pre></td></tr></table></figure>
+<p>我们暂且把这个话题放旁边，我们先看看python另外一个很有意思的属性：可以在函数中定义函数：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">talk</span><span class="params">()</span> :</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 你可以在talk中定义另外一个函数</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">whisper</span><span class="params">(word=<span class="string">"yes"</span>)</span> :</span></span><br><span class="line">        <span class="keyword">return</span> word.lower()+<span class="string">"..."</span>;</span><br><span class="line"> </span><br><span class="line"><span class="comment"># ... 并且立马使用它</span></span><br><span class="line"> </span><br><span class="line">    <span class="keyword">print</span> whisper()</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 你每次调用'talk'，定义在talk里面的whisper同样也会被调用</span></span><br><span class="line">talk()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出 :</span></span><br><span class="line"><span class="comment"># yes...</span></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment"># 但是"whisper" 不会单独存在:</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">try</span> :</span><br><span class="line">    <span class="keyword">print</span> whisper()</span><br><span class="line"><span class="keyword">except</span> NameError, e :</span><br><span class="line">    <span class="keyword">print</span> e</span><br><span class="line"></span><br><span class="line"><span class="comment">#输出 : "name 'whisper' is not defined"*</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-函数引用"><a href="#2-函数引用" class="headerlink" title="2. 函数引用"></a>2. 函数引用</h3><p>从以上两个例子我们可以得出，函数既然作为一个对象，因此：</p>
+<ol>
+<li><p>其可以被赋给其他变量</p>
+</li>
+<li><p>其可以被定义在另外一个函数内</p>
+</li>
+</ol>
+<p>这也就是说，函数可以返回一个函数，看下面的例子：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getTalk</span><span class="params">(type=<span class="string">"shout"</span>)</span> :</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 我们定义另外一个函数</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">shout</span><span class="params">(word=<span class="string">"yes"</span>)</span> :</span></span><br><span class="line">        <span class="keyword">return</span> word.capitalize()+<span class="string">" !"</span></span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">whisper</span><span class="params">(word=<span class="string">"yes"</span>)</span> :</span></span><br><span class="line">        <span class="keyword">return</span> word.lower()+<span class="string">"..."</span>;</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 然后我们返回其中一个</span></span><br><span class="line">    <span class="keyword">if</span> type == <span class="string">"shout"</span> :</span><br><span class="line"></span><br><span class="line"><span class="comment"># 我们没有使用(),因为我们不是在调用该函数</span></span><br><span class="line"><span class="comment"># 我们是在返回该函数</span></span><br><span class="line">        <span class="keyword">return</span> shout</span><br><span class="line">    <span class="keyword">else</span> :</span><br><span class="line">        <span class="keyword">return</span> whisper</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 然后怎么使用呢 ?</span></span><br><span class="line"><span class="comment"># 把该函数赋予某个变量</span></span><br><span class="line">talk = getTalk()     </span><br><span class="line"> </span><br><span class="line"><span class="comment"># 这里你可以看到talk其实是一个函数对象:</span></span><br><span class="line"><span class="keyword">print</span> talk</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出 : &lt;function shout at 0xb7ea817c&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 该对象由函数返回的其中一个对象:</span></span><br><span class="line"><span class="keyword">print</span> talk()</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 或者你可以直接如下调用 :</span></span><br><span class="line"><span class="keyword">print</span> getTalk(<span class="string">"whisper"</span>)()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出 : yes...</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 还有，既然可以返回一个函数，我们可以把它作为参数传递给函数：</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">doSomethingBefore</span><span class="params">(func)</span> :</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">"I do something before then I call the function you gave me"</span></span><br><span class="line">    <span class="keyword">print</span> func()</span><br><span class="line"> </span><br><span class="line">doSomethingBefore(scream)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出 :</span></span><br><span class="line"><span class="comment"># I do something before then I call the function you gave me</span></span><br><span class="line"><span class="comment"># Yes !</span></span><br></pre></td></tr></table></figure>
+<p>这里你已经足够能理解装饰器了，其他它可被视为封装器。也就是说，它能够让你在装饰前后执行代码而无须改变函数本身内容。</p>
+<h3 id="3-手工装饰"><a href="#3-手工装饰" class="headerlink" title="3. 手工装饰"></a>3. 手工装饰</h3><p>那么如何进行手动装饰呢？</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="python"><span class="comment"># 装饰器是一个函数，而其参数为另外一个函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">my_shiny_new_decorator</span><span class="params">(a_function_to_decorate)</span> :</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 在内部定义了另外一个函数：一个封装器。</span></span><br><span class="line"><span class="comment"># 这个函数将原始函数进行封装，所以你可以在它之前或者之后执行一些代码</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">the_wrapper_around_the_original_function</span><span class="params">()</span> :</span></span><br><span class="line"> </span><br><span class="line">        <span class="comment"># 放一些你希望在真正函数执行前的一些代码</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">"Before the function runs"</span></span><br><span class="line"> </span><br><span class="line">        <span class="comment"># 执行原始函数</span></span><br><span class="line">        a_function_to_decorate()</span><br><span class="line"> </span><br><span class="line">        <span class="comment"># 放一些你希望在原始函数执行后的一些代码</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">"After the function runs"</span></span><br><span class="line"> </span><br><span class="line">    <span class="comment">#在此刻，"a_function_to_decrorate"还没有被执行，我们返回了创建的封装函数</span></span><br><span class="line">    <span class="comment">#封装器包含了函数以及其前后执行的代码，其已经准备完毕</span></span><br><span class="line">    <span class="keyword">return</span> the_wrapper_around_the_original_function</span><br><span class="line"> </span><br><span class="line">	<span class="comment"># 现在想象下，你创建了一个你永远也不远再次接触的函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a_stand_alone_function</span><span class="params">()</span> :</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">"I am a stand alone function, don't you dare modify me"</span></span><br><span class="line"> </span><br><span class="line">a_stand_alone_function()</span><br><span class="line">	<span class="comment">#输出: I am a stand alone function, don't you dare modify me</span></span><br><span class="line"> </span><br><span class="line">	<span class="comment"># 好了，你可以封装它实现行为的扩展。可以简单的把它丢给装饰器</span></span><br><span class="line">	<span class="comment"># 装饰器将动态地把它和你要的代码封装起来，并且返回一个新的可用的函数。</span></span><br><span class="line">	</span><br><span class="line">a_stand_alone_function_decorated = my_shiny_new_decorator(a_stand_alone_function)</span><br><span class="line">a_stand_alone_function_decorated()</span><br><span class="line">	</span><br><span class="line">	<span class="comment">#输出 :</span></span><br><span class="line">	<span class="comment">#Before the function runs</span></span><br><span class="line">	<span class="comment">#I am a stand alone function, don't you dare modify me</span></span><br><span class="line">	<span class="comment">#After the function runs</span></span><br><span class="line">	<span class="comment">#现在你也许要求当每次调用a_stand_alone_function时，实际调用却是</span></span><br><span class="line">	<span class="comment">#a_stand_alone_function_decorated。实现也很简单，可以用	#my_shiny_new_decorator来给a_stand_alone_function重新赋值。</span></span><br><span class="line"></span><br><span class="line">a_stand_alone_function = my_shiny_new_decorator(a_stand_alone_function)</span><br><span class="line">a_stand_alone_function()</span><br><span class="line">	</span><br><span class="line">	<span class="comment">#输出 :</span></span><br><span class="line">	<span class="comment">#Before the function runs</span></span><br><span class="line">	<span class="comment">#I am a stand alone function, don't you dare modify me</span></span><br><span class="line">	<span class="comment">#After the function runs</span></span><br><span class="line"> </span><br><span class="line">	<span class="comment"># And guess what, that's EXACTLY what decorators do !</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="4-装饰器揭秘"><a href="#4-装饰器揭秘" class="headerlink" title="4. 装饰器揭秘"></a>4. 装饰器揭秘</h3><p>前面的例子，我们可以使用装饰器的语法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@my_shiny_new_decorator</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">another_stand_alone_function</span><span class="params">()</span> :</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">"Leave me alone"</span></span><br><span class="line"> </span><br><span class="line">another_stand_alone_function()</span><br><span class="line"><span class="comment">#输出 :</span></span><br><span class="line"><span class="comment">#Before the function runs</span></span><br><span class="line"><span class="comment">#Leave me alone</span></span><br><span class="line"><span class="comment">#After the function runs</span></span><br><span class="line">当然你也可以累积装饰：</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bread</span><span class="params">(func)</span> :</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">()</span> :</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">"&lt;/''''''\&gt;"</span></span><br><span class="line">        func()</span><br><span class="line">        <span class="keyword">print</span> <span class="string">"&lt;\______/&gt;"</span></span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ingredients</span><span class="params">(func)</span> :</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">()</span> :</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">"#tomatoes#"</span></span><br><span class="line">        func()</span><br><span class="line">        <span class="keyword">print</span> <span class="string">"~salad~"</span></span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sandwich</span><span class="params">(food=<span class="string">"--ham--"</span>)</span> :</span></span><br><span class="line">    <span class="keyword">print</span> food</span><br><span class="line"> </span><br><span class="line">sandwich()</span><br><span class="line"><span class="comment">#输出 : --ham--</span></span><br><span class="line">sandwich = bread(ingredients(sandwich))</span><br><span class="line">sandwich()</span><br><span class="line"><span class="comment">#outputs :</span></span><br><span class="line"><span class="comment">#&lt;/''''''\&gt;</span></span><br><span class="line"><span class="comment"># #tomatoes#</span></span><br><span class="line"><span class="comment"># --ham--</span></span><br><span class="line"><span class="comment"># ~salad~</span></span><br><span class="line"><span class="comment">#&lt;\______/&gt;</span></span><br><span class="line">使用python装饰器语法：</span><br><span class="line"></span><br><span class="line"><span class="meta">@bread</span></span><br><span class="line"><span class="meta">@ingredients</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sandwich</span><span class="params">(food=<span class="string">"--ham--"</span>)</span> :</span></span><br><span class="line">    <span class="keyword">print</span> food</span><br><span class="line"> </span><br><span class="line">sandwich()</span><br><span class="line"></span><br><span class="line"><span class="comment">#输出 :</span></span><br><span class="line"><span class="comment">#&lt;/''''''\&gt;</span></span><br><span class="line"><span class="comment"># #tomatoes#</span></span><br><span class="line"><span class="comment"># --ham--</span></span><br><span class="line"><span class="comment"># ~salad~</span></span><br><span class="line"><span class="comment">#&lt;\______/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#装饰器的顺序很重要，需要注意：</span></span><br><span class="line"><span class="meta">@ingredients</span></span><br><span class="line"><span class="meta">@bread</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">strange_sandwich</span><span class="params">(food=<span class="string">"--ham--"</span>)</span> :</span></span><br><span class="line">    <span class="keyword">print</span> food</span><br><span class="line"> </span><br><span class="line">strange_sandwich()</span><br><span class="line"></span><br><span class="line"><span class="comment">#输出 :</span></span><br><span class="line"><span class="comment">##tomatoes#</span></span><br><span class="line"><span class="comment">#&lt;/''''''\&gt;</span></span><br><span class="line"><span class="comment"># --ham--</span></span><br><span class="line"><span class="comment">#&lt;\______/&gt;</span></span><br><span class="line"><span class="comment"># ~salad~</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 最后解决一个问题：</span></span><br><span class="line"><span class="comment"># 装饰器makebold用于转换为粗体</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">makebold</span><span class="params">(fn)</span>:</span></span><br><span class="line">    <span class="comment"># 结果返回该函数</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="comment"># 插入一些执行前后的代码</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">"&lt;b&gt;"</span> + fn() + <span class="string">"&lt;/b&gt;"</span></span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 装饰器makeitalic用于转换为斜体</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">makeitalic</span><span class="params">(fn)</span>:</span></span><br><span class="line">    <span class="comment"># 结果返回该函数</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="comment"># 插入一些执行前后的代码</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">"&lt;i&gt;"</span> + fn() + <span class="string">"&lt;/i&gt;"</span></span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"> </span><br><span class="line"><span class="meta">@makebold</span></span><br><span class="line"><span class="meta">@makeitalic</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"hello"</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">print</span> say()</span><br><span class="line"><span class="comment">#输出: &lt;b&gt;&lt;i&gt;hello&lt;/i&gt;&lt;/b&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 等同于</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"hello"</span></span><br><span class="line">say = makebold(makeitalic(say))</span><br><span class="line"> </span><br><span class="line"><span class="keyword">print</span> say()</span><br><span class="line"><span class="comment">#输出: &lt;b&gt;&lt;i&gt;hello&lt;/i&gt;&lt;/b&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="5-内置的装饰器"><a href="#5-内置的装饰器" class="headerlink" title="5. 内置的装饰器"></a>5. 内置的装饰器</h3><p>内置的装饰器有三个，分别是staticmethod、classmethod和property，作用分别是把类中定义的实例方法变成静态方法、类方法和类属性。由于模块里可以定义函数，所以静态方法和类方法的用处并不是太多，除非你想要完全的面向对象编程。</p>
+<p>That’s all, thank you.</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block； padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="Jozo.Chan wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎扫一扫订阅我的微信公众号</div>
+</div>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>生活不止有诗和远方，还应该有打赏。</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechat-pay.png" alt="Jozo.Chan WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/ali-pay.png" alt="Jozo.Chan Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag">#Python</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/将Hexo博客从GitCafe转移到Github时所遇到的问题详解/" rel="next" title="将Hexo博客从GitCafe转移到Github时所遇到的问题详解">
+                <i class="fa fa-chevron-left"></i> 将Hexo博客从GitCafe转移到Github时所遇到的问题详解
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/JZShare - ShareSDK如何自定义分享UI/" rel="prev" title="JZShare - ShareSDK如何自定义分享UI">
+                JZShare - ShareSDK如何自定义分享UI <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="如何理解Python中的装饰器/"
+           data-title="如何理解Python中的装饰器" data-url="http://www.kohmax.com/如何理解Python中的装饰器/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            索引
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            我
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://img.blog.csdn.net/20160527172232866"
+               alt="Jozo.Chan" />
+          <p class="site-author-name" itemprop="name">Jozo.Chan</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">29</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/chenzht" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/249559801" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/jozochan" target="_blank" title="zhihu">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  zhihu
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-装饰器的使用场景"><span class="nav-number">1.</span> <span class="nav-text">1. 装饰器的使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-函数引用"><span class="nav-number">2.</span> <span class="nav-text">2. 函数引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-手工装饰"><span class="nav-number">3.</span> <span class="nav-text">3. 手工装饰</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-装饰器揭秘"><span class="nav-number">4.</span> <span class="nav-text">4. 装饰器揭秘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-内置的装饰器"><span class="nav-number">5.</span> <span class="nav-text">5. 内置的装饰器</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2011 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jozo.Chan</span>
+</div>
+
+<div class="powered-by">
+  科勒的小刀
+</div>
+
+<div class="theme-info">
+  With -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"kohmax"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
