@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Jozo的博客</title>
+  <title>Ronny的博客</title>
   
   <link href="/atom.xml" rel="self"/>
   
@@ -9,8 +9,8 @@
   <id>http://www.kohmax.com/</id>
   
   <author>
-    <name>Jozo.Chan</name>
-    <email>jozochan@gmail.com</email>
+    <name>Ronny.Chan</name>
+    <email>ischenzht@gmail.com</email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
