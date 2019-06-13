@@ -1,5 +1,11 @@
 <!doctype html>
-<html class="theme-next   use-motion ">
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -21,70 +27,100 @@
 
 
 
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
   
-    <link href='//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
 
 
 
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=0.4.5.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
 
 
 
 
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
-
+  <link rel="alternate" href="/atom.xml" title="Ronny的博客" type="application/atom+xml" />
 
 
 
 
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
-<meta name="description" content="iOS | life">
+
+
+
+
+
+<meta name="description">
 <meta property="og:type" content="website">
-<meta property="og:title" content="科勒的小刀">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="科勒的小刀">
-<meta property="og:description" content="iOS | life">
+<meta property="og:title" content="Ronny的博客">
+<meta property="og:url" content="http://www.kohmax.com/index.html">
+<meta property="og:site_name" content="Ronny的博客">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="科勒的小刀">
-<meta name="twitter:description" content="iOS | life">
+<meta name="twitter:title" content="Ronny的博客">
+<meta name="twitter:description">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: '[object Object]',
-    motion: true
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
   };
 </script>
 
-  <title>  - 科勒的小刀 -  To be a quiet Coder. </title>
+  <title> Ronny的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
   
 
 
@@ -92,9 +128,18 @@
 
 
 
-  <div class="container one-column 
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
    page-home 
-">
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -104,11 +149,11 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">科勒的小刀</span>
+      <span class="site-title">Ronny的博客</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle">be a quiet man</p>
+  <p class="site-subtitle"></p>
 </div>
 
 <div class="site-nav-toggle">
@@ -123,11 +168,13 @@
   
 
   
-    <ul id="menu" class="menu menu-left">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -137,13 +184,17 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-            日志
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            有料
           </a>
         </li>
       
         
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
           </a>
@@ -153,6 +204,8 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
             标签
           </a>
         </li>
@@ -161,12 +214,24 @@
         <li class="menu-item menu-item-about">
           <a href="/about/index.html" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
             关于
           </a>
         </li>
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
       
     </ul>
   
@@ -174,11 +239,9 @@
   
     <div class="site-search">
       
-  
   <form class="site-search-form">
-    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
-  </form>
-
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
 
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
@@ -195,22 +258,15 @@
   
 </nav>
 
-
-
  </div>
     </header>
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content">
-          
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
   <section id="posts" class="posts-expand">
-
-    
-
-    
-    
-
     
       
 
@@ -233,8 +289,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/03/04/mutableAttributeString/" itemprop="url">
-                  mutableAttributeString
+                <a class="post-title-link" href="/怎样将Linphone移植到自己的项目/" itemprop="url">
+                  怎样将Linphone移植到自己的项目
                 </a>
               
             
@@ -243,15 +299,22 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-03-04T10:23:15+08:00" content="2016-03-04">
-              2016-03-04
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-24T11:58:29+08:00" content="2016-06-24">
+              2016-06-24
             </time>
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/iOS/" itemprop="url" rel="index">
@@ -270,8 +333,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/04/mutableAttributeString/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/04/mutableAttributeString/" itemprop="commentsCount"></span>
+                <a href="/怎样将Linphone移植到自己的项目/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="怎样将Linphone移植到自己的项目/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -279,24 +342,46 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> <span class="built_in">NSString</span> *text = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%@ 年化收益"</span>,model<span class="variable">.rate</span>];</span><br><span class="line">    <span class="built_in">NSMutableAttributedString</span> *str = [[<span class="built_in">NSMutableAttributedString</span> alloc] initWithString:text];</span><br><span class="line">    <span class="built_in">NSRange</span> ran = [text rangeOfString:model<span class="variable">.rate</span>];</span><br><span class="line"></span><br><span class="line">    <span class="built_in">NSDictionary</span> *dict = @&#123;<span class="built_in">NSForegroundColorAttributeName</span>:[<span class="built_in">UIColor</span> orangeColor],<span class="built_in">NSFontAttributeName</span>:[<span class="built_in">UIFont</span> systemFontOfSize:<span class="number">20</span>]&#125;;</span><br><span class="line">    [str addAttributes:dict range:ran];</span><br><span class="line">    _shouYiLvLable<span class="variable">.attributedText</span> = str;</span><br><span class="line"></span><br><span class="line">效果:</span><br><span class="line">   <span class="number">10</span>%(黄色,<span class="number">20</span>号大字体) 年化收益(黑色,<span class="number">12</span>号小字体)</span><br></pre></td></tr></table></figure>
-            
-          </span>
+          <blockquote>
+<p>我自己集成的<a href="https://github.com/chenzht/JZPhone">Demo &amp; SDK源码路径</a></p>
+<p><a href="https://www.linphone.org/snapshots/ios/">最新版SDK下载地址</a></p>
+<p>开始前先安利下江湖哥简书，当初都是照着这一步步摸索的<a href="http://www.jianshu.com/p/2ba2d4aa168e">http://www.jianshu.com/p/2ba2d4aa168e</a></p>
+</blockquote>
+<hr>
+<p>更新ipv6</p>
+<p>见文末</p>
+<hr>
+<p>正文开始。<br>很多场景下，我们的App会使用到VOIP通话，虽然目前各大通讯公司都推出了各自的SDK，相比Linphone，它们对开发者更为友好（体现在有更及时的技术支持、丰富的开发文档），但有些时候，迫于某些需求，也只有掏出Linphone SDK，硬着头皮上了。而我是为了实现纯SIP通话，以及客户需求，所以进行了对Linphone SDK的集成、开发，本文的目的一为记录以便日后翻阅，二为了让后来的开发者少跳一些坑，白白耽误时间。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/怎样将Linphone移植到自己的项目/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -335,8 +420,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/01/20/UI分析利器 - Reveal/" itemprop="url">
-                  UI分析利器 - Reveal
+                <a class="post-title-link" href="/JZShare - ShareSDK如何自定义分享UI/" itemprop="url">
+                  JZShare - ShareSDK如何自定义分享UI
                 </a>
               
             
@@ -345,19 +430,26 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-01-20T12:21:17+08:00" content="2016-01-20">
-              2016-01-20
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-27T10:22:01+08:00" content="2016-05-27">
+              2016-05-27
             </time>
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/必先利其器/" itemprop="url" rel="index">
-                    <span itemprop="name">必先利其器</span>
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
                   </a>
                 </span>
 
@@ -372,8 +464,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/20/UI分析利器 - Reveal/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/20/UI分析利器 - Reveal/" itemprop="commentsCount"></span>
+                <a href="/JZShare - ShareSDK如何自定义分享UI/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="JZShare - ShareSDK如何自定义分享UI/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -381,29 +473,41 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <p>在iOS开发中，UI是十分重要的一环，它直观的展示给用户，在日益强调用户体验的今天，UI的优劣，可以立竿见影的影响用户对其体验的判断，平常不管用真机还是模拟器，虽然没有方便但分析力度微乎其微，而Reveal这个工具，适时的弥补了这一不足，是我们学习UI或者日常工作使用UI的辅助神器。</p>
-<h3 id="一-_基础_-_Reveal查看自己的app">一. 基础 - Reveal查看自己的app</h3><ol>
-<li><p>打开Reveal（<a href="http://revealapp.com">http://revealapp.com</a>下载）</p>
-</li>
-<li><p>Reveal —&gt; Help —&gt; Show Reveal Library in Finder</p>
+          <blockquote>
+<p>首先附上源码：<a href="https://github.com/chenzht/JZShare">Jozo的Github – JZShare</a></p>
+</blockquote>
+<p>当我们用ShareSDK集成分享的功能，难免会遇到产品提来的需求，他会找设计自行设计出一套UI，然后指着那美轮美奂的效果告诉你，做成这样。</p>
+<p><img src="http://7xusmm.com1.z0.glb.clouddn.com/mdJozo/1464428529645.png" alt=""></p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/20/UI分析利器 - Reveal/#more" rel="contents">
+            <a class="btn" href="/JZShare - ShareSDK如何自定义分享UI/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -442,7 +546,380 @@
             
               
                 
-                <a class="post-title-link" href="/2016/01/18/Swift-Refactor，可视化编程利器/" itemprop="url">
+                <a class="post-title-link" href="/如何理解Python中的装饰器/" itemprop="url">
+                  如何理解Python中的装饰器
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-26T16:29:47+08:00" content="2016-05-26">
+              2016-05-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/如何理解Python中的装饰器/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="如何理解Python中的装饰器/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>最近接触了一点Python，基本语法比较简单但十分惊艳，本来一路畅通，然后遇到了“装饰器”这个拦路虎，突然脑袋就短路并且开始怀疑人生。于是在网上搜索了很多博客，慢慢的也有了一点理解，下面就整理一下，也给大家提供一些思路。</p>
+<h3 id="1-装饰器的使用场景"><a href="#1-装饰器的使用场景" class="headerlink" title="1. 装饰器的使用场景"></a>1. 装饰器的使用场景</h3><p>首先，说下装饰器的概念，装饰器是一个很著名的<strong>设计模式</strong>，经常被用于有切面需求的场景，较为经典的有<strong>插入日志、性能测试、事务处理</strong>等。装饰器是解决这类问题的绝佳设计，有了装饰器，我们就可以抽离出大量函数中与函数功能本身无关的雷同代码并继续重用。概括的讲，<strong>装饰器的作用就是为已经存在的对象添加额外的功能</strong>。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/如何理解Python中的装饰器/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/将Hexo博客从GitCafe转移到Github时所遇到的问题详解/" itemprop="url">
+                  将Hexo博客从GitCafe转移到Github时所遇到的问题详解
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-25T15:14:46+08:00" content="2016-05-25">
+              2016-05-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/将Hexo博客从GitCafe转移到Github时所遇到的问题详解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="将Hexo博客从GitCafe转移到Github时所遇到的问题详解/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>近日博客频频登陆不上，遂登入GitCafe看看是啥状况，谁知看到这一惊天“噩耗”，虽然合并本是一件好事，但由于之前访问仓库频繁的不稳定，以及实在懒得再Coding上再花时间部署，于是就将博客仓库转到了比较熟悉的Github上来，不过坑依然很多，下面择取几个讲讲看</p>
+<p><img src="http://img.blog.csdn.net/20160528155002415" alt=""></p>
+<h3 id="1-每次-hexo-d-都要输入github的账号密码"><a href="#1-每次-hexo-d-都要输入github的账号密码" class="headerlink" title="1. 每次 hexo d 都要输入github的账号密码"></a>1. 每次 hexo d 都要输入github的账号密码</h3><p>这一操作实在是令人抓狂，不过解决办法也相当简单。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/将Hexo博客从GitCafe转移到Github时所遇到的问题详解/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/UI分析利器 - Reveal/" itemprop="url">
+                  UI分析利器 - Reveal
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-01-20T12:21:17+08:00" content="2016-01-20">
+              2016-01-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/磨刀/" itemprop="url" rel="index">
+                    <span itemprop="name">磨刀</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/UI分析利器 - Reveal/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="UI分析利器 - Reveal/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>在iOS开发中，UI是十分重要的一环，它直观的展示给用户，在日益强调用户体验的今天，UI的优劣，可以立竿见影的影响用户对其体验的判断，平常不管用真机还是模拟器，虽然没有方便但分析力度微乎其微，而Reveal这个工具，适时的弥补了这一不足，是我们学习UI或者日常工作使用UI的辅助神器。</p>
+<h3 id="一-基础-Reveal查看自己的app"><a href="#一-基础-Reveal查看自己的app" class="headerlink" title="一. 基础 - Reveal查看自己的app"></a>一. 基础 - Reveal查看自己的app</h3><ol>
+<li><p>打开Reveal（<a href="http://revealapp.com">http://revealapp.com</a>下载）</p>
+</li>
+<li><p>Reveal —&gt; Help —&gt; Show Reveal Library in Finder</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/UI分析利器 - Reveal/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/Swift-Refactor，可视化编程利器/" itemprop="url">
                   Swift_Refactor，可视化编程利器
                 </a>
               
@@ -452,7 +929,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-01-18T17:53:20+08:00" content="2016-01-18">
               2016-01-18
             </time>
@@ -460,7 +940,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Swift/" itemprop="url" rel="index">
@@ -479,8 +963,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/18/Swift-Refactor，可视化编程利器/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/18/Swift-Refactor，可视化编程利器/" itemprop="commentsCount"></span>
+                <a href="/Swift-Refactor，可视化编程利器/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Swift-Refactor，可视化编程利器/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -488,12 +972,16 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -503,11 +991,19 @@
           <p>Refactor是iOS9推出的新特性，如果还不会用实在是太暴殄天物了<em>（虽然我也是今天才开始用的）</em></p>
 <p>尽管平时开发我更倾向于纯代码编程，很享受一连串代码行云流水的敲打过程，但不得不说可视化编程在有些时候会更加方便且快速。而之所以搁浅可视化编程是因为在团队开发时，会遇到一些不太友好的操作，当每个成员使用了一个Storyboard，这样项目就存在了很多个Storyboard，最后我们需要通过代码，将多个Storyboard整合在一起的，实在是非常的麻烦。而有了这个<code>Storyboard Refactor</code>，这将变得超级简单。<br>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/18/Swift-Refactor，可视化编程利器/#more" rel="contents">
+            <a class="btn" href="/Swift-Refactor，可视化编程利器/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -546,7 +1042,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/01/13/React-Native学习里程01-环境搭建/" itemprop="url">
+                <a class="post-title-link" href="/React-Native学习里程01-环境搭建/" itemprop="url">
                   React Native学习里程01--环境搭建
                 </a>
               
@@ -556,7 +1052,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-01-13T15:41:34+08:00" content="2016-01-13">
               2016-01-13
             </time>
@@ -564,7 +1063,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/React-Native-js/" itemprop="url" rel="index">
@@ -583,8 +1086,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/13/React-Native学习里程01-环境搭建/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/13/React-Native学习里程01-环境搭建/" itemprop="commentsCount"></span>
+                <a href="/React-Native学习里程01-环境搭建/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="React-Native学习里程01-环境搭建/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -592,28 +1095,40 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <h4 id="1-安装node-js">1.安装node.js</h4><ul>
+          <h4 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1.安装node.js"></a>1.安装node.js</h4><ul>
 <li>nodejs版本需要在4.0以上,官网下载安装即可<a href="http://nodejs.cn">http://nodejs.cn</a></li>
 </ul>
-<h4 id="2-安装Homebrew">2.安装Homebrew</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby <span class="operator">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-安装Homebrew"><a href="#2-安装Homebrew" class="headerlink" title="2.安装Homebrew"></a>2.安装Homebrew</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby <span class="_">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/13/React-Native学习里程01-环境搭建/#more" rel="contents">
+            <a class="btn" href="/React-Native学习里程01-环境搭建/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -652,7 +1167,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/01/12/如何取消必应首页花哨的背景图片/" itemprop="url">
+                <a class="post-title-link" href="/如何取消必应首页花哨的背景图片/" itemprop="url">
                   如何取消必应首页花哨的背景图片
                 </a>
               
@@ -662,7 +1177,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-01-12T10:23:15+08:00" content="2016-01-12">
               2016-01-12
             </time>
@@ -670,7 +1188,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Others/" itemprop="url" rel="index">
@@ -689,8 +1211,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/12/如何取消必应首页花哨的背景图片/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/12/如何取消必应首页花哨的背景图片/" itemprop="commentsCount"></span>
+                <a href="/如何取消必应首页花哨的背景图片/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="如何取消必应首页花哨的背景图片/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -698,12 +1220,16 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -713,11 +1239,19 @@
           <p>近日某度的贴吧事件被炒得如火如荼，虽然早已习惯了它的产品，但本着良心（以下省略千字..），因此，找到了这款不错的搜索引擎，Bing必应<a href="cn.bing.com">cn.bing.com</a></p>
 <p>它是微软旗下的一款搜索引擎。搜索工具大家都不陌生，而必应与其他搜索感官上的最大不同恐怕就是首页的富含知识的背景图了。旖旎的风光，动人的瞬间，以及图片背后的故事，都可以为搜索用户提供丰富而快乐的体验。它让每天数以亿计用户频繁访问的搜索引擎首页，不一定仅仅是白板加Logo。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/12/如何取消必应首页花哨的背景图片/#more" rel="contents">
+            <a class="btn" href="/如何取消必应首页花哨的背景图片/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -756,7 +1290,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/01/04/OC与Swift混编教程/" itemprop="url">
+                <a class="post-title-link" href="/OC与Swift混编教程/" itemprop="url">
                   OC与Swift混编教程
                 </a>
               
@@ -766,7 +1300,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-01-04T16:43:14+08:00" content="2016-01-04">
               2016-01-04
             </time>
@@ -774,7 +1311,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Swift/" itemprop="url" rel="index">
@@ -793,8 +1334,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/04/OC与Swift混编教程/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/04/OC与Swift混编教程/" itemprop="commentsCount"></span>
+                <a href="/OC与Swift混编教程/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="OC与Swift混编教程/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -802,12 +1343,16 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -815,14 +1360,22 @@
       
         
           <p>本文会介绍一下OC与Swift的混编教程，按步骤来，简单易懂</p>
-<h3 id="1-_创建一个swift或者oc的工程">1. 创建一个swift或者oc的工程</h3><p>我这里是创建的Swift语言的工程</p>
-<h3 id="2-_在工程中代码目录下创建一个oc的类，选择oc语言">2. 在工程中代码目录下创建一个oc的类，选择oc语言</h3><p>之后会出一个对话框，选择Create Bridging Header</p>
+<h3 id="1-创建一个swift或者oc的工程"><a href="#1-创建一个swift或者oc的工程" class="headerlink" title="1. 创建一个swift或者oc的工程"></a>1. 创建一个swift或者oc的工程</h3><p>我这里是创建的Swift语言的工程</p>
+<h3 id="2-在工程中代码目录下创建一个oc的类，选择oc语言"><a href="#2-在工程中代码目录下创建一个oc的类，选择oc语言" class="headerlink" title="2. 在工程中代码目录下创建一个oc的类，选择oc语言"></a>2. 在工程中代码目录下创建一个oc的类，选择oc语言</h3><p>之后会出一个对话框，选择Create Bridging Header</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/04/OC与Swift混编教程/#more" rel="contents">
+            <a class="btn" href="/OC与Swift混编教程/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -861,8 +1414,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/01/04/UIButton中拖动与点击事件重合的处理方法/" itemprop="url">
-                  UIButton中拖动与点击事件重合的处理方法
+                <a class="post-title-link" href="/Sublime Text 3 - Full Stack developer的编辑器/" itemprop="url">
+                  Sublime Text 3 - Full Stack developer的编辑器
                 </a>
               
             
@@ -871,110 +1424,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-01-04T11:58:29+08:00" content="2016-01-04">
-              2016-01-04
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
             </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/04/UIButton中拖动与点击事件重合的处理方法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/04/UIButton中拖动与点击事件重合的处理方法/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>在开发中，我们也许会碰到以上这种需求，如图所示，我们可以随意的拖动“会议中”的button，而且点击button会实现页面跳转。<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/04/UIButton中拖动与点击事件重合的处理方法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/28/Sublime Text 3 - 全栈er的编辑器/" itemprop="url">
-                  Sublime Text 3 - 全栈er的编辑器
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-12-28T11:58:57+08:00" content="2015-12-28">
               2015-12-28
             </time>
@@ -982,11 +1435,15 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/必先利其器/" itemprop="url" rel="index">
-                    <span itemprop="name">必先利其器</span>
+                  <a href="/categories/磨刀/" itemprop="url" rel="index">
+                    <span itemprop="name">磨刀</span>
                   </a>
                 </span>
 
@@ -1001,8 +1458,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/12/28/Sublime Text 3 - 全栈er的编辑器/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/28/Sublime Text 3 - 全栈er的编辑器/" itemprop="commentsCount"></span>
+                <a href="/Sublime Text 3 - Full Stack developer的编辑器/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Sublime Text 3 - Full Stack developer的编辑器/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1010,28 +1467,40 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <h2 id="1-_安装Sublime_Text_3">1. 安装Sublime Text 3</h2><p>百度网盘链接: <a href="http://pan.baidu.com/s/1qWOE5L6">http://pan.baidu.com/s/1qWOE5L6</a> 密码: vuch</p>
-<h2 id="2-_插件">2. 插件</h2><h3 id="2-1_Package_Control">2.1 Package Control</h3><ul>
+          <h2 id="1-安装Sublime-Text-3"><a href="#1-安装Sublime-Text-3" class="headerlink" title="1. 安装Sublime Text 3"></a>1. 安装Sublime Text 3</h2><p>百度网盘链接: <a href="http://pan.baidu.com/s/1qWOE5L6">http://pan.baidu.com/s/1qWOE5L6</a> 密码: vuch</p>
+<h2 id="2-插件"><a href="#2-插件" class="headerlink" title="2. 插件"></a>2. 插件</h2><h3 id="2-1-Package-Control"><a href="#2-1-Package-Control" class="headerlink" title="2.1 Package Control"></a>2.1 Package Control</h3><ul>
 <li>按Ctrl+`调出console（注：安装有QQ输入法的这个快捷键会有冲突的，输入法属性设置-输入法管理-取消热键切换至QQ拼音）</li>
 <li>粘贴以下代码到底部命令行并回车：
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/28/Sublime Text 3 - 全栈er的编辑器/#more" rel="contents">
+            <a class="btn" href="/Sublime Text 3 - Full Stack developer的编辑器/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1070,113 +1539,7 @@
             
               
                 
-                <a class="post-title-link" href="/2015/12/18/iOS开发-NSPredicate谓词的用法详解/" itemprop="url">
-                  [iOS开发]NSPredicate谓词的用法详解
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-12-18T10:49:11+08:00" content="2015-12-18">
-              2015-12-18
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/12/18/iOS开发-NSPredicate谓词的用法详解/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/18/iOS开发-NSPredicate谓词的用法详解/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h3 id="1-_引">1. 引</h3><p>在开发中也许会需要用到过滤数组的情况，如<strong>本机通讯录中新增或者删除了联系人后，App端读取通讯录时的处理</strong>，因为我们往往会把通讯录先保存到本地数据库，这样读取时就会更加迅捷，而一旦源数据改变了，怎样快速更新村粗在本地数据库中的数据呢？这就是本文要探讨的内容</p>
-<blockquote>
-<p>举个例子</p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/18/iOS开发-NSPredicate谓词的用法详解/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/03/集成微信支付时跳转到只有一个确定的页面-问题处理/" itemprop="url">
+                <a class="post-title-link" href="/集成微信支付时跳转到只有一个确定的页面-问题处理/" itemprop="url">
                   集成微信支付时跳转到只有一个确定的页面--问题处理
                 </a>
               
@@ -1186,7 +1549,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-12-03T18:05:00+08:00" content="2015-12-03">
               2015-12-03
             </time>
@@ -1194,7 +1560,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/iOS/" itemprop="url" rel="index">
@@ -1213,8 +1583,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/12/03/集成微信支付时跳转到只有一个确定的页面-问题处理/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/03/集成微信支付时跳转到只有一个确定的页面-问题处理/" itemprop="commentsCount"></span>
+                <a href="/集成微信支付时跳转到只有一个确定的页面-问题处理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="集成微信支付时跳转到只有一个确定的页面-问题处理/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1222,12 +1592,16 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -1236,17 +1610,25 @@
         
           <p>不得不说微信支付的集成是个相当坑爹的事，相比之下，阿里的实在太好用了，但因为工作需要不得不集成WechatPay，但又不想借助第三方平台如Ping++之类的，那也只好硬着头皮上了</p>
 <blockquote>
-<h3 id="微信支付开发文档">微信支付开发文档</h3></blockquote>
+<h3 id="微信支付开发文档"><a href="#微信支付开发文档" class="headerlink" title="微信支付开发文档"></a>微信支付开发文档</h3></blockquote>
 <p>这个容易，根据官方的开发文档一步步操作即可—&gt;<a href="https://pay.weixin.qq.com/wiki/doc/api/index.html">微信支付开发文档</a></p>
 <blockquote>
-<h3 id="遇到的问题">遇到的问题</h3></blockquote>
+<h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3></blockquote>
 <p>接下来才是最坑爹的事了，如下图所示。<br>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/03/集成微信支付时跳转到只有一个确定的页面-问题处理/#more" rel="contents">
+            <a class="btn" href="/集成微信支付时跳转到只有一个确定的页面-问题处理/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1264,27 +1646,1648 @@
 
 
     
-
-  </section>
+      
 
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  
 
+  
+  
+  
 
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/如何注册一个美国的Apple-ID（最新）/" itemprop="url">
+                  如何注册一个美国的Apple ID（最新）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-11-27T15:41:57+08:00" content="2015-11-27">
+              2015-11-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/如何注册一个美国的Apple-ID（最新）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="如何注册一个美国的Apple-ID（最新）/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
         </div>
+      </header>
+    
 
-        
 
+    <div class="post-body" itemprop="articleBody">
 
-        
-
-      </div>
+      
+      
 
       
         
+          <h2 id="Before"><a href="#Before" class="headerlink" title="Before"></a>Before</h2><p>一个美国的Apple ID并不是为了装逼或者好玩，而是真的有许多方便之处。最常见的便是下载一些境内未发布的App或者游戏了。之前有一种比较轻便的方法是用自己的Apple ID，然后<strong>直接点击修改“国家/地区”也可以达到相同效果</strong>，我也曾这样成功过，但今天又去捣鼓一番，<strong>屡屡卡在了填写“付款方式”这一步</strong>，问题是这个“付款方式”怎么填怎么错，除非你有国外的信用卡（国内的Visa也不行），所以成功的关键就是如何<strong>跳过填写“付款方式”</strong>这一步骤，话不多说，下面将会详细的说说怎样成功的申请一个ID。</p>
+<h2 id="进入正题"><a href="#进入正题" class="headerlink" title="进入正题"></a>进入正题</h2><p>按图操作即可（截图好辛苦= =）</p>
+<h3 id="1-进入手机App-Store-点击-查看-Apple-ID"><a href="#1-进入手机App-Store-点击-查看-Apple-ID" class="headerlink" title="1. 进入手机App Store,点击 查看 Apple ID"></a>1. 进入手机App Store,点击 查看 Apple ID</h3>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/如何注册一个美国的Apple-ID（最新）/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/Swift_Guard，开启保镖模式/" itemprop="url">
+                  Swift_Guard，开启保镖模式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-11-27T01:11:52+08:00" content="2015-11-27">
+              2015-11-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Swift/" itemprop="url" rel="index">
+                    <span itemprop="name">Swift</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Swift_Guard，开启保镖模式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Swift_Guard，开启保镖模式/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="1-guard简介"><a href="#1-guard简介" class="headerlink" title="1. guard简介"></a>1. guard简介</h3><p><code>guard</code>特性是在Swift 2.0后推出的，所以请使用Xcode 7.X版本来编写代码</p>
+<p>值得提及的是，<code>guard</code>和<code>if..else..</code>有很大程度的相似性，下面我将对它们进行一些比较</p>
+<ol>
+<li>guard语句和if..else..语句有类似的地方，都是做判断处理</li>
+<li>与if语句相同的是，guard也是基于一个表达式的布尔值去判断一段代码是否该被执行</li>
+<li>与if语句不同的是，guard只有在条件不满足的时候才会执行这段代码</li>
+<li>guard语句有且仅有else语句，当条件不成立时，执行else部分；当条件成立时，执行guard后面的代码</li>
+<li>guard中声明的变量或者常量，在guard下面可以使用，但不能在else分支中使用</li>
+</ol>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/Swift_Guard，开启保镖模式/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/Swift，截取字符串/" itemprop="url">
+                  Swift，截取字符串
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-11-27T01:11:52+08:00" content="2015-11-27">
+              2015-11-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Swift/" itemprop="url" rel="index">
+                    <span itemprop="name">Swift</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Swift，截取字符串/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Swift，截取字符串/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>下面介绍2种swift的字符串截取方法,实际上用到了</p>
+<ul>
+<li>substringFromIndex</li>
+<li>substringToIndex</li>
+<li>substringWithRange</li>
+</ul>
+<p>这三个方法，相信大家在OC中肯定对此不会陌生，因此我们可以</p>
+<h5 id="1-将String转化为NSString再截取"><a href="#1-将String转化为NSString再截取" class="headerlink" title="1. 将String转化为NSString再截取"></a>1. 将String转化为NSString再截取</h5><p>具体做法如下</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="keyword">str</span> = (<span class="keyword">self</span> <span class="keyword">as</span> NSString).substringFromIndex(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/Swift，截取字符串/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/iOS9与XCode7中不能使用http连接的解决办法/" itemprop="url">
+                  iOS9与XCode7中不能使用http连接的解决办法
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-11-18T10:58:00+08:00" content="2015-11-18">
+              2015-11-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/iOS9与XCode7中不能使用http连接的解决办法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="iOS9与XCode7中不能使用http连接的解决办法/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>在Xcode7.0及以上版本中编译iOS APP时，默认会使用iOS9的一项新特性，使得所有http连接被禁用，项目里使用的API没有https支持，就悲剧了。差了官方文档，有这么一段话<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/iOS9与XCode7中不能使用http连接的解决办法/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/Swift_Singleton，深入浅出单例设计模式/" itemprop="url">
+                  Swift_Singleton，深入浅出单例设计模式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-11-17T00:21:13+08:00" content="2015-11-17">
+              2015-11-17
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Swift/" itemprop="url" rel="index">
+                    <span itemprop="name">Swift</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Swift_Singleton，深入浅出单例设计模式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Swift_Singleton，深入浅出单例设计模式/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="单例设计模式"><a href="#单例设计模式" class="headerlink" title="单例设计模式"></a>单例设计模式</h3><p>开发项目的时候，有时候需要很多工具类，这时候单例的使用就尤为重要。在OC中，单例的写法想必大家很清晰了，在这里给大家介绍下Swift中几种单例的写法：</p>
+<h4 id="1-最直接的写法"><a href="#1-最直接的写法" class="headerlink" title="1. 最直接的写法"></a>1. 最直接的写法</h4><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">static var instance: DBHelper? = nil<span class="keyword"></span><br><span class="line">static</span> func sharedInstance() -&gt; DBHelper &#123;</span><br><span class="line"></span><br><span class="line">   <span class="built_in"> if </span>instance == nil &#123;</span><br><span class="line">       <span class="built_in"> instance </span>= DBHelper()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">   <span class="built_in"> return </span>instance!</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/Swift_Singleton，深入浅出单例设计模式/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/Swift_lazy，延迟存储属性/" itemprop="url">
+                  Swift_lazy，延迟存储属性
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-11-14T10:21:13+08:00" content="2015-11-14">
+              2015-11-14
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Swift/" itemprop="url" rel="index">
+                    <span itemprop="name">Swift</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Swift_lazy，延迟存储属性/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Swift_lazy，延迟存储属性/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>所谓的延迟存储属性，就是我们OC中所谓的懒加载对象，也就是把创建对象的步骤放在重写的getter方法中进行。这样，只有当我们使用这个属性的getter方法的时候，才会创建对象，可以为我们节省不必要得内存开销。</p>
+<p>在OC中，UIViewController的view属性是懒加载对象，还有，UITableViewCell的textLabel、detailTextLabel、imageView属性也都是懒加载对象，只有当我们使用的时候才会被创建。除了这些，我们自己也可以写很多。</p>
+<p>那么，在Swift中，如何实现所谓的懒加载对象呢？<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/Swift_lazy，延迟存储属性/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/iOS：一种直接修改frame的某个属性的方法/" itemprop="url">
+                  iOS：一种直接修改frame的某个属性的方法
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-11-13T17:22:19+08:00" content="2015-11-13">
+              2015-11-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/iOS：一种直接修改frame的某个属性的方法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="iOS：一种直接修改frame的某个属性的方法/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>在iOS中，view的frame属性使用地十分频繁，特别是调整UI。而正常情况下我们无法对frame的某个属性(如x,y,width,height等)进行单独修改，比如：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">someView<span class="selector-class">.frame</span><span class="selector-class">.x</span> = <span class="number">100</span>；	<span class="comment">// This is a wrong code;</span></span><br></pre></td></tr></table></figure>
+<p>这种方式是不允许的，但实际上我们更经常遇到的是frame的大部分元素值保持不变，只改变其中的一部分。相信这个烦恼困扰了不少人，于是我们不得不用以下两种方法去达到目的：</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">法<span class="number">1</span>：</span><br><span class="line">CGRect frame = someView.frame<span class="comment">;</span></span><br><span class="line">frame.x =<span class="number">100</span><span class="comment">;</span></span><br><span class="line">frame.width = <span class="number">200</span><span class="comment">;</span></span><br><span class="line">someView.frame = frame<span class="comment">;</span></span><br><span class="line"> </span><br><span class="line">法<span class="number">2</span>：</span><br><span class="line">someView.frame = CGRectMake(<span class="number">100</span>, XXX, <span class="number">200</span>, XXX)<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<p>法2看起来也很精简，但实际上也很麻烦，因为实际应用场景中x, y, width, height四个值都是依赖别的变量，导致法2的语句非常长。简而言之，以上方法都不够“优雅”。那怎样才算优雅呢？我觉得如果我们能如下这样直接修改某个值就完美了：<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/iOS：一种直接修改frame的某个属性的方法/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/如何给UITextView增加一个Placeholder/" itemprop="url">
+                  如何给UITextView增加一个Placeholder
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2014-12-17T22:15:12+08:00" content="2014-12-17">
+              2014-12-17
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/如何给UITextView增加一个Placeholder/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="如何给UITextView增加一个Placeholder/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>UITextField想必大家都很熟悉，其中有个叫placeholder的属性。那么当我们不得不用到UITextView时，如何给它也添加一个placeholder呢？实现效果如下图。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/如何给UITextView增加一个Placeholder/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/一些UINavgationBar的实用技巧/" itemprop="url">
+                  一些UINavgationBar的实用技巧
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2014-12-15T22:36:53+08:00" content="2014-12-15">
+              2014-12-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/一些UINavgationBar的实用技巧/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="一些UINavgationBar的实用技巧/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>开发中几乎每个页面都会碰大盘Navgation，那么如何定制它的一些属性来满足不同的页面要求呢，下面就会列举一些。</p>
+<h3 id="1-Nav背景-Title颜色"><a href="#1-Nav背景-Title颜色" class="headerlink" title="1. Nav背景/Title颜色"></a>1. Nav背景/Title颜色</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//set NavigationBar 背景颜色&amp;title 颜色（全局）</span></span><br><span class="line">    [<span class="keyword">self</span>.navigationBar setBarTintColor:[<span class="built_in">UIColor</span> colorWithRed:<span class="number">20</span>/<span class="number">255.0</span> green:<span class="number">155</span>/<span class="number">255.0</span> blue:<span class="number">213</span>/<span class="number">255.0</span> alpha:<span class="number">1.0</span>]];</span><br><span class="line">    [<span class="keyword">self</span>.navigationBar setTitleTextAttributes:[<span class="built_in">NSDictionary</span> dictionaryWithObjectsAndKeys:[<span class="built_in">UIColor</span> whiteColor],<span class="built_in">UITextAttributeTextColor</span>,<span class="literal">nil</span>]];</span><br><span class="line">    </span><br><span class="line"><span class="comment">//设置NavigationBar背景颜色（当前）</span></span><br><span class="line">	[[<span class="built_in">UINavigationBar</span> appearance] setBarTintColor:[<span class="built_in">UIColor</span> redColor]];</span><br><span class="line"><span class="comment">//@&#123;&#125;代表Dictionary</span></span><br><span class="line">	[[<span class="built_in">UINavigationBar</span> appearance] setTitleTextAttributes:@&#123;<span class="built_in">NSForegroundColorAttributeName</span>:[<span class="built_in">UIColor</span> whiteColor]&#125;];</span><br></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/一些UINavgationBar的实用技巧/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/如何隐藏TableView多余的Cell/" itemprop="url">
+                  如何隐藏UITableView多余的Cell
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2014-12-11T11:06:54+08:00" content="2014-12-11">
+              2014-12-11
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/如何隐藏TableView多余的Cell/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="如何隐藏TableView多余的Cell/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>在我们的日常开发中，UITableView想必是一个十分熟悉的控件，几乎每个页面都要用到它，本文就讲一讲一些关于UITableView的实用小操作。</p>
+<h2 id="1-如何隐藏UITableView多余的Cell"><a href="#1-如何隐藏UITableView多余的Cell" class="headerlink" title="1. 如何隐藏UITableView多余的Cell"></a>1. 如何隐藏UITableView多余的Cell</h2><p>所谓多余的cell便是指那些没有赋值的cell。如果没有隐藏分割线，或者tableView与父view颜色不一致，而恰巧有值cell的行数不足以填充整个屏幕，由于cell的复用性，导致空的cell会填充屏幕，如下图所示。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/如何隐藏TableView多余的Cell/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/TableView如何实现只选择一行cell/" itemprop="url">
+                  TableView如何实现只选择一行cell
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2014-11-15T23:02:14+08:00" content="2014-11-15">
+              2014-11-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/TableView如何实现只选择一行cell/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="TableView如何实现只选择一行cell/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>相信大家总遇到这样的情况，我们需要写一个tableView，让其实现“选项卡”的功能，即每次只能选择其中一行cell，而且cell前会有一个小对勾，这个用自定义的cell，或者给selectedBackgroundView赋值，也不难实现，但cell有一个叫accessoryType得属性，可以让我们轻松实现以上功能，而且十分轻便。</p>
+<p>换不多说，上代码。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/TableView如何实现只选择一行cell/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/Markdown简明教程/" itemprop="url">
+                  Markdown简明教程
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2011-11-16T13:58:38+08:00" content="2011-11-16">
+              2011-11-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Others/" itemprop="url" rel="index">
+                    <span itemprop="name">Others</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Markdown简明教程/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Markdown简明教程/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <ul>
+<li><p>“ # ” 与几级标题息息相关</p>
+</li>
+<li><p>“ * ” 一个是斜体，两个是粗体（包围）</p>
+</li>
+<li><p>“ ` ” 一个是行内代码，两个来嵌套，三个是代码块（包围）</p>
+</li>
+<li><p>“ ~~ “ 前后包围语句，从而实现删除线效果</p>
+</li>
+<li><p>“ — “ 分割线，上面必须是一个空行</p>
+</li>
+<li><p>“ 1. “ 有序标题</p>
+</li>
+<li><p>“ - ” 无序标题</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/Markdown简明教程/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/简单记录博主使用Hexo搭建博客历程(一)/" itemprop="url">
+                  简单记录博主使用Hexo搭建博客历程(一)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2011-05-16T13:58:38+08:00" content="2011-05-16">
+              2011-05-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/简单记录博主使用Hexo搭建博客历程(一)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="简单记录博主使用Hexo搭建博客历程(一)/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>网上的各种教程鱼龙混杂，自己也一路摸爬滚打，无论怎样，总算将博客搭建成现在这个样子也算小成了，那就这里抛砖引玉，尽量去繁就简，也会将自己所遇到过的问题贴出来供大家参考。</p>
+<h2 id="hexo介绍"><a href="#hexo介绍" class="headerlink" title="hexo介绍"></a>hexo介绍</h2><p>这么官方的内容我就贴个链接就好，就不增加阅读量，影响搭建效率了。<a href="http://www.oschina.net/p/hexo">Hexo</a><br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/简单记录博主使用Hexo搭建博客历程(一)/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -1303,60 +3306,76 @@
 
       <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="http://img.blog.csdn.net/20151113121050259" alt="Kohler" itemprop="image"/>
-          <p class="site-author-name" itemprop="name">Kohler</p>
+          <img class="site-author-image" itemprop="image"
+               src="http://img.blog.csdn.net/20160527172232866"
+               alt="Ronny.Chan" />
+          <p class="site-author-name" itemprop="name">Ronny.Chan</p>
+          <p class="site-description motion-element" itemprop="description"></p>
         </div>
-        <p class="site-description motion-element" itemprop="description"> To be a quiet Coder.</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">26</span>
+              <span class="site-state-item-count">24</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
-          <div class="site-state-item site-state-categories">
-            <a href="/categories">
-              <span class="site-state-item-count">6</span>
-              <span class="site-state-item-name">分类</span>
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">分类</span>
               </a>
-          </div>
+            </div>
+          
 
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">67</span>
-              <span class="site-state-item-name">标签</span>
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">60</span>
+                <span class="site-state-item-name">标签</span>
               </a>
-          </div>
+            </div>
+          
 
         </nav>
 
         
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
 
         <div class="links-of-author motion-element">
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/i-kohler" target="_blank">
+                <a href="https://github.com/chenzht" target="_blank" title="github">
                   
-                    <i class="fa fa-github"></i> github
+                    <i class="fa fa-fw fa-github"></i>
                   
+                  github
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://weibo.com/249559801" target="_blank">
+                <a href="http://weibo.com/249559801" target="_blank" title="weibo">
                   
-                    <i class="fa fa-weibo"></i> weibo
+                    <i class="fa fa-fw fa-weibo"></i>
                   
+                  weibo
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://www.zhihu.com/people/ikohler" target="_blank">
+                <a href="http://www.zhihu.com/people/jozochan" target="_blank" title="zhihu">
                   
-                    <i class="fa fa-zhihu"></i> zhihu
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  zhihu
                 </a>
               </span>
             
@@ -1366,16 +3385,8 @@
         
         
 
-        <div class="links-of-author motion-element">
-          
-            <p class="site-author-name"></p>
-            
-              <span class="links-of-author-item">
-                <a href="http://dear.wordpress.com.cn/" target="_blank">Maxxies</a>
-              </span>
-            
-          
-        </div>
+        
+        
 
       </section>
 
@@ -1385,8 +3396,8 @@
   </aside>
 
 
-
-      
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
@@ -1396,48 +3407,101 @@
   &copy;  2011 - 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i>
+    <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Kohler Chen</span>
+  <span class="author" itemprop="copyrightHolder">Ronny.Chan</span>
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  科勒的小刀
 </div>
 
 <div class="theme-info">
-  主题 -
+  With -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 
-<script type="text/javascript" src="http://www.arao.me/js/tw_cn.js"></script>
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
 <script type="text/javascript">
-var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
-var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
-var cookieDomain = "http://ikohler.gitcafe.io/"; //Cookie地址, 一定要设定, 通常为你的网址
-var msgToTraditionalChinese = "繁體"; //此处可以更改为你想要显示的文字
-var msgToSimplifiedChinese = "简体"; //同上，但两处均不建议更改
-var translateButtonId = "translateLink"; //默认互换id
-translateInitilization();
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
 
 
-      </div>
-    </footer>
 
-    <div class="back-to-top"></div>
-  </div>
 
+
+
+
+
+  
+
+
+
+  
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
   
 
   
-    
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
 
   
     
@@ -1455,60 +3519,21 @@ translateInitilization();
       || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
   </script>
-    
-     
 
-
+  
     
   
 
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
 
 
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-<script type="text/javascript" src="/js/motion.js?v=0.4.5.1" id="motion.global"></script>
-
-
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-
-  <script type="text/javascript" src="/js/bootstrap.js"></script>
-
-  
-  
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    });
-  </script>
-
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for (i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-    });
-  </script>
-
-  
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/MathJax.js"></script>
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/config/TeX-AMS-MML_HTMLorMML.js"></script>
-  
 
 
   
+  
+  
+
+  
+
   
 
 </body>

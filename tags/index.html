@@ -1,5 +1,11 @@
 <!doctype html>
-<html class="theme-next   use-motion ">
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -21,54 +27,93 @@
 
 
 
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
   
-    <link href='//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
 
 
 
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=0.4.5.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
 
 
 
 
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
-
+  <link rel="alternate" href="/atom.xml" title="Ronny的博客" type="application/atom+xml" />
 
 
 
 
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
-<meta name="description" content="iOS | life">
+
+
+
+
+
+<meta name="description">
 <meta property="og:type" content="website">
 <meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
-<meta property="og:site_name" content="科勒的小刀">
-<meta property="og:description" content="iOS | life">
+<meta property="og:url" content="http://www.kohmax.com/tags/index.html">
+<meta property="og:site_name" content="Ronny的博客">
+<meta property="og:description">
 <meta property="og:updated_time" content="2016-01-07T14:07:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="iOS | life">
+<meta name="twitter:description">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: '[object Object]',
-    motion: true
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
   };
 </script>
 
@@ -76,22 +121,13 @@
   
 
   
-    标签 | 科勒的小刀
+    标签 | Ronny的博客
   
 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
   
 
 
@@ -99,7 +135,16 @@
 
 
 
-  <div class="container one-column ">
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -109,11 +154,11 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">科勒的小刀</span>
+      <span class="site-title">Ronny的博客</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle">be a quiet man</p>
+  <p class="site-subtitle"></p>
 </div>
 
 <div class="site-nav-toggle">
@@ -128,11 +173,13 @@
   
 
   
-    <ul id="menu" class="menu menu-left">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -142,13 +189,17 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-            日志
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            有料
           </a>
         </li>
       
         
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
           </a>
@@ -158,6 +209,8 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
             标签
           </a>
         </li>
@@ -166,12 +219,24 @@
         <li class="menu-item menu-item-about">
           <a href="/about/index.html" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
             关于
           </a>
         </li>
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
       
     </ul>
   
@@ -179,11 +244,9 @@
   
     <div class="site-search">
       
-  
   <form class="site-search-form">
-    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
-  </form>
-
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
 
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
@@ -200,50 +263,47 @@
   
 </nav>
 
-
-
  </div>
     </header>
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content">
-          
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
     
     
       <div class="tag-cloud">
         <div class="tag-cloud-title">
-            目前共计 67 个标签
+            目前共计 60 个标签
         </div>
         <div class="tag-cloud-tags">
-          <a href="/tags/3D-Touch/" style="font-size: 12px; color: #ccc">3D Touch</a> <a href="/tags/Apple-ID/" style="font-size: 12px; color: #ccc">Apple ID</a> <a href="/tags/AsyncSocket/" style="font-size: 12px; color: #ccc">AsyncSocket</a> <a href="/tags/Bing/" style="font-size: 12px; color: #ccc">Bing</a> <a href="/tags/Block/" style="font-size: 12px; color: #ccc">Block</a> <a href="/tags/Bouncer-Pattern/" style="font-size: 12px; color: #ccc">Bouncer Pattern</a> <a href="/tags/CGRect/" style="font-size: 12px; color: #ccc">CGRect</a> <a href="/tags/Cell/" style="font-size: 18px; color: #8e8e8e">Cell</a> <a href="/tags/Closure/" style="font-size: 12px; color: #ccc">Closure</a> <a href="/tags/Frame/" style="font-size: 12px; color: #ccc">Frame</a> <a href="/tags/Gitcafe/" style="font-size: 12px; color: #ccc">Gitcafe</a> <a href="/tags/Github/" style="font-size: 12px; color: #ccc">Github</a> <a href="/tags/Hexo/" style="font-size: 12px; color: #ccc">Hexo</a> <a href="/tags/JavaScript/" style="font-size: 18px; color: #8e8e8e">JavaScript</a> <a href="/tags/Json/" style="font-size: 12px; color: #ccc">Json</a> <a href="/tags/Mac-app/" style="font-size: 12px; color: #ccc">Mac app</a> <a href="/tags/Markdown/" style="font-size: 12px; color: #ccc">Markdown</a> <a href="/tags/NSArray/" style="font-size: 12px; color: #ccc">NSArray</a> <a href="/tags/NSPredicate/" style="font-size: 12px; color: #ccc">NSPredicate</a> <a href="/tags/Next/" style="font-size: 12px; color: #ccc">Next</a> <a href="/tags/Objective-C/" style="font-size: 12px; color: #ccc">Objective-C</a> <a href="/tags/Placeholder/" style="font-size: 12px; color: #ccc">Placeholder</a> <a href="/tags/React-Native/" style="font-size: 12px; color: #ccc">React Native</a> <a href="/tags/Refactor/" style="font-size: 12px; color: #ccc">Refactor</a> <a href="/tags/Reveal/" style="font-size: 12px; color: #ccc">Reveal</a> <a href="/tags/Singleton/" style="font-size: 12px; color: #ccc">Singleton</a> <a href="/tags/Storyboard/" style="font-size: 12px; color: #ccc">Storyboard</a> <a href="/tags/String/" style="font-size: 12px; color: #ccc">String</a> <a href="/tags/Sublime-Text/" style="font-size: 12px; color: #ccc">Sublime Text</a> <a href="/tags/Swift/" style="font-size: 24px; color: #4f4f4f">Swift</a> <a href="/tags/TCP/" style="font-size: 12px; color: #ccc">TCP</a> <a href="/tags/TLV/" style="font-size: 12px; color: #ccc">TLV</a> <a href="/tags/UI/" style="font-size: 18px; color: #8e8e8e">UI</a> <a href="/tags/UIButton/" style="font-size: 12px; color: #ccc">UIButton</a> <a href="/tags/UINavgationBar/" style="font-size: 12px; color: #ccc">UINavgationBar</a> <a href="/tags/UITableView/" style="font-size: 18px; color: #8e8e8e">UITableView</a> <a href="/tags/UITextView/" style="font-size: 12px; color: #ccc">UITextView</a> <a href="/tags/USA/" style="font-size: 12px; color: #ccc">USA</a> <a href="/tags/Wechat/" style="font-size: 12px; color: #ccc">Wechat</a> <a href="/tags/WxApi/" style="font-size: 12px; color: #ccc">WxApi</a> <a href="/tags/XCode7/" style="font-size: 12px; color: #ccc">XCode7</a> <a href="/tags/Xcode/" style="font-size: 12px; color: #ccc">Xcode</a> <a href="/tags/dnspod/" style="font-size: 12px; color: #ccc">dnspod</a> <a href="/tags/godaddy/" style="font-size: 12px; color: #ccc">godaddy</a> <a href="/tags/http/" style="font-size: 12px; color: #ccc">http</a> <a href="/tags/iOS/" style="font-size: 30px; color: #111">iOS</a> <a href="/tags/iPhone-6s/" style="font-size: 12px; color: #ccc">iPhone 6s</a> <a href="/tags/info-plist/" style="font-size: 12px; color: #ccc">info.plist</a> <a href="/tags/lazy/" style="font-size: 12px; color: #ccc">lazy</a> <a href="/tags/mutableAttributeString/" style="font-size: 12px; color: #ccc">mutableAttributeString</a> <a href="/tags/保镖模式/" style="font-size: 12px; color: #ccc">保镖模式</a> <a href="/tags/单例/" style="font-size: 12px; color: #ccc">单例</a> <a href="/tags/可视化编程/" style="font-size: 12px; color: #ccc">可视化编程</a> <a href="/tags/团队开发/" style="font-size: 12px; color: #ccc">团队开发</a> <a href="/tags/工具/" style="font-size: 12px; color: #ccc">工具</a> <a href="/tags/延迟存储属性/" style="font-size: 12px; color: #ccc">延迟存储属性</a> <a href="/tags/微信支付/" style="font-size: 12px; color: #ccc">微信支付</a> <a href="/tags/微软/" style="font-size: 12px; color: #ccc">微软</a> <a href="/tags/懒加载/" style="font-size: 12px; color: #ccc">懒加载</a> <a href="/tags/截取字符串/" style="font-size: 12px; color: #ccc">截取字符串</a> <a href="/tags/手势/" style="font-size: 12px; color: #ccc">手势</a> <a href="/tags/搜索引擎/" style="font-size: 12px; color: #ccc">搜索引擎</a> <a href="/tags/教程/" style="font-size: 12px; color: #ccc">教程</a> <a href="/tags/混编/" style="font-size: 12px; color: #ccc">混编</a> <a href="/tags/网络编程/" style="font-size: 12px; color: #ccc">网络编程</a> <a href="/tags/闭包/" style="font-size: 12px; color: #ccc">闭包</a> <a href="/tags/问题/" style="font-size: 12px; color: #ccc">问题</a>
+          <a href="/tags/Apple-ID/" style="font-size: 12px; color: #ccc">Apple ID</a> <a href="/tags/Bing/" style="font-size: 12px; color: #ccc">Bing</a> <a href="/tags/Bouncer-Pattern/" style="font-size: 12px; color: #ccc">Bouncer Pattern</a> <a href="/tags/CGRect/" style="font-size: 12px; color: #ccc">CGRect</a> <a href="/tags/Cell/" style="font-size: 18px; color: #8e8e8e">Cell</a> <a href="/tags/Frame/" style="font-size: 12px; color: #ccc">Frame</a> <a href="/tags/GitCafe/" style="font-size: 12px; color: #ccc">GitCafe</a> <a href="/tags/Gitcafe/" style="font-size: 12px; color: #ccc">Gitcafe</a> <a href="/tags/Github/" style="font-size: 18px; color: #8e8e8e">Github</a> <a href="/tags/Hexo/" style="font-size: 18px; color: #8e8e8e">Hexo</a> <a href="/tags/JavaScript/" style="font-size: 18px; color: #8e8e8e">JavaScript</a> <a href="/tags/Linphone/" style="font-size: 12px; color: #ccc">Linphone</a> <a href="/tags/Mac-app/" style="font-size: 12px; color: #ccc">Mac app</a> <a href="/tags/Markdown/" style="font-size: 12px; color: #ccc">Markdown</a> <a href="/tags/Next/" style="font-size: 12px; color: #ccc">Next</a> <a href="/tags/Objective-C/" style="font-size: 12px; color: #ccc">Objective-C</a> <a href="/tags/Placeholder/" style="font-size: 12px; color: #ccc">Placeholder</a> <a href="/tags/Python/" style="font-size: 12px; color: #ccc">Python</a> <a href="/tags/React-Native/" style="font-size: 12px; color: #ccc">React Native</a> <a href="/tags/Refactor/" style="font-size: 12px; color: #ccc">Refactor</a> <a href="/tags/Reveal/" style="font-size: 12px; color: #ccc">Reveal</a> <a href="/tags/ShareSDK/" style="font-size: 12px; color: #ccc">ShareSDK</a> <a href="/tags/Singleton/" style="font-size: 12px; color: #ccc">Singleton</a> <a href="/tags/Storyboard/" style="font-size: 12px; color: #ccc">Storyboard</a> <a href="/tags/String/" style="font-size: 12px; color: #ccc">String</a> <a href="/tags/Sublime-Text/" style="font-size: 12px; color: #ccc">Sublime Text</a> <a href="/tags/Swift/" style="font-size: 24px; color: #4f4f4f">Swift</a> <a href="/tags/UI/" style="font-size: 18px; color: #8e8e8e">UI</a> <a href="/tags/UINavgationBar/" style="font-size: 12px; color: #ccc">UINavgationBar</a> <a href="/tags/UITableView/" style="font-size: 18px; color: #8e8e8e">UITableView</a> <a href="/tags/UITextView/" style="font-size: 12px; color: #ccc">UITextView</a> <a href="/tags/USA/" style="font-size: 12px; color: #ccc">USA</a> <a href="/tags/VOIP/" style="font-size: 12px; color: #ccc">VOIP</a> <a href="/tags/Wechat/" style="font-size: 12px; color: #ccc">Wechat</a> <a href="/tags/WxApi/" style="font-size: 12px; color: #ccc">WxApi</a> <a href="/tags/XCode7/" style="font-size: 12px; color: #ccc">XCode7</a> <a href="/tags/Xcode/" style="font-size: 12px; color: #ccc">Xcode</a> <a href="/tags/coding/" style="font-size: 12px; color: #ccc">coding</a> <a href="/tags/dnspod/" style="font-size: 12px; color: #ccc">dnspod</a> <a href="/tags/godaddy/" style="font-size: 12px; color: #ccc">godaddy</a> <a href="/tags/http/" style="font-size: 12px; color: #ccc">http</a> <a href="/tags/iOS/" style="font-size: 30px; color: #111">iOS</a> <a href="/tags/info-plist/" style="font-size: 12px; color: #ccc">info.plist</a> <a href="/tags/lazy/" style="font-size: 12px; color: #ccc">lazy</a> <a href="/tags/保镖模式/" style="font-size: 12px; color: #ccc">保镖模式</a> <a href="/tags/分享，-iOS/" style="font-size: 12px; color: #ccc">分享， iOS</a> <a href="/tags/单例/" style="font-size: 12px; color: #ccc">单例</a> <a href="/tags/可视化编程/" style="font-size: 12px; color: #ccc">可视化编程</a> <a href="/tags/团队开发/" style="font-size: 12px; color: #ccc">团队开发</a> <a href="/tags/工具/" style="font-size: 12px; color: #ccc">工具</a> <a href="/tags/延迟存储属性/" style="font-size: 12px; color: #ccc">延迟存储属性</a> <a href="/tags/微信支付/" style="font-size: 12px; color: #ccc">微信支付</a> <a href="/tags/微软/" style="font-size: 12px; color: #ccc">微软</a> <a href="/tags/懒加载/" style="font-size: 12px; color: #ccc">懒加载</a> <a href="/tags/截取字符串/" style="font-size: 12px; color: #ccc">截取字符串</a> <a href="/tags/搜索引擎/" style="font-size: 12px; color: #ccc">搜索引擎</a> <a href="/tags/教程/" style="font-size: 12px; color: #ccc">教程</a> <a href="/tags/混编/" style="font-size: 12px; color: #ccc">混编</a> <a href="/tags/自定义UI/" style="font-size: 12px; color: #ccc">自定义UI</a> <a href="/tags/问题/" style="font-size: 12px; color: #ccc">问题</a>
         </div>
       </div>
     
   </div>
 
 
-        </div>
+          </div>
+          
 
-        
 
-
-        
+          
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="tags/index.html"
-           data-title="tags" data-url="http://yoursite.com/tags/index.html">
+           data-title="tags" data-url="http://www.kohmax.com/tags/index.html">
       </div>
     
   </div>
 
 
-      </div>
-
-      
+        </div>
         
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -262,60 +322,76 @@
 
       <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="http://img.blog.csdn.net/20151113121050259" alt="Kohler" itemprop="image"/>
-          <p class="site-author-name" itemprop="name">Kohler</p>
+          <img class="site-author-image" itemprop="image"
+               src="http://img.blog.csdn.net/20160527172232866"
+               alt="Ronny.Chan" />
+          <p class="site-author-name" itemprop="name">Ronny.Chan</p>
+          <p class="site-description motion-element" itemprop="description"></p>
         </div>
-        <p class="site-description motion-element" itemprop="description"> To be a quiet Coder.</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">26</span>
+              <span class="site-state-item-count">24</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
-          <div class="site-state-item site-state-categories">
-            <a href="/categories">
-              <span class="site-state-item-count">6</span>
-              <span class="site-state-item-name">分类</span>
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">分类</span>
               </a>
-          </div>
+            </div>
+          
 
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">67</span>
-              <span class="site-state-item-name">标签</span>
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">60</span>
+                <span class="site-state-item-name">标签</span>
               </a>
-          </div>
+            </div>
+          
 
         </nav>
 
         
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
 
         <div class="links-of-author motion-element">
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/i-kohler" target="_blank">
+                <a href="https://github.com/chenzht" target="_blank" title="github">
                   
-                    <i class="fa fa-github"></i> github
+                    <i class="fa fa-fw fa-github"></i>
                   
+                  github
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://weibo.com/249559801" target="_blank">
+                <a href="http://weibo.com/249559801" target="_blank" title="weibo">
                   
-                    <i class="fa fa-weibo"></i> weibo
+                    <i class="fa fa-fw fa-weibo"></i>
                   
+                  weibo
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://www.zhihu.com/people/ikohler" target="_blank">
+                <a href="http://www.zhihu.com/people/jozochan" target="_blank" title="zhihu">
                   
-                    <i class="fa fa-zhihu"></i> zhihu
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  zhihu
                 </a>
               </span>
             
@@ -325,16 +401,8 @@
         
         
 
-        <div class="links-of-author motion-element">
-          
-            <p class="site-author-name"></p>
-            
-              <span class="links-of-author-item">
-                <a href="http://dear.wordpress.com.cn/" target="_blank">Maxxies</a>
-              </span>
-            
-          
-        </div>
+        
+        
 
       </section>
 
@@ -344,8 +412,8 @@
   </aside>
 
 
-
-      
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
@@ -355,48 +423,101 @@
   &copy;  2011 - 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i>
+    <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Kohler Chen</span>
+  <span class="author" itemprop="copyrightHolder">Ronny.Chan</span>
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  科勒的小刀
 </div>
 
 <div class="theme-info">
-  主题 -
+  With -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 
-<script type="text/javascript" src="http://www.arao.me/js/tw_cn.js"></script>
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
 <script type="text/javascript">
-var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
-var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
-var cookieDomain = "http://ikohler.gitcafe.io/"; //Cookie地址, 一定要设定, 通常为你的网址
-var msgToTraditionalChinese = "繁體"; //此处可以更改为你想要显示的文字
-var msgToSimplifiedChinese = "简体"; //同上，但两处均不建议更改
-var translateButtonId = "translateLink"; //默认互换id
-translateInitilization();
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
 
 
-      </div>
-    </footer>
 
-    <div class="back-to-top"></div>
-  </div>
 
+
+
+
+
+  
+
+
+
+  
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
   
 
   
-    
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
 
   
     
@@ -414,60 +535,21 @@ translateInitilization();
       || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
   </script>
-    
-     
 
-
+  
     
   
 
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
 
 
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-<script type="text/javascript" src="/js/motion.js?v=0.4.5.1" id="motion.global"></script>
-
-
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-
-  <script type="text/javascript" src="/js/bootstrap.js"></script>
-
-  
-  
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    });
-  </script>
-
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for (i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-    });
-  </script>
-
-  
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/MathJax.js"></script>
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/config/TeX-AMS-MML_HTMLorMML.js"></script>
-  
 
 
   
+  
+  
+
+  
+
   
 
 </body>
